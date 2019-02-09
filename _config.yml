@@ -24,12 +24,27 @@ url: "https://blog.flurdy.com" # the base hostname & protocol for your site, e.g
 twitter_username: flurdy
 github_username:  flurdy
 
+# google-analytics: 123
+
 # Build settings
 markdown: kramdown
-#theme: minima
-theme: jekyll-theme-hydejack
+# theme: minima
+# theme: jekyll-theme-hydejack
+permalink: ':title/'
 plugins:
   - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+
+paginate: 7
+paginate_path: "/page/:num"
+
+inclide:
+  - _pages
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
