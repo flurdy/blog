@@ -30,13 +30,13 @@ github_username:  flurdy
 markdown: kramdown
 # theme: minima
 # theme: jekyll-theme-hydejack
-permalink: ':title/'
+# permalink: ':title/'
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
 
-paginate: 7
+paginate: 11
 paginate_path: "/page/:num"
 
 inclide:
