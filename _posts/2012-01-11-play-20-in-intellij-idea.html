@@ -1,0 +1,15 @@
+---
+layout: post
+title: Play! 2.0 in IntelliJ IDEA
+date: '2012-01-11T17:35:00.010Z'
+author: flurdy
+tags:
+- code
+- intellij
+- play
+modified_time: '2012-01-11T18:10:15.006Z'
+blogger_id: tag:blogger.com,1999:blog-4019909.post-1962401108445920377
+blogger_orig_url: http://blog.flurdy.com/2012/01/play-20-in-intellij-idea.html
+---
+
+Play! Framework 1.x supported creating an IntelliJ IDEA project by the command: <code>play idealize</code>.<br /><br />However while Play! Framework 2.0 is in beta that command does not work**.<br /><br />So how do you get your Play! 2.0 project to open in IntelliJ IDEA? There are few different work arounds. Especially regarding integrating <b>sbt</b>.<br /><br />However I have a quick way. For this to work you need both Play! 2.0 and Play! 1.2.x installed.<br /><br />Create Play! 2.0 project: <br /><code><i>/usr/local/lib/play-2.0-beta</i>/play new helloworld</code><br />(I am assuming it was a Java project that you chose)<br /><br />Rename project folder:<br /><code>mv helloworld helloworld2</code><br /><br />Create Play! 1.x project: <br /><code><i>/usr/local/lib/play-1.2.4</i>/play new helloworld</code><br /><br />Create IntelliJ project: <br /><code>cd helloworld; <br /><i>/usr/local/lib/play-1.2.4</i>/play idealize</code><br /><br />Move IntelliJ files to Play! 2.0 project: <br /><code>cd ..; <br />mv helloworld/helloworld.i* helloworld2/</code><br /><br />Remove 1.x project and rename 2.0 folder: <br /><code>rm -rf helloworld; <br />mv helloworld2 helloworld</code><br /><br />Now you can open IntelliJ and then go to file/open project, then find and open helloworld/helloworld.ipr.<br /><br /><br />There will be some issues such as libraries etc but this a good start. For further tips try <a href="http://jetbrains.dzone.com/articles/configuring-intellij-idea">these suggestions</a>.<br /><br /><br />** As of 11th of January 2012 it is not present in Play! 2.0. I fully expect Play! to create an <i>idealize</i>, <i>eclipsify</i>, <i>netbeansify</i> etc as soon as 2.0 is stable.

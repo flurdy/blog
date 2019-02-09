@@ -1,0 +1,15 @@
+---
+layout: post
+title: Skinny WAR Assembly in maven
+date: '2010-07-02T09:53:00.004+01:00'
+author: flurdy
+tags:
+- war
+- code
+- maven
+modified_time: '2010-07-02T13:02:55.028+01:00'
+blogger_id: tag:blogger.com,1999:blog-4019909.post-7889270122972316781
+blogger_orig_url: http://blog.flurdy.com/2010/07/skinny-war-assembly-in-maven.html
+---
+
+If you want to create a <i>"Skinny WAR"</i> so that you can package it as part of an EAR or as in my case as part of an assembly later, then you can do this:<br /><br /><code><br />  &lt;plugin&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;2.1-beta-1&lt;/version&gt;<br />&nbsp;&nbsp; &lt;configuration&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;   &lt;packagingExcludes&gt;WEB-INF/lib/*.jar&lt;/packagingExcludes&gt;      <br />&nbsp;&nbsp;&nbsp;&nbsp;   &lt;archive&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &lt;manifest&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;addClasspath&gt;true&lt;/addClasspath&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;       &lt;classpathPrefix&gt;lib/&lt;/classpathPrefix&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     &lt;/manifest&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;   &lt;/archive&gt;      <br />&nbsp;&nbsp; &lt;/configuration&gt;<br />  &lt;/plugin&gt;<br /></code><br /><br />If you then later in another pom.xml want to include this war and the excluded libraries:<br /><br /><code><br />&lt;dependency&gt;<br />&nbsp;&nbsp;  &lt;groupId&gt;${project.groupId}&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;<i>you war module name</i>&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;${project.version}&lt;/version&gt;<br />&nbsp;&nbsp;  &lt;type&gt;war&lt;/type&gt;<br />  &lt;/dependency&gt; <br />  &lt;dependency&gt;<br />&nbsp;&nbsp;  &lt;groupId&gt;${project.groupId}&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;<i>you war module name</i>&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;${project.version}&lt;/version&gt;<br />&nbsp;&nbsp;  &lt;type&gt;pom&lt;/type&gt;<br />  &lt;/dependency&gt;<br /></code>

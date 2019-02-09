@@ -1,0 +1,16 @@
+---
+layout: post
+title: elastic experience
+date: '2008-04-30T20:26:00.004+01:00'
+author: flurdy
+tags:
+- hosting
+- code
+- web services
+- amazon
+modified_time: '2008-04-30T21:06:04.089+01:00'
+blogger_id: tag:blogger.com,1999:blog-4019909.post-2186282191105971357
+blogger_orig_url: http://blog.flurdy.com/2008/04/elastic-experience.html
+---
+
+Been playing with <a href="http://amazon.com">Amazon</a>'s web services, <a href="http://ec2.amazonaws.com">EC2</a> and <a href="http://s3.amazonaws.com">S3</a>.<br /><br /><a href="http://ec2.amazonaws.com">EC2, Elastic Computing Cloud</a>, is really nice. In a nutshell, it allows you to create servers on the fly as and when you need it.<br /><br />My initial impression before using it was that is would be very good for high load, performance intensive applications for larger corporations or research. And not for my use; low to none performance, tiny web sites and web apps, which are mostly used by just me.<br /><br />The main reason was the cost of running one 24/7 is costly with amazon pricing, especially as it would be idle most of the time. At most I get 500 web site visitors a day, thats only 1 every few minutes.<br /><br />But after playing around with EC2, I have realised it can also be very usefull for my meagre usage. Initially it looked a conveluted way of creating and accessing EC2 and S3. But the starter guide was actually quite easy to follow. And then the firefox extensions for both makes admin very easy.<br /><br />I run a subversion server on my normal server for my code, websites, documents etc. But its does not need to be online 24/7. I can just bring up an EC2 AIM instance for a little while, or even for the daytime hours.<br /><br />I also use my current server to run test apps, which only I use. They do not need to be up for very long. EC2 will be fine.<br /><br />The main cost will be the 24/7 hosting of my static web sites. If I run one, I might as well run them all on the same instance. But I worked out the costs is on par the ISP is charging for my co-location server. However it's costs are shared with others, which I may not be able to do with EC2.<br /><br />So now Im moving from one physical server doing everything(including crashing and being down for long periods), to several dynamic instances with at least one permanent. Will keep a look at costs to see how much more this way is costing.<br /><br />Will have to write and create some routines to persist to S3 some of the data of the instances. This looked a pain initially, but I think it is just a period of adaption before it will be acceptable.<br /><br />One thing Im not sure I can move to EC2 is my email server. But <a href="http://google.com/a/">google apps</a> is handling well some of my domains, I might just convince myself to move it all to it.<br /><br /><br />Ps. The one odd, funny thing, but to be aware of with EC2, is that after you have terminated your instances, try after awhile the ip again in a browser. I have gotten other people's instances whom have been handed the IP, but often their websites are in their initial install state. So Ive seen default admin pages for CSM apps(ie with default passwords as well) etc being exposed to anyone  before the actual owner logs in and changes settings. Remember you can be in the opposite situation as well.

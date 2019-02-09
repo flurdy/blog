@@ -1,0 +1,14 @@
+---
+layout: post
+title: Clone local git repository to remote server?
+date: '2012-02-22T12:34:00.009Z'
+author: flurdy
+tags:
+- code
+- git
+modified_time: '2012-02-22T12:49:12.821Z'
+blogger_id: tag:blogger.com,1999:blog-4019909.post-8601425684312589007
+blogger_orig_url: http://blog.flurdy.com/2012/02/clone-local-git-repository-to-remote.html
+---
+
+If you have a local repository that you want to clone/copy to a remote server here is how I do it. <br /><br />Perhaps you have been scaffolding, testing and initial silver bullet development and have realised the project is mature enough to share with others. Or you just want it backed up remotely. <br /><br />Simple <code>git clone <i>local</i> <i>remote</i></code> do not work. Destination path for git clone is always local.<br /><br />What you need to do is on the remote server create a bare git repository:<br /><br /><code>remoteserver$ mkdir -p <i>/var/local/repos/myproject</i>;<br />remoteserver$ cd <i>/var/local/repos/myproject</i>;<br />remoteserver$ git init --bare;</code><br /><br />Then add this remote to your local git repository:<br /><br /><code>localmachine$ git remote add <i>origin</i> \<br />ssh://<i>remoteserver.example.com/var/local/repos/myproject</i>;</code><br /><br />Now every time you want to push to your remote server, you do a normal push:<br /><br /><code>localmachine$ git push <i>origin</i> master;</code><br /><br /><br/><br />Although I would seriously consider using something <a href="http://github.com">github</a> or <a href="http://gitorious.com/local_install/">gitorious</a> instead of your own server.<br /><br /><br/><br/>

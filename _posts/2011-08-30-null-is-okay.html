@@ -1,0 +1,98 @@
+---
+layout: post
+title: Null is okay
+date: '2011-08-30T10:59:00.003+01:00'
+author: flurdy
+tags:
+- code
+- java
+modified_time: '2011-08-30T17:42:47.776+01:00'
+blogger_id: tag:blogger.com,1999:blog-4019909.post-2449186793446020974
+blogger_orig_url: http://blog.flurdy.com/2011/08/null-is-okay.html
+---
+
+Most of the bugs that you find or are reported to you in java applications are <a href=”http://download.oracle.com/javase/6/docs/api/java/lang/NullPointerException.html”>NullPointerExceptions</a> <sup><a href=”http://stackoverflow.com/questions/218384/what-is-a-null-pointer-exception”>[1]</a></sup>. NPE are rife in the beginning of a product’s life cycle, and they never go away.
+<br />
+<br />
+<br />The consequences are bug fixing which checks if:<ul><li>input is null</li>
+<br /><li>if interface calls return null</li>
+<br /><li>if method calls return null</li>
+<br /><li>if properties and collections are null</li></ul>
+<br />
+<br />So this original pizza ordering method: 
+<br /><code>public void orderPizza(PizzaOrder pizzaOrder){
+<br />&nbsp;&nbsp;for( Pizza pizza : pizzaOrder.getPizzas()){
+<br />&nbsp;&nbsp;&nbsp;&nbsp;kitchen.makePizza(pizza);
+<br />&nbsp;&nbsp;}
+<br />}</code>
+<br />
+<br />Morphs into this:
+<br /><code>public void orderPizza(PizzaOrder pizzaOrder){
+<br />&nbsp;&nbsp;if( pizzaOrder != null) {
+<br />&nbsp;&nbsp;&nbsp;&nbsp;if( pizzaOrder.getPizzas() != null ||
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Collection.isEmpty(pizzaOrder.getPizzas())) {
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if( kitchen != null) {
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for( Pizza pizza : pizzaOrder.getPizzas()){
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if( pizza != null) {
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kitchen.makePizza(pizza);
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw PizzeriaTechnicalException(“No pizza!!!”);
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else {
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw PizzeriaTechnicalException(“No kitchen!!!”);
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />&nbsp;&nbsp;&nbsp;&nbsp;} else {
+<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;throw PizzeriaTechnicalException(“No pizzas in order!!!”);
+<br />&nbsp;&nbsp;&nbsp;&nbsp;}
+<br />&nbsp;&nbsp;} else {
+<br />&nbsp;&nbsp;&nbsp;&nbsp;throw PizzeriaTechnicalException(“No pizza order!!!”);
+<br />&nbsp;&nbsp;}
+<br />}</code>
+<br />(Or alternativly many “assert pizzaOrder != null” that are useless in production)
+<br />
+<br />Madness, and very messy. 
+<br />
+<br /><b>Blinkered coding standard</b>:
+<br />This happens when code ownership is not clear, when desire for clean code is not existant, when fixing bugs with blinkers on.
+<br />When developers are time constrained or scared of changing code.
+<br />When development is outsourced but authority and knowledge is not, so refactoring is avoided or not part of SLA.  
+<br />
+<br />
+<br /><h3>Why are we so afraid of NullPointerExceptions? 
+<br />What is wrong with null?</h3>
+<br />Null is okay. Null is exactly that. Don't avoid it like the plague, but try to not pass the problem to others. Tidy up your gateway interfaces, trust internally null does not happen. If it does then don't hide the problem.
+<br />
+<br />Do not check for null inside you application. Check for null on your edges: 
+<br />
+<br />Validate user interface inputs. “Users” are always causing trouble, but we can not live without customers. Validate the essentials, but remember duck walking, don’t scare your customers with perfection validation. 
+<br />
+<br />Validate external 3rd party api interfaces. Probably validate internal api interfaces. Remember duck walking. If an internal system quite close to your application erroneously passes null values, fix that system instead. It is a gray zone however so some null pointer validation is fine. Just don’t complicate your system because of the laziness of another within your team/company.
+<br />
+<br />Do not validate calls between your applications layers. Trust the edges has validated the data. Use unit tests to ensure integrity. 
+<br />
+<br /><h3>Dealing with NPE/Null?</h3>
+<br />If you encounter a Null or anything resembling empty when not possible etc: throw a NullPointerException. Don’t sugar coat and masquerade it as something else. An NPE is an NPE! It says what it is on the tin! It is easily understood by all developers, and easily traced. Obviously don’t show that to the end user, but don’t catch it too far down your stack.
+<br />
+<br />If you get bug report about an NPE. Fix the edge validation, factory generation or inside the api call. Do not add a “== null“ condition inside your application. 
+<br />
+<br />It is easier to avoid internal NPE by not passing external DTO and domain objects through your own application. If you act on it, it should be your applications objects, not an external one. This avoids complicated null pointer validation.
+<br />
+<br />“Clean Code” book suggest “specific case object” for method calls that may previously return null. I am not a big fan, but it may solve internal api NPEs. I definitely support the pattern of returning empty collections in find* calls instead of null when nothing was found.
+<br />
+<br />
+<br />How would I deal with Null in the Pizza Order scenario?
+<br />
+<br />PizzaOrder object should be validated beforehand in the interface layer. It is not the responsibility of this method.
+<br />
+<br />Same layer before this method should call a factory method that sets pizzas collection to an empty collection if no pizzas.
+<br />
+<br />Kitchen is always injected or constructed externally to this method and not its responsibility. 
+<br />
+<br />Factories in mapping/creating the PizzaOrder before this method call should also ensure no Pizza objects are Null.
+<br />
+<br />The one possible valid check is if there are any pizzas in the order. The <code>Collection.isEmpty(pizzaOrder.getPizzas())</code> But it is not a null pointer check, as previous interfaces/factories will ensure a collection object exists. However the interface or application before this method call should probably have validated the actual order, to ensure an order contains pizzas!
+<br />
+<br />
+<br />So Null is okay and NullPointerException can be your friend.
+<br />

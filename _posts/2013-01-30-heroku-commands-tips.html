@@ -1,0 +1,17 @@
+---
+layout: post
+title: Heroku commands & tips
+date: '2013-01-30T18:08:00.000Z'
+author: flurdy
+tags:
+- heroku
+- linux
+- code
+- git
+- play
+modified_time: '2013-01-30T18:10:28.707Z'
+blogger_id: tag:blogger.com,1999:blog-4019909.post-8878855087806403497
+blogger_orig_url: http://blog.flurdy.com/2013/01/heroku-commands-tips.html
+---
+
+<br />I wrote a quick <a href="http://flurdy.com/docs/heroku/tips.html">howto of Heroku commands and tips</a> I use all the time.<br /><br />It covers creating instances, configurations, common add-ons such as databases &amp; email, deployment strategies and more.<br /><br />As mentioned in the document I tend to have multiple applications per project, so I always append <span style="font-family: Courier New, Courier, monospace;">--remote staging </span><span style="font-family: inherit;">for example, resulting in this long deploy command:</span><br /><span style="font-family: inherit;"><br /></span><span style="font-family: Courier New, Courier, monospace;">git push staging master &amp;&amp; \</span><br /><span style="font-family: Courier New, Courier, monospace;">heroku logs -t --remote staging; \</span><br /><span style="font-family: Courier New, Courier, monospace;">heroku open --remote staging &amp;&amp; \</span><br /><span style="font-family: Courier New, Courier, monospace;">heroku logs -t --remote staging</span><br /><span style="font-family: Courier New, Courier, monospace;"><br /></span><span style="font-family: inherit;">For the eagle eyed you will have noticed the "</span><span style="font-family: Courier New, Courier, monospace;">;</span><span style="font-family: inherit;">" which means as the log tailing never really finishes, when you notice the app is up and running you have to manually end it with control+c to proceed with opening up a browser.</span><br /><span style="font-family: Courier New, Courier, monospace;"><br /></span><span style="font-family: inherit;">Obviously these commands ties nicely into my use of <a href="http://www.playframework.com/">Play</a> on <a href="http://www.heroku.com/">Heroku</a> and the <a href="http://flurdy.com/docs/herokuplay/play2.html">howtos I wrote on integrating both</a>.</span><br /><br />They are perhaps obvious commands and basic but I hope they are of use to some people.<br /><br /><br />

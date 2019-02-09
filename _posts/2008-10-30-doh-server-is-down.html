@@ -1,0 +1,17 @@
+---
+layout: post
+title: Doh! Server is down
+date: '2008-10-30T22:25:00.004Z'
+author: flurdy
+tags:
+- ec2
+- code
+- flurdy
+- s3
+- socrates
+modified_time: '2008-10-30T22:44:37.310Z'
+blogger_id: tag:blogger.com,1999:blog-4019909.post-881511910092539420
+blogger_orig_url: http://blog.flurdy.com/2008/10/doh-server-is-down.html
+---
+
+Bugger, think <a href="http://socrates.flurdy.net">my server</a> has gone down. Its an <a href="http://aws.amazon.com/ec2/">Amazon ec2</a> instance, and been up for awhile. But now it cant be reached, not even within their cloud. Tried to reboot it via <a href="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=609">elasticfox</a>, no luck.<br /><br />Never got time to make the disk persistant, with the new <a href="http://aws.amazon.com/ebs">Elastic Block Store</a>. Doh! Again.<br /><br />Havent <a href="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=931">synced</a> to <a href="http://aws.amazon.com/s3">S3</a> for a while, probably months. Doh! 3rd time. <br /><br />Don't think Ive lost much critical stuff. All <a href="http://flurdy.com">flurdy.com</a> changes are gone, but google cache may retrieve some of it. All logs is also gone, and any recent changes to application databases...<br /><br />And my subversion server was on the same server. Doh! 4th.<br /><br />Wish I could afford to run more than one instance on ec2, so that I could spread load, seperate concerns and not have a single point of failure which kills everything!<br /><br />Better start to get another server up and reconfigure it. But not sure when Ill get the time. But I also wont receive any email till then as it was also <a href="http://flurdy.com/docs/postfix/">my email server</a>!

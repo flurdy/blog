@@ -1,0 +1,17 @@
+---
+layout: post
+title: Copying message to Sent folder?
+date: '2008-09-12T20:54:00.007+01:00'
+author: flurdy
+tags:
+- mail
+- code
+- helpdesk
+- thunderbird
+- mozilla
+modified_time: '2008-09-12T22:04:17.246+01:00'
+blogger_id: tag:blogger.com,1999:blog-4019909.post-7625018936348811962
+blogger_orig_url: http://blog.flurdy.com/2008/09/copying-message-to-sent-folder.html
+---
+
+Problem sending email in <a href="http://www.mozilla.com/thunderbird"><span style="font-weight:bold;">Thunderbird</span></a>?<br /><br />Encountered this problem a few times, so thought I'd <a href="http://blog.flurdy.com">blog</a> my about my last solution to this.<br /><br />Frequently people when trying to send email with the Thunderbird mail client, are not able to do so, and a popup with the text "<span style="font-weight:bold;">Copying message to Sent folder</span>" are forever present on the screen.<br /><br />There are <a href="http://www.google.no/search?q=thunderbird+not+copying+to+sent+folder">many causes for this symptom</a> (<a href="http://www.marteydodoo.com/2005/12/07/fixing-copying-to-sent-folder-errors-in-mozilla-thunderbird/">1</a>,<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=206408">2</a>,<a href="http://ubuntuforums.org/showthread.php?t=705008">3</a>,<a href="http://forums.opensuse.org/applications/387148-thunderbird-sent-folder.html">4</a>,<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=413240">5</a>), and <a href="http://helpdesk.doit.wisc.edu/page.php?cat=1009&id=3679">several solutions</a> (<a href="http://forums.mozillazine.org/viewtopic.php?f=39&t=523155">1</a>,<a href="http://www.citadel.org/doku.php/faq:favoriteclient:when_i_send">2</a>,<a href="http://">3</a>,<a href="http://">4</a>,<a href="http://forums.mozillazine.org/viewtopic.php?t=518516&highlight=message*+copy+sent+folder">5</a>,<a href="http://kb.mozillazine.org/Cannot_send_mail">6</a>). It seems it is a problem the <a href="http://www.mozilla.com/thunderbird">Mozilla</a> mail clients have suffered for a long time.<br /><br />In my last encounter, which was a <a href="http://features.slashdot.org/article.pl?sid=03/03/15/0051258">family "helpdesk"</a> case, so <a href="http://www.tightvnc.org">VNC</a> session across the sea. :)<br /><br />As mentioned the problem was that the "Copying message to Sent folder" message was continuously displayed, so the sender had no indication whether the mail was sent or not. It was. But never copied to the <span style="font-style:italic;">Sent</span> folder. Nor by canceling where they able to save it to the <span style="font-style:italic;">Drafts</span> folder.<br /><br />What seemed to be the problem was the selection of where the <span style="font-style:italic;">Sent and Drafts</span> folders where. In <span style="font-style:italic;">Tools/Accont Settings</span> and <span style="font-style:italic;">Copies and Folders</span>. They had it set to the default, ie. eg. the "Sent" of each account. This had worked for a long while before. <br /><br />But by changing this to the custom option, and manually choosing the <span style="font-style:italic;">Sent</span> folder, solved the problem! I also had to create the <span style="font-style:italic;">Sent</span> folder for one account, and a <span style="font-style:italic;">Drafts</span> folder in the <span style="font-style:italic;">local</span> account. <br /><br />No doubt, Ill re-encounter this in the future, hopefully Ill remember to check my own blog...

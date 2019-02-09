@@ -1,0 +1,16 @@
+---
+layout: post
+title: groovy spring annotation
+date: '2008-09-19T08:16:00.005+01:00'
+author: flurdy
+tags:
+- groovy
+- code
+- spring
+- annotation
+modified_time: '2008-09-24T17:04:40.319+01:00'
+blogger_id: tag:blogger.com,1999:blog-4019909.post-6358960342868257503
+blogger_orig_url: http://blog.flurdy.com/2008/09/groovy-spring-annotation.html
+---
+
+Hmmm.<br /><br /><a href="http://groovy.codehaus.org">Groovy</a> supports well <a href="http://www.springframework.org">spring</a>'s <a href="http://static.springframework.org/spring/docs/2.5.x/reference/beans.html#beans-annotation-config">annotations</a>.<br /><a href="http://static.springframework.org/spring/docs/2.5.x/reference/dynamic-language.html">Spring's dynamic language</a> tags are also handy.<br /><br />But I wish there was some dynamic language annotation!<br /><br />As in  eg, I have a Service written in Groovy such as:<br /><br />@Service<br />class PersonService {<br /><br /> @Autowired<br /> PersonRepository<br /><br /> blah blah ...<br /><br />}<br /><br />wouldn't be nice if I could:<br /><br />@Service<br />@DynamicScript("Groovy")<br />class PersonService {<br /><br /> @Autowired<br /> PersonRepository<br /><br /> blah blah ...<br /><br />}<br /><br />thus enabling it to be a refreshable bean without xml!

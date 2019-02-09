@@ -1,0 +1,15 @@
+---
+layout: post
+title: No single default persistence unit defined
+date: '2008-04-22T10:27:00.005+01:00'
+author: flurdy
+tags:
+- jpa
+- code
+- spring
+modified_time: '2008-04-27T21:50:58.407+01:00'
+blogger_id: tag:blogger.com,1999:blog-4019909.post-4817994821940694106
+blogger_orig_url: http://blog.flurdy.com/2008/04/no-single-default-persistence-unit.html
+---
+
+If you getting nowhere with this type of problem:<br /><br />Using spring and jpa, and you get this error:<br /><br />No single default persistence unit defined in {classpath*:META-INF/persistence.xml}<br /><br />And you DO have a persistence.xml in your classpath. <br /><br />Then the cause is simple.<br /><br />You may have other persistence.xml files as well in your lib/jars.<br /><br />Solution, add your persistenceUnitName to entityManager bean.<br /><br /><code><br />&lt;bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"&gt;<br />  &lt;property name="dataSource" ref="dataSource" /&gt;<br />  &lt;property name="persistenceUnitName" value="blahblahYourName" /&gt;</code><br /><br />which matches the one in your persistence.xml<br /><br /><code><br />&lt;persistence-unit name="blahblahYourName"&gt;<br />     <br /> &lt;/persistence-unit&gt;<br /></code>

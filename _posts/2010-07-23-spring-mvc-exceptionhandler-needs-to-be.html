@@ -1,0 +1,15 @@
+---
+layout: post
+title: Spring MVC ExceptionHandler needs to be in same class
+date: '2010-07-23T14:06:00.006+01:00'
+author: flurdy
+tags:
+- mvc
+- code
+- spring
+modified_time: '2010-07-23T14:52:42.956+01:00'
+blogger_id: tag:blogger.com,1999:blog-4019909.post-7559410409556540379
+blogger_orig_url: http://blog.flurdy.com/2010/07/spring-mvc-exceptionhandler-needs-to-be.html
+---
+
+Had a frustrating evening (<a href="http://code.flurdy.com/grid/snaps">pet project</a>) trying to get <a href="http://www.springsource.org">Spring</a> 3.0 MVC's annotation based  <a href="http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/bind/annotation/ExceptionHandler.html">exception handler</a> to work.<br /><br />All the examples seemed straight forwards:<br /><br />Just annotate a method in a controller:<br /><code>import org.springframe...ExceptionHandler;<br />import org.springframe...ModelAndView;<br />import org.springframe...Controller;<br />....<br />@Controller<br />public class MyController {<br />....<br />@ExceptionHandler(SomeException.class)<br />public ModelAndView myExceptionHandler(<br />&nbsp;&nbsp;&nbsp;&nbsp;SomeException exception){<br />&nbsp;&nbsp;<i>blah</i><br />}<br />...<br />}</code><br /><br />But it just would never catch my exceptions. Very frustrating.<br /><br />But in the end a google search to the end of the world where someone mentioned in the comments that the exceptionhandler method <b>have to be</b> be in the <b>same class</b> as the method throwing the exception.<br /><br />Very odd restriction compared to Spring's usual very agile and generic annotation.<br /><br />So I added my handlers to my abstract controller class that all my controllers extend and problem solved, with some hair still intact.

@@ -1,0 +1,19 @@
+---
+layout: post
+title: Ubuntuing Dell work PCs and 3G
+date: '2009-01-05T16:05:00.001Z'
+author: flurdy
+tags:
+- geek
+- telenor
+- linux
+- code
+- dell
+- 3g
+- ubunu
+modified_time: '2009-01-06T08:59:31.317Z'
+blogger_id: tag:blogger.com,1999:blog-4019909.post-7390633048893826392
+blogger_orig_url: http://blog.flurdy.com/2008/12/ubuntuing-dell-work-pcs-and-3g.html
+---
+
+Now I have had two <a href="http://dell.com">Dell</a> laptop PCs from work recently, D610 and D820. Both worked flawlessly with <a href="http://ubuntu.com">Ubuntu</a> and both work with my 3G USB key from <a href="http://www.telenor.no">Telenor</a>, an Option iCon 255.<br /><br /><br />On my Dell D610, I installed Ubuntu 8.04 Hardy Heron. To get 3G working I installed all HSO script from <a href="http://www.pharscape.org">PHARscape</a>.<br /><br /><br />On my more recent Dell D820, I installed Ubuntu 8.10 Intrepid Ibex, which now comes with great 3G support. It does include the HSO driver in the kernel. And by installing the new zerocd and udev script from <a href="http://www.pharscape.org">PHARscape</a>, basically following his <a href="http://www.pharscape.org/networkmanager-0.7.0-and-3g-wwan-modems.html">howto</a> you can get it up and running. <br /><br />However the HSO driver with Ubuntu 8.10 is an older version, and caused my PC to crash after awhile, so I installed the newer version from PHARscape, which works flawlessly.<br /><br />The new Network Manager works great with the 3G USB dongle, however it needs to be plugged in on boot to pick it up. If you sometimes plug it in afterwards, it is wise to also install PHARscape's HSO Connect GUI as a backup.
