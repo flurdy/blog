@@ -1,5 +1,5 @@
 <aside class="sidebar">
-  
+
   {% if page.id %}
   <div class="widget widget-recent">
     <h3 class="widget-title">Recent Posts</h3>
@@ -49,9 +49,16 @@
         <a href="{{ site.pinterest }}" class="social-profiles-link"><i class="ion ion-logo-pinterest"></i></a>
       </li>
       {% else %} {% endif %}
+
+      {% if site.linkedin %}
+      <li class="social-profiles-item">
+        <a href="{{ site.linkedin }}" class="social-profiles-link"><i class="ion ion-logo-linkedin"></i></a>
+      </li>
+      {% else %} {% endif %}
     </ul>
   </div>
 
+<!--
   <div class="widget widget-newsletter">
     <h3 class="widget-title">Newsletter</h3>
     <div class="newsletter-subtitle">Get Interesting News</div>
@@ -68,6 +75,7 @@
       </div>
     </form>
   </div>
+-->
 
   {% if site.instafeed == true %}
   <div class="widget widget-instagram">
@@ -91,5 +99,5 @@
     {% endfor %}
     </ul>
   </div>
-  
+
 </aside> <!-- /.sidebar -->
