@@ -24,8 +24,12 @@
   {% endif %}
 
   <div class="widget widget-social">
-    <h3 class="widget-title">Subscribe & Follow</h3>
+    <h3 class="widget-title">Follow</h3>
     <ul class="social-profiles list-reset">
+      <li class="social-profiles-item">
+        <a href="{{ root_url }}{{ site.baseurl }}/feed.xml" class="social-profiles-link"><i class="ion ion-logo-rss"></i></a>
+      </li>
+
       {% if site.facebook %}
       <li class="social-profiles-item">
         <a href="{{ site.facebook }}" class="social-profiles-link"><i class="ion ion-logo-facebook"></i></a>
@@ -53,6 +57,12 @@
       {% if site.linkedin %}
       <li class="social-profiles-item">
         <a href="{{ site.linkedin }}" class="social-profiles-link"><i class="ion ion-logo-linkedin"></i></a>
+      </li>
+      {% else %} {% endif %}
+
+      {% if site.github %}
+      <li class="social-profiles-item">
+        <a href="{{ site.github }}" class="social-profiles-link"><i class="ion ion-logo-github"></i></a>
       </li>
       {% else %} {% endif %}
     </ul>

@@ -13,8 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Ivar's rambling
-email: blog@flurdy.tldreplcewithdotemail
+
+title: Flurdy's blog - Ivar's rambling
+# email: blog@flurdy.tldreplcewithdotemail
+author-name: Ivar Abrahamsen
+author-avatar: ivarvr.jpg
+
 description: >- # this means to ignore newlines until "baseurl:"
   The ramblings of Ivar Abrahamsen at flurdy.com.
   Contain ideas, ranting at innocents, blinkered sporting opinions,
@@ -31,7 +35,7 @@ facebook_username:  flurdy
 linkedin: https://linkedin.com/in/flurdy
 linkedin_username:  flurdy
 
-# google-analytics: 123
+# google-analytics: UA-281408-9
 
 # Build settings
 markdown: kramdown
@@ -42,11 +46,12 @@ plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-archives
 
 paginate: 11
 paginate_path: "/page/:num"
 
-inclide:
+include:
   - _pages
 
 sass:
