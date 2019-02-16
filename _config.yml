@@ -26,13 +26,16 @@ author-avatar1: me/oculus.jpg
 author-avatar2: me/ivarslips.jpg
 author-avatar3: me/skina.jpg
 author-description: >-
-  I was an Enterprise Java Architect during the day,
-  then Startup Scala Tech Lead,
-  and now a Consultant for hire
-  and still is an Open Source wannabee hacker at night.
+  <ul>
+    <li>Developer then Architect then Tech Lead &amp; Manager, now Consultant/Contractor</li>
+    <li>With Java then Scala then a little Rust</li>
+    <li>From racks to AWS to Kubernetes</li>
+    <li>From multinational enterprises to unicorn startups. From Finance to Game studios</li>
+    <li>Still is an Open Source wannabee hacker at night</li>
+  </ul>
 author-description1: >-
   Most blog entries are about technology and some about sport.
-  All very biased, based on little facts, unfiltered, non-pc,
+  All posts are very biased, based on little facts, unfiltered, non-pc,
   and eventually outdated...
 author-description2: >-
   <ul>
