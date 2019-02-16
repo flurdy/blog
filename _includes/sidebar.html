@@ -78,9 +78,9 @@
    <div class="widget widget-archive">
       <h3 class="widget-title">Post archive</h3>
       {% assign yearposts = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
-      {% for year in yearposts %}
-         <div class="archive-posts">
-            <div class="archive-content">
+      <div class="archive-posts">
+         {% for year in yearposts %}
+            <div class="row archive-content">
                <h6 class="archive-title">
                   <a href="/{{ year.name }}/">{{ year.name }}</a>
                   <span class="archive-size">
@@ -88,21 +88,35 @@
                   </span>
                </h6>
             </div>
-         </div>
-      {% endfor %}
+         {% endfor %}
+      </div>
    </div>
 
-  <div class="widget widget-tags">
-    <h3 class="widget-title"><a href="/tags.html">Tag Cloud</a></h3>
-    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{%
-    endcapture %} {% assign tag_words = site_tags | split:',' | sort %}
-    <ul class="tag-list list-reset">
-    {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-      {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-        <li class="tag-item"><a href="{{ site.baseurl }}/tags#{{ this_word | cgi_escape }}" class="tag">{{ this_word }}</a></li>
-      {% endunless %}
-    {% endfor %}
-    </ul>
-  </div>
+   <div class="widget widget-tags">
+      <h3 class="widget-title"><a href="/tags.html">Tag Cloud</a></h3>
+      {% assign quantified = "" | split: "" %}
+      {% for tag in site.tags %}
+         {% if tag[1].size > 1 %}
+            {% assign quantified = quantified | push: tag %}
+         {% endif %}
+      {% endfor %}
+      {% capture tag_words %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+      {% assign sorted_tag_words = tag_words | split:',' | sort %}
+      <ul class="tag-list list-reset">
+         {% for tag_word in sorted_tag_words %}
+            {% for tag in site.tags %}
+               {% if tag[0] == tag_word %}
+                  {% if tag[1].size > 1 or quantified > 20 %}
+                     <li class="tag-item">
+                        <a href="{{ site.baseurl }}/tags#{{ {{ tag | first | slugify }} | cgi_escape }}" class="tag">
+                           {{ tag | first }}
+                        </a>
+                     </li>
+                  {% endif %}
+               {% endif %}
+            {% endfor %}
+         {% endfor %}
+      </ul>
+   </div>
 
 </aside> <!-- /.sidebar -->
