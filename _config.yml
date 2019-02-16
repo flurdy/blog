@@ -16,12 +16,31 @@
 
 title: Ivar's rambling
 # email: blog@flurdy.tldreplcewithdotemail
-jobtitle: Software Engineer
 copyright_year: 2019
 copyright_name: Ivar Abrahamsen
 author-name: Ivar Abrahamsen
+author-jobtitle: Software Engineer
+author-location: Hampshire, United Kingdom
 author-avatar: me/stash2.jpg
-
+author-avatar1: me/oculus.jpg
+author-avatar2: me/ivarslips.jpg
+author-avatar3: me/skina.jpg
+author-description: >-
+  I was an Enterprise Java Architect during the day,
+  then Startup Scala Tech Lead,
+  and now a Consultant for hire
+  and still is an Open Source wannabee hacker at night.
+author-description1: >-
+  Most blog entries are about technology and some about sport.
+  All very biased, based on little facts, unfiltered, non-pc,
+  and eventually outdated...
+author-description2: >-
+  <ul>
+    <li>Hire me: <a href="https//eray.uk">eray.uk</a></li>
+    <li>My website: <a href="https//flurdy.com">flurdy.com</a></li>
+    <li>My ideas: <a href="https//code.flurdy.com">code.flurdy.com</a></li>
+    <li>Who am I: <a href="https//ivar.uk/whoami.html">ivar.uk/whoami.html</a></li>
+  </ul>
 description: >- # this means to ignore newlines until "baseurl:"
   The ramblings of Ivar Abrahamsen at flurdy.com.
   Contain ideas, ranting at innocents, blinkered sporting opinions,

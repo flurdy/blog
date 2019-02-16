@@ -1,0 +1,106 @@
+---
+layout: page
+title: About
+image: carfogdump.jpg
+permalink: /about/
+---
+
+<div class="about">
+   <div class="container about-author">
+      <div class="row">
+         <div class="about-author-avatar">
+            <img class="top20" src="{{"/img/" | prepend: site.baseurl | append : site.author-avatar }}" />
+         </div>
+         {% if site.author-avatar1 %}
+            <div class="about-author-avatar">
+               <img src="{{"/img/" | prepend: site.baseurl | append : site.author-avatar1 }}" />
+            </div>
+         {% endif %}
+         {% if site.author-avatar1 %}
+            <div class="about-author-avatar">
+               <img src="{{"/img/" | prepend: site.baseurl | append : site.author-avatar2 }}" />
+            </div>
+         {% endif %}
+         {% if site.author-avatar1 %}
+            <div class="about-author-avatar">
+               <img src="{{"/img/" | prepend: site.baseurl | append : site.author-avatar3 }}" />
+            </div>
+         {% endif %}
+      </div>
+      <div class="row about-author-name">
+         <h4>{{ site.author-name }}</h4>
+      </div>
+      <div class="row about-author-jobtitle">
+         <p>{{ site.author-jobtitle }}</p>
+      </div>
+      <div class="row about-author-location">
+         <p>{{ site.author-location }}</p>
+      </div>
+   </div>
+
+   <div class="container">
+      <div class="row">
+
+         <p>
+            {{ site.author-description }}
+         </p>
+         {% if site.author-description1 %}
+            <p>
+               {{ site.author-description1 }}
+            </p>
+         {% endif %}
+         {% if site.author-description2 %}
+         <p>
+            {{ site.author-description2 }}
+         </p>
+         {% endif %}
+         {% if site.author-description3 %}
+         <p>
+            {{ site.author-description3 }}
+         </p>
+         {% endif %}
+
+      </div>
+   </div>
+
+   <div class="container">
+      <ul class="social-profiles list-reset">
+
+         <li class="social-profiles-item">
+            <a href="{{ root_url }}{{ site.baseurl }}/feed.xml" class="social-profiles-link"><i
+                  class="ion ion-logo-rss"></i></a>
+         </li>
+
+         {% if site.twitter %}
+         <li class="social-profiles-item">
+            <a href="{{ site.twitter }}" class="social-profiles-link"><i class="ion ion-logo-twitter"></i></a>
+         </li>
+         {% else %} {% endif %}
+
+         {% if site.linkedin %}
+         <li class="social-profiles-item">
+            <a href="{{ site.linkedin }}" class="social-profiles-link"><i class="ion ion-logo-linkedin"></i></a>
+         </li>
+         {% else %} {% endif %}
+
+         {% if site.github %}
+         <li class="social-profiles-item">
+            <a href="{{ site.github }}" class="social-profiles-link"><i class="ion ion-logo-github"></i></a>
+         </li>
+         {% else %} {% endif %}
+
+         <!-- {% if site.contact %}
+         <li class="social-profiles-item">
+         <a href="{{ site.contact }}" class="social-profiles-link"><i class="ion ion-mail"></i></a>
+         </li>
+         {% else %} {% endif %} -->
+
+         {% if site.keybase %}
+         <li class="social-profiles-item">
+            <a href="{{ site.keybase }}" class="social-profiles-link"><i class="ion ion-key"></i></a>
+         </li>
+         {% else %} {% endif %}
+      </ul>
+   </div>
+
+</div>

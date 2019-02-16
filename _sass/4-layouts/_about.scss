@@ -1,0 +1,38 @@
+.about {
+   .about-author {
+      text-align: center;
+      .about-author-avatar {
+         margin: 0 auto 3px auto;
+         position: relative;
+         width: 60px;
+         height: 60px;
+         overflow: hidden;
+         border-radius: 50%;
+         img {
+            width: 100%;
+            height: auto;
+         }
+         img.top20 {
+            margin-top: -10px;
+         }
+      }
+      .about-author-name {
+         margin-top: 20px;
+      }
+   }
+}
+
+@media only screen and (min-width: 768px) {
+   .about {
+      .about-author {
+         .about-author-avatar {
+            margin: 0 auto 10px auto;
+            width: 120px;
+            height: 120px;
+            img.top20 {
+               margin-top: -20px;
+            }
+         }
+      }
+   }
+}
