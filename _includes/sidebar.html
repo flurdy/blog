@@ -23,40 +23,29 @@
   {% else %}
   {% endif %}
 
-  <div class="widget">
-    <h3 class="widget-title">Who am I</h3>
-
-    <img src="{{"/img/" | prepend: site.baseurl | append : "ivarvr.jpg"}}" class=""  style="border-radius: 50%;" />
+  <div class="widget widget-author">
+    <div class="author-avatar">
+      <a href="{{ "/about/" | prepend: site.baseurl }}"><img src="{{"/img/" | prepend: site.baseurl | append : site.author-avatar }}" /></a>
+    </div>
+    <div class="author-name">
+       <h4><a href="{{ "/about/" | prepend: site.baseurl }}">{{ site.author-name }}</a></h4>
+    </div>
+    <div class="author-jobtitle">
+       <p>{{ site.jobtitle }}</p>
+    </div>
   </div>
 
   <div class="widget widget-social">
     <h3 class="widget-title">Follow</h3>
     <ul class="social-profiles list-reset">
+
       <li class="social-profiles-item">
         <a href="{{ root_url }}{{ site.baseurl }}/feed.xml" class="social-profiles-link"><i class="ion ion-logo-rss"></i></a>
       </li>
 
-      {% if site.facebook %}
-      <li class="social-profiles-item">
-        <a href="{{ site.facebook }}" class="social-profiles-link"><i class="ion ion-logo-facebook"></i></a>
-      </li>
-      {% else %} {% endif %}
-
        {% if site.twitter %}
       <li class="social-profiles-item">
         <a href="{{ site.twitter }}" class="social-profiles-link"><i class="ion ion-logo-twitter"></i></a>
-      </li>
-      {% else %} {% endif %}
-
-      {% if site.instagram %}
-      <li class="social-profiles-item">
-        <a href="{{ site.instagram }}" class="social-profiles-link"><i class="ion ion-logo-instagram"></i></a>
-      </li>
-      {% else %} {% endif %}
-
-      {% if site.pinterest %}
-      <li class="social-profiles-item">
-        <a href="{{ site.pinterest }}" class="social-profiles-link"><i class="ion ion-logo-pinterest"></i></a>
       </li>
       {% else %} {% endif %}
 
@@ -71,37 +60,20 @@
         <a href="{{ site.github }}" class="social-profiles-link"><i class="ion ion-logo-github"></i></a>
       </li>
       {% else %} {% endif %}
+
+      <!-- {% if site.contact %}
+      <li class="social-profiles-item">
+        <a href="{{ site.contact }}" class="social-profiles-link"><i class="ion ion-mail"></i></a>
+      </li>
+      {% else %} {% endif %} -->
+
+      {% if site.keybase %}
+      <li class="social-profiles-item">
+        <a href="{{ site.keybase }}" class="social-profiles-link"><i class="ion ion-key"></i></a>
+      </li>
+      {% else %} {% endif %}
     </ul>
   </div>
-
-<!--
-  <div class="widget widget-newsletter">
-    <h3 class="widget-title">Newsletter</h3>
-    <div class="newsletter-subtitle">Get Interesting News</div>
-    <div class="newsletter-text">Receive the latest news via email.</div>
-    <form class="c-newsletter-form validate" action="{% if site.mailchimp %}//{{site.mailchimp}}{% else %}#{% endif %}" method="POST"
-      id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-      <div class="newsletter-group">
-        <div class="newsletter-group-top">
-          <label class="screen-reader-text" for="mce-EMAIL">Email address</label>
-          <i class="email-icon ion ion-ios-mail"></i>
-          <input class="newsletter-email required email" id="mce-EMAIL" type="text" name="EMAIL" placeholder="E-mail">
-        </div>
-        <input class="newsletter-button" id="mc-embedded-subscribe" type="submit" name="subscribe" value="Subscribe">
-      </div>
-    </form>
-  </div>
--->
-
-  {% if site.instafeed == true %}
-  <div class="widget widget-instagram">
-    <h3 class="widget-title">Instagram</h3>
-    <div class="instagram-box">
-      <ul id="instafeed" class="instagram-grid list-reset clearfix"></ul>
-      <a class="instagram-prof" href="#">&#64;UserName</a>
-    </div>
-  </div>
-  {% endif %}
 
   <div class="widget widget-tags">
     <h3 class="widget-title"><a href="/tags.html">Tag Cloud</a></h3>

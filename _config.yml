@@ -14,10 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Flurdy's blog - Ivar's rambling
+title: Ivar's rambling
 # email: blog@flurdy.tldreplcewithdotemail
+jobtitle: Software Engineer
+copyright_year: 2019
+copyright_name: Ivar Abrahamsen
 author-name: Ivar Abrahamsen
-author-avatar: me/ivarvr.jpg
+author-avatar: me/stash2.jpg
 
 description: >- # this means to ignore newlines until "baseurl:"
   The ramblings of Ivar Abrahamsen at flurdy.com.
@@ -27,13 +30,21 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.flurdy.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 twitter: https://twitter.com/flurdy
-twitter_username: flurdy
 github: https://github.com/flurdy
-github_username:  flurdy
 facebook: https://facebook.com/flurdy
-facebook_username:  flurdy
 linkedin: https://linkedin.com/in/flurdy
-linkedin_username:  flurdy
+keybase: https://keybase.io/flurdy
+twitter_username: flurdy
+github_username: flurdy
+facebook_username: flurdy
+linkedin_username: flurdy
+keybase_username: flurdy
+contact: https://ivar.uk/contact
+website-url: https://flurdy.com
+website-pretty: flurdy.com
+
+
+rss: true
 
 # google-analytics: UA-281408-9
 
@@ -61,11 +72,11 @@ sass:
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
- exclude:
-   - Gemfile
-   - Gemfile.lock
-   - _imports
-   - docker-compose.yml
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - _imports
+  - docker-compose.yml
 #   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/

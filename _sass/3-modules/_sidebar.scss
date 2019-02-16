@@ -170,6 +170,27 @@
   }
 }
 
+// Avatar Widget
+.widget-author {
+  text-align: center;
+  .author-avatar {
+    margin: 0 auto 10px auto;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+    img {
+       width: 100%;
+       height: auto;
+       margin-top: -30px;
+    }
+  }
+  .author-jobtitle {
+     margin: 20px;
+  }
+}
+
 // Newsletter Widget
 .widget-newsletter {
   text-align: center;
@@ -220,6 +241,7 @@
 
 // Tags Widget
 .tag-list {
+   text-align: center;
   .tag-item {
     display: inline-block;
     margin: 3px;
