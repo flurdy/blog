@@ -14,7 +14,7 @@
       <div class="recent-content">
         <h6 class="recent-title"><a href="{{ root_url }}{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h6>
         <div class="recent-date">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{post.date | date: "%B %-d, %Y"}}</time>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{post.date | date: "%-d %B %Y"}}</time>
         </div>
       </div>
     </div>

@@ -3,16 +3,21 @@ layout: default
 ---
 <div class="container">
 	<div class="row">
+      {% if page.image %}
 		<div class="col col-12">
 			<div class="page-image-box">
 				<div class="page-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image}})"></div>
 			</div>
-		</div>
+      </div>
+      {% endif %}
 		<article class="col col-12 col-t-10 push-t-1 page">
 			<div class="page-content">
+
+            {% if page.title %}
 				<div class="page-head">
 					<h1 class="page-title">{{ page.title | escape }}</h1>
 				</div>
+            {% endif %}
 
 				<div class="page-body">
 					{{ content }}

@@ -81,6 +81,16 @@ plugins:
 paginate: 11
 paginate_path: "/page/:num"
 
+jekyll-archives:
+  enabled:
+    - year
+    - month
+    - tags
+  layouts:
+    year: archive-year
+    month: archive-month
+    tag: archive-tags
+
 include:
   - _pages
 

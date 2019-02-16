@@ -11,9 +11,6 @@ source "https://rubygems.org"
 gem "jekyll", "~> 3.8.5"
 
 # gem "bundler"
-gem "jekyll-paginate"
-gem "jekyll-sitemap"
-gem "jekyll-archives"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 # gem "minima", "~> 2.0"
@@ -25,6 +22,9 @@ gem "jekyll-archives"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem "jekyll-paginate"
+  gem "jekyll-sitemap"
+  gem "jekyll-archives"
   gem "jekyll-feed", "~> 0.6"
 end
 
