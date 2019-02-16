@@ -32,7 +32,9 @@
 }
 
 .post-head, .post-content {
-  background: rgba($blue-darken, .95);
+//   background: rgba($blue-darken, .95);
+  background: rgba($white, .95);
+  color: $blue-darken;
 }
 
 .post-content {
@@ -114,7 +116,7 @@
       position: relative;
       padding-right: 20px;
       margin-right: 15px;
-      color: $text;
+      color: $blue-darken;
       &:after {
         content: "";
         position: absolute;
@@ -161,21 +163,25 @@
 .prev, .next {
   flex-basis: 100%;
   padding: 15px;
-  background: #26272B;
+  background: $white;
+//   background: #26272B;
   &:hover {
     background: darken(#26272B, 3%);
     .post-nav-title {
       color: $primary-color;
       transition: $global-transition;
     }
+   .post-nav-arrow {
+       color: $text;
+   }
   }
   .post-nav-arrow {
     font-size: 14px;
-    color: $text;
+    color: $blue-darken;
   }
   .post-nav-title {
     font-size: 18px;
-    color: $text;
+    color: $blue-darken;
     transition: $global-transition;
   }
 }
