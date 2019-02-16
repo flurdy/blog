@@ -75,6 +75,23 @@
     </ul>
   </div>
 
+   <div class="widget widget-archive">
+      <h3 class="widget-title">Post archive</h3>
+      {% assign yearposts = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+      {% for year in yearposts %}
+         <div class="archive-posts">
+            <div class="archive-content">
+               <h6 class="archive-title">
+                  <a href="/{{ year.name }}/">{{ year.name }}</a>
+                  <span class="archive-size">
+                     ( {{ year.size }} posts )
+                  </span>
+               </h6>
+            </div>
+         </div>
+      {% endfor %}
+   </div>
+
   <div class="widget widget-tags">
     <h3 class="widget-title"><a href="/tags.html">Tag Cloud</a></h3>
     {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{%

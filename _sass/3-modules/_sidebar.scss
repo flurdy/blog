@@ -104,6 +104,46 @@
   }
 }
 
+// Recent Widget
+.archive-posts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 15px;
+  &:hover{
+    .archive-content {
+      .archive-title {
+        a {
+          color: $link-color-hover;
+        }
+      }
+    }
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .archive-header {
+    width: 100%;
+    margin-bottom: 10px;
+    background: $black;
+  }
+  .archive-content {
+    margin: 5px 0;
+    .archive-title {
+      margin-bottom: 0;
+      font-weight: 700;
+      a {
+        font-size: 18px;
+        color: $text;
+      }
+      .archive-size {
+         font-size: 12px;
+         color: $gray-blue;
+      }
+    }
+  }
+}
+
 // Social Widget
 .social-profiles {
   text-align: center;
