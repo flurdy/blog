@@ -8,7 +8,13 @@ layout: default
 		{% if forloop.index <= 1 %}
 		<div class="col col-12">
 			<article class="article-first">
-				<div class="article-image-first" style="background-image: url({{"/img/" | prepend: site.baseurl | append : post.image}})">
+            <div class="article-image-first"
+            {% if post.image %}
+               style="background-image: url({{"/img/" | prepend: site.baseurl | append : post.image}})"
+            {% else %}
+               style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url({{"/img/lysaker.jpg" | prepend: site.baseurl }})"
+            {% endif %}
+            >
 					<div class="article-content-first">
 						<div class="article-tag">
 						{% if post.tags.size >= 1 %}
@@ -18,7 +24,7 @@ layout: default
 						{% else %} {% endif %}
 						</div>
 						<h2 class="article-title"><a href="{{ post.url | prepend: site.baseurl }}">{{post.title}}</a></h2>
-						<p class="article-excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 163 }}{% else %}{{ post.content | strip_html | truncate: 163 }}{% endif %}</p>
+						<p class="article-excerpt">{% if post.description %}{{ post.description | strip_html | truncate: 223 }}{% else %}{{ post.content | strip_html | truncate: 223 }}{% endif %}</p>
 						<a href="{{ post.url | prepend: site.baseurl }}" class="button read-more">Read More</a>
 					</div>
 				</div>
