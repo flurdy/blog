@@ -109,8 +109,9 @@ exclude:
   - Gemfile.lock
   - _imports
   - docker-compose.yml
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - Dockerfile
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

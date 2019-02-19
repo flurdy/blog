@@ -1,10 +1,19 @@
-version: 2
+version: 2.1
+executors:
+  docker-publisher:
+    environment:
+      IMAGE_NAME: flurdy/blog.flurdy.com
+    docker:
+      - image: circleci/buildpack-deps:stretch
+#orbs:
+#  docker-publish: circleci/docker-publish@0.1.6
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.5
+      - image: circleci/ruby:2.6.0-node
     environment:
       BUNDLE_PATH: ~/repo/vendor/bundle
+      BUNDLE_VERSION: 2.0.1
     working_directory: ~/repo
     steps:
       - checkout
@@ -13,22 +22,97 @@ jobs:
             - v1-dependencies-{{ checksum "Gemfile.lock" }}
             - v1-dependencies-
       - run:
+          name: install bundler
+          command: |
+            sudo gem update --system
+            sudo gem uninstall bundler
+            sudo rm /usr/local/bin/bundle
+            sudo rm /usr/local/bin/bundler
+            sudo gem install bundler
+      - run:
           name: install dependencies
           command: |
-            bundle check || bundle install --jobs=4 --retry=3
+            bundle check || bundle install
       - save_cache:
           paths:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
       - run:
-          name: HTMLProofer tests
-          command: |
-            bundle exec htmlproofer ./_site \
-              --allow-hash-href \
-              --check-favicon  \
-              --check-html \
-              --disable-external
+          name: Jekyll build
+          command: bundle exec jekyll build
+#      - run:
+#          name: HTMLProofer tests
+#          command: |
+#            bundle exec htmlproofer ./_site \
+#              --allow-hash-href \
+#              --check-favicon  \
+#              --check-html \
+#              --disable-external
       - persist_to_workspace:
           root: ./
           paths:
             - _site
+
+  build-image:
+    docker:
+      - image: circleci/buildpack-deps:stretch
+    environment:
+        IMAGE_NAME: quay.io/flurdy/blog.flurdy.com
+    steps:
+     - checkout
+     - attach_workspace:
+         at: ./
+     - setup_remote_docker
+     - run:
+         name: Build Docker image
+         command: docker build -t $IMAGE_NAME:latest .
+     - run:
+         name: Archive Docker image
+         command: docker save -o image.tar $IMAGE_NAME
+     - persist_to_workspace:
+         root: .
+         paths:
+           - ./image.tar
+
+  publish-image:
+    docker:
+      - image: circleci/buildpack-deps:stretch
+    environment:
+        IMAGE_NAME: quay.io/flurdy/blog.flurdy.com
+    steps:
+      - setup_remote_docker
+#      - checkout
+      - attach_workspace:
+          at: ./
+      - run:
+          name: Load archived Docker image
+          command: docker load -i image.tar
+      - run:
+          name: Upload to registry
+          command: |
+            echo "$DOCKER_PASSWORD" | docker login quay.io -u "$DOCKER_LOGIN" --password-stdin
+            docker push $IMAGE_NAME:latest
+
+workflows:
+  version: 2
+  build-master:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master
+#      - docker-publish/publish:
+#          registry: quay.io
+#          image: flurdy/blog.flurdy.com
+      - build-image:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+      - publish-image:
+          requires:
+            - build-image
+          filters:
+            branches:
+              only: master

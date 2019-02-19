@@ -92,6 +92,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler
   html-proofer
   jekyll (~> 3.8.5)
   jekyll-archives
