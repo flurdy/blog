@@ -59,6 +59,11 @@ permalink: /about/
             {{ site.author-description3 }}
          </p>
          {% endif %}
+         {% if site.author-description4 %}
+         <p>
+            {{ site.author-description4 }}
+         </p>
+         {% endif %}
 
       </div>
    </div>
@@ -97,7 +102,7 @@ permalink: /about/
 
          {% if site.keybase %}
          <li class="social-profiles-item">
-            <a href="{{ site.keybase }}" class="social-profiles-link"><i class="ion ion-key"></i></a>
+            <a href="{{ site.keybase }}" class="social-profiles-link"><i class="ion ion-md-key"></i></a>
          </li>
          {% else %} {% endif %}
       </ul>

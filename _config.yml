@@ -27,11 +27,11 @@ author-avatar2: me/ivarslips.jpg
 author-avatar3: me/skina.jpg
 author-description: >-
   <ul>
-    <li>Developer then Architect then Tech Lead &amp; Manager, now Consultant/Contractor</li>
-    <li>With Java then Scala then a little Rust</li>
-    <li>From racks to AWS to Kubernetes</li>
-    <li>From multinational enterprises to unicorn startups. From Finance to Game studios</li>
-    <li>Still is an Open Source wannabee hacker at night</li>
+    <li>Developer then Architect then Tech Lead &amp; Manager, now Consultant/Contractor.</li>
+    <li>With Java then Scala then a little Rust.</li>
+    <li>From racks to AWS to Kubernetes.</li>
+    <li>From multinational enterprises to unicorn startups. From Finance to Game studios.</li>
+    <li>Still is an Open Source wannabee hacker at night.</li>
   </ul>
 author-description1: >-
   Most blog entries are about technology and some about sport.
@@ -44,6 +44,8 @@ author-description2: >-
     <li>My ideas: <a href="https//code.flurdy.com">code.flurdy.com</a></li>
     <li>Who am I: <a href="https//ivar.uk/whoami.html">ivar.uk/whoami.html</a></li>
   </ul>
+author-description3: >-
+  Ps. I rant a lot more on <a href="https://twitter.com/flurdy">Twitter</a> than I blog.
 description: >- # this means to ignore newlines until "baseurl:"
   The ramblings of Ivar Abrahamsen at flurdy.com.
   Contain ideas, ranting at innocents, blinkered sporting opinions,
