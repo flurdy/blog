@@ -74,9 +74,7 @@ rss: true
 
 # Build settings
 markdown: kramdown
-# theme: minima
-# theme: jekyll-theme-hydejack
-# permalink: ':title/'
+permalink: '/:year/:month/:title:output_ext'
 plugins:
   - jekyll-feed
   - jekyll-paginate
