@@ -89,6 +89,9 @@ jobs:
           command: |
             echo "$DOCKER_PASSWORD" | docker login quay.io -u "$DOCKER_LOGIN" --password-stdin
             docker push $IMAGE_NAME:latest
+            IMAGE_TAG="1.0.${CIRCLE_BUILD_NUM}"
+            docker tag $IMAGE_NAME:latest $IMAGE_NAME:$IMAGE_TAG
+            docker push $IMAGE_NAME:$IMAGE_TAG
 
 workflows:
   version: 2
