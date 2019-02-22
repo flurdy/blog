@@ -70,7 +70,7 @@ website-pretty: flurdy.com
 
 rss: true
 
-# google-analytics: UA-281408-9
+google-analytics: UA-281408-9
 
 # Build settings
 markdown: kramdown

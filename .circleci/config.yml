@@ -5,8 +5,6 @@ executors:
       IMAGE_NAME: flurdy/blog.flurdy.com
     docker:
       - image: circleci/buildpack-deps:stretch
-#orbs:
-#  docker-publish: circleci/docker-publish@0.1.6
 jobs:
   build:
     docker:
@@ -81,7 +79,6 @@ jobs:
         IMAGE_NAME: quay.io/flurdy/blog.flurdy.com
     steps:
       - setup_remote_docker
-#      - checkout
       - attach_workspace:
           at: ./
       - run:
@@ -101,9 +98,6 @@ workflows:
           filters:
             branches:
               only: master
-#      - docker-publish/publish:
-#          registry: quay.io
-#          image: flurdy/blog.flurdy.com
       - build-image:
           requires:
             - build
