@@ -40,33 +40,37 @@ permalink: /about/
 
    <div class="container">
       <div class="row">
-
-         <p>
-            {{ site.author-description }}
-         </p>
-         {% if site.author-description1 %}
-            <p>
-               {{ site.author-description1 }}
-            </p>
-         {% endif %}
-         {% if site.author-description2 %}
-         <p>
-            {{ site.author-description2 }}
-         </p>
-         {% endif %}
-         {% if site.author-description3 %}
-         <p>
-            {{ site.author-description3 }}
-         </p>
-         {% endif %}
-         {% if site.author-description4 %}
-         <p>
-            {{ site.author-description4 }}
-         </p>
-         {% endif %}
-
+{{ site.author-description }}
       </div>
    </div>
+   {% if site.author-description1 %}
+      <div class="container">
+         <div class="row">
+{{ site.author-description1 }}
+         </div>
+      </div>
+   {% endif %}
+   {% if site.author-description2 %}
+      <div class="container">
+         <div class="row">
+{{ site.author-description2 }}
+         </div>
+      </div>
+   {% endif %}
+   {% if site.author-description3 %}
+      <div class="container">
+         <div class="row">
+{{ site.author-description3 }}
+         </div>
+      </div>
+   {% endif %}
+   {% if site.author-description4 %}
+      <div class="container">
+         <div class="row">
+{{ site.author-description4 }}
+         </div>
+      </div>
+   {% endif %}
 
    <div class="container">
       <ul class="social-profiles list-reset">

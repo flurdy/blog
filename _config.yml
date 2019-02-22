@@ -34,9 +34,11 @@ author-description: >-
     <li>Still is an Open Source wannabee hacker at night.</li>
   </ul>
 author-description1: >-
-  Most blog entries are about technology and some about sport.
-  All posts are very biased, based on little facts, unfiltered, non-pc,
-  and eventually outdated...
+  <p>
+    Most blog entries are about technology and some about sport.
+    All posts are very biased, based on little facts, unfiltered, non-pc,
+    and eventually outdated...
+  </p>
 author-description2: >-
   <ul>
     <li>Hire me: <a href="https//eray.uk">eray.uk</a></li>
@@ -45,7 +47,9 @@ author-description2: >-
     <li>Who am I: <a href="https//ivar.uk/whoami.html">ivar.uk/whoami.html</a></li>
   </ul>
 author-description3: >-
-  Ps. I rant a lot more on <a href="https://twitter.com/flurdy">Twitter</a> than I blog.
+  <p>
+    Ps. I rant a lot more on <a href="https://twitter.com/flurdy">Twitter</a> than I blog.
+  </p>
 description: >- # this means to ignore newlines until "baseurl:"
   The ramblings of Ivar Abrahamsen at flurdy.com.
   Contain ideas, ranting at innocents, blinkered sporting opinions,
