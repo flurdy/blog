@@ -9,8 +9,6 @@ tags:
 - jekyll
 ---
 
-# Migrate blog to Jekyll
-
 In [my previous post]({{ "/2019/02/migrating-blog-away-from-blogger.html" | prepend: site.baseurl }}) I explain why I decided to migrate [my blog](http://blog.flurdy.com) away from [Blogger](http://blogger.com).
 And I that decided to use [Jekyll](http://jekyllrb.com) to generate my blog from now on.
 
@@ -41,7 +39,7 @@ But you can create it and its pages &amp; posts all inside a [Jekyll Docker cont
 
 #### Theme
 
-There is a lot of readily available [themes for Jekyll](https://jekyllthemes.io/):
+There is a lot of readily available [themes for Jekyll](https://jekyllrb.com/docs/themes/):
 
 * [jekyllthemes.org](http://jekyllthemes.org)
 * [jekyll-themes.com](https://jekyll-themes.com)

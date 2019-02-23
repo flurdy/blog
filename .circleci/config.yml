@@ -1,10 +1,10 @@
 version: 2.1
-executors:
-  docker-publisher:
-    environment:
-      IMAGE_NAME: flurdy/blog.flurdy.com
-    docker:
-      - image: circleci/buildpack-deps:stretch
+# executors:
+#  docker-publisher:
+#    environment:
+#      IMAGE_NAME: flurdy/blog.flurdy.com
+#    docker:
+#      - image: circleci/buildpack-deps:stretch
 jobs:
   build:
     docker:
