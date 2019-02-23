@@ -8,7 +8,11 @@ layout: default
 			<div class="post-image-box">
             <div class="post-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image}})"></div>
             {% if page.image-attribution %}
-            <div class="post-image-attribution">Photo: {{ page.image-attribution }}</div>
+            <div class="post-image-attribution">
+               {% if page.image-attribution-link %}<a target="_new" href="{{ page.image-attribution-link }}">{% endif %}
+               Photo: {{ page.image-attribution }}
+               {% if page.image-attribution-link %}</a>{% endif %}
+            </div>
             {% endif %}
 			</div>
 		</div>

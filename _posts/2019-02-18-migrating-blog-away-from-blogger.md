@@ -4,6 +4,7 @@ title: Migrating blog away from Blogger
 date: '2019-02-18T18:11:00.000Z'
 image: /posts/2019/02/moving.jpg
 image-attribution: U.S. Air Force photo by Airman 1st Class Gul Crockett
+image-attribution-link: https://www.mountainhome.af.mil/News/Article-Display/Article/309058/pcs-moving-season-is-in-motion/
 author: flurdy
 tags:
 - blog
