@@ -6,7 +6,10 @@ layout: default
 	<div class="row">
 		<div class="col col-12">
 			<div class="post-image-box">
-				<div class="post-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image}})"></div>
+            <div class="post-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image}})"></div>
+            {% if page.image-attribution %}
+            <div class="post-image-attribution">Photo: {{ page.image-attribution }}</div>
+            {% endif %}
 			</div>
 		</div>
 	</div>

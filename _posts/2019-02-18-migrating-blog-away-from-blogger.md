@@ -2,6 +2,8 @@
 layout: post
 title: Migrating blog away from Blogger
 date: '2019-02-18T18:11:00.000Z'
+image: /posts/2019/02/moving.jpg
+image-attribution: U.S. Air Force photo by Airman 1st Class Gul Crockett
 author: flurdy
 tags:
 - blog
