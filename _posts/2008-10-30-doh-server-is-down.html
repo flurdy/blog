@@ -15,3 +15,33 @@ blogger_orig_url: http://blog.flurdy.com/2008/10/doh-server-is-down.html
 ---
 
 Bugger, think <a href="http://socrates.flurdy.net">my server</a> has gone down. Its an <a href="http://aws.amazon.com/ec2/">Amazon ec2</a> instance, and been up for awhile. But now it cant be reached, not even within their cloud. Tried to reboot it via <a href="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=609">elasticfox</a>, no luck.<br /><br />Never got time to make the disk persistant, with the new <a href="http://aws.amazon.com/ebs">Elastic Block Store</a>. Doh! Again.<br /><br />Havent <a href="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=931">synced</a> to <a href="http://aws.amazon.com/s3">S3</a> for a while, probably months. Doh! 3rd time. <br /><br />Don't think Ive lost much critical stuff. All <a href="http://flurdy.com">flurdy.com</a> changes are gone, but google cache may retrieve some of it. All logs is also gone, and any recent changes to application databases...<br /><br />And my subversion server was on the same server. Doh! 4th.<br /><br />Wish I could afford to run more than one instance on ec2, so that I could spread load, seperate concerns and not have a single point of failure which kills everything!<br /><br />Better start to get another server up and reconfigure it. But not sure when Ill get the time. But I also wont receive any email till then as it was also <a href="http://flurdy.com/docs/postfix/">my email server</a>!
+
+{% include comments.html %}
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img src="http://www.ivar.uk/images/ivarupclose.jpg" alt="comment author" />
+      </div>
+      Flurdy:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            Ah its back up. Relieved.
+         </p>
+         <p>
+            Seems it got rebooted during the night.
+         </p>
+         <p>
+            Either the reboot command from elasticfox was really delayed... Or Amazon did some maintenance themselves.
+         </p>
+         <p>
+            Now S3 syncing...
+         </p>
+      </div>
+      <div class="post-comment-date">
+         31 Oct 2008, 07:48:00
+      </div>
+   </div>
+</div>

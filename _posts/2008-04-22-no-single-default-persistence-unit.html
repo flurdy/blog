@@ -13,3 +13,312 @@ blogger_orig_url: http://blog.flurdy.com/2008/04/no-single-default-persistence-u
 ---
 
 If you getting nowhere with this type of problem:<br /><br />Using spring and jpa, and you get this error:<br /><br />No single default persistence unit defined in {classpath*:META-INF/persistence.xml}<br /><br />And you DO have a persistence.xml in your classpath. <br /><br />Then the cause is simple.<br /><br />You may have other persistence.xml files as well in your lib/jars.<br /><br />Solution, add your persistenceUnitName to entityManager bean.<br /><br /><code><br />&lt;bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"&gt;<br />  &lt;property name="dataSource" ref="dataSource" /&gt;<br />  &lt;property name="persistenceUnitName" value="blahblahYourName" /&gt;</code><br /><br />which matches the one in your persistence.xml<br /><br /><code><br />&lt;persistence-unit name="blahblahYourName"&gt;<br />     <br /> &lt;/persistence-unit&gt;<br /></code>
+
+{% include comments.html %}
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      krla:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+         Thank you. You solved my problem ;)
+         </p>
+      </div>
+      <div class="post-comment-date">
+         28 May 2008, 08:58:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="https://www.blogger.com/profile/10377756292784267629">m4rkuz</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            you solve my problem...<br/>
+            I got it in a spring web flow app example
+         </p>
+      </div>
+      <div class="post-comment-date">
+         10 Sep 2008, 03:38:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            Perfect! Thanks :)
+         </p>
+         <p>
+               /bitte
+         </p>
+      </div>
+      <div class="post-comment-date">
+         12 Nov 2008, 12:18:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+
+Thanks!! This problem was driving me nuts... PB
+
+         </p>
+      </div>
+      <div class="post-comment-date">
+         11 Jan 2009, 15:51:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Mark:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+             This solved it. Thanks
+         </p>
+      </div>
+      <div class="post-comment-date">
+         25 Mar 2009, 10:53:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img src="https://2.bp.blogspot.com/_Ha6zIAMsfvg/SZc4nwtVHCI/AAAAAAAAATU/1_4RbmuFeFw/S45-s35/photoID-BnW.jpg" alt="comment author" />
+      </div>
+      <a href="https://www.blogger.com/profile/02042515329741585937">Timothy Wonil Lee</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            thanks for this!
+         </p>
+      </div>
+      <div class="post-comment-date">
+         6 Aug 2009, 07:52:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Thanks, this solved an issue I encountered some time ago as well!
+         </p>
+      </div>
+      <div class="post-comment-date">
+         5 Oct 2009, 10:38:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+
+You da man! Thanks for posting this!
+         </p>
+      </div>
+      <div class="post-comment-date">
+            30 Dec 2009, 03:07:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+
+thank you man!
+
+         </p>
+      </div>
+      <div class="post-comment-date">
+         12 Feb 2010, 18:32:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="https://www.blogger.com/profile/11755385982739739038">jalejo</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Thank's a lot!!!<br/>
+Nice solution
+         </p>
+      </div>
+      <div class="post-comment-date">
+         23 Apr 2010, 01:31:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img src="https://3.bp.blogspot.com/_vpmNKCfsQcU/SardnF0ShNI/AAAAAAAAAf4/EZi3IJGP278/S45-s35/242116148_d3f8852971.jpg%3Fv%3D0"
+            alt="comment author" />
+      </div>
+      <a href="https://www.blogger.com/profile/02786491758390335994">Anil Samuel</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+life saver !!
+         </p>
+      </div>
+      <div class="post-comment-date">
+            12 May 2010, 01:03:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="gdadadadasd">gdadadadasd</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Is it possible to have multiple persistence unit in one persistence.xml file?
+         </p>
+      </div>
+      <div class="post-comment-date">
+    26 May 2011, 00:30:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+             Thanks for the solution!
+         </p>
+      </div>
+      <div class="post-comment-date">
+            30 Jun 2011, 15:49:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="https://www.blogger.com/profile/02355519034040229900">Reigo</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Solved my problem which only occured while trying to run the project with JRebel. Thanks!
+         </p>
+      </div>
+      <div class="post-comment-date">
+            25 Nov 2011, 20:09:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Solved my problem. Thanks for the post.
+         </p>
+      </div>
+      <div class="post-comment-date">
+            29 Jan 2012, 21:36:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+thank you, Sir!
+         </p>
+      </div>
+      <div class="post-comment-date">
+         29 Feb 2012, 22:39:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="http://blog.99monkeys.com/">hugo p</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Solved conflicts between multiple war on the same server.
+Thank you !
+         </p>
+      </div>
+      <div class="post-comment-date">
+         15 Nov 2012, 09:47:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Big Thank you, you rock !<br/>
+modjo2010
+         </p>
+      </div>
+      <div class="post-comment-date">
+           28 Jan 2014, 14:14:00
+      </div>
+   </div>
+</div>

@@ -15,3 +15,56 @@ blogger_orig_url: http://blog.flurdy.com/2008/12/distributing-mercurial-to-disco
 ---
 
 Having some issues, teething problems with <a href="http://www.selenic.com/mercurial">Mercurial</a>. Here is the story:<br /><br />Started a tiny mini project, a quick <a href="http://grid.flurdy.com/currency/">currency conversion web app</a>, as typing the <a href="http://www.google.com/search?q=10gbp+in+nok">extra 10 characters into google</a> is too cumbersome after a while....<br /><br />Naturally picked new technology to play with, this time it being <a href="http://grails.org">Grails</a> and <a href="http://www.selenic.com/mercurial">Mercurial</a>. Having already played abit with <a href="http://groovy.codehaus.org">groovy</a> in my recent <br /><a href="http://wishlist.wiki.sourceforge.net">wishlist facebook app</a>, the next step to grails was not too hard. With <a href="http://netbeans.org">NetBeans</a> excellent support for groovy and grails, getting up and running was quick.<br /><br />Having followed the story of Mercurial, <a href="http://bazaar-vcs.org/">Bazaar</a>, <a href="http://git.or.cz/">git</a> and other <a href="http://en.wikipedia.org/wiki/Distributed_revision_control">DVCSes</a> recently. My adoption of them have only been delayed by being busy and not having a new project to test them out with. But now came the chance, and Mercurial being the one I wanted the most to try out, (wish their push back to SVN became usuable soon). It being integrated into NetBeans already also helped.<br /><br /><br /><br />But I quickly became a little stuck. Mercurial does have a lot of <a href="http://www.selenic.com/mercurial/wiki/index.cgi">documentation</a> <br /><a href="http://hgbook.red-bean.com">(2)</a>, and many blogs to cover a large set of situations. But nothing quite described (spoon fed) me the steps I needed. Maybe playing a bit devil's advocate, but...<br /><br />Basically I would develop this app in two places. I do 99% at home, while I'd also use it at work, thus would do the odd tweak there as well. SSH and web shared repositories is not an option due to work policies. So they are two disconnected locations.<br /><br />So I create a grails app, do <span style="font-style:italic;">hg init</span>. But then how do I get it to the other location??? I can not do a <span style="font-style:italic;">hg clone a b</span>, because they are in different locations. A public shared repository is not an option.<br /><br />There is not a guide for how <span style="font-weight:bold;">distributed</span> groups get started (without a public shared repository), only that it is a very <span style="font-weight:bold;">distributed</span> SCM. :0<br /><br />OK, so what I will have to do is tar up the project, take it to the other location and clone it. Then email changesets somehow, presume with export or bundle.<br /><br />Actually I see you can pull other repositories into any repository, so I suppose I can <span style="font-style:italic;">hg init</span> a folder in each location, but still need to tar across an initial copy?<br /><br />oh well. Guess I can document it next week.
+
+{% include comments.html %}
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img src="http://www.ivar.uk/images/ivarupclose.jpg" alt="comment author" />
+      </div>
+      Flurdy:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            Off course there is always someone whom have done your exact project before:<br/>
+            http://grails.org/Currencies+plugin
+         </p>
+         <p>
+            With nearly identical core domain objects!
+         </p>
+         <p>
+            But Ill power on ahead to reinvent the flat wheel!
+         </p>
+      </div>
+      <div class="post-comment-date">
+         5 Dec 2008, 09:41:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img src="http://www.ivar.uk/images/ivarupclose.jpg" alt="comment author" />
+      </div>
+      Flurdy:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            Still trying to find a good way to transport repository and changes.
+         </p>
+         <p>
+            With one machine being windows, it seems windows zip ignores .hg folder.
+         </p>
+         <p>
+            Sending exported patches keep getting rejected when trying to import.
+         </p>
+      </div>
+      <div class="post-comment-date">
+         19 Dec 2008, 14:50:00
+      </div>
+   </div>
+</div>

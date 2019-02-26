@@ -14,3 +14,57 @@ blogger_orig_url: http://blog.flurdy.com/2006/12/encryption-stops-linux.html
 ---
 
 Does work laptops which are pre installed with Windows, using full disk encryption software stop you from using Linux?<br /><br />Well at least for me.<br /><br />The problem I have is I have several laptops handed to me by clients that I have to use while working for them. No problem with that, they are much higher spec than my own pcs anyway. Pre installed with MS Windows is fine, it usually is company standard and most of their employees would insist on it. Previously I have just shrunk the windows partition and dual booted into linux.<br /><br />But my current two work laptops have both got full disk encryption software,  to protect lost laptops, from  two different providers (<a href="http://www.pointsec.com/">PointSec</a> and <a href="http://www.utimaco.com/">SafeGuard</a>). And you cant run dual boots with them, nor resize partitions.<br /><br />So this means for the past half a year I have had to use windows full time, as I rarely get any time at home to use my own linux pcs.<br /><br />Okay it is not that bad, I am not suffering from starvation or illness, but it is annoying, feels like having a hand tied behind my back when I work. But I shouldnt complain, I am after all getting hardware and licenses for weblogic and oracle handed to me.<br /><br />I do wonder though, how many others are affected by this? Does it have any effect on the amount of people using Linux?
+
+{% include comments.html %}
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Pointsec allows you to have a dual boot with Linux. You can also install Pointsec for Linux on a few distributions to
+encrypt a Linux partition. You need to fully decrypt your Windows partitions, then make space for Linux. Install Linux
+and use a MBR based boot loader like GRUB. Then re-install Pointsec and during the install boot to the Windows
+partition.
+         </p>
+         <p>
+Cheers
+</p>
+<p>
+Fred
+         </p>
+      </div>
+      <div class="post-comment-date">
+         9 Jan 2007, 16:05:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img
+            src="http://www.ivar.uk/images/ivarupclose.jpg"
+            alt="comment author" />
+      </div>
+      Flurdy:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Thanks Fred for the tip.
+</p>
+<p>
+VMWare also solved my problem.
+</p>
+<p>
+WMWare and an Ubuntu image works perfectly, but mostly due to 2gb of ram and intel duo core cpu.
+         </p>
+      </div>
+      <div class="post-comment-date">
+         24 Jan 2007, 23:41:00
+      </div>
+   </div>
+</div>

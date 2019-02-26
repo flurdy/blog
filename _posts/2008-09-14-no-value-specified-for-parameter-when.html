@@ -16,3 +16,28 @@ blogger_orig_url: http://blog.flurdy.com/2008/09/no-value-specified-for-paramete
 ---
 
 I came across a problem when swithching database for a <a href="http.//sourceforge.net/projects/wishlist">project</a> from <a href="http://www.hsqldb.org">HSQLDB</a> to <a href="http://www.mysql.com">MySQL</a>.<br /><br />I am using memory based HSQL for unit tests.<br />I am using file based HSQL for development testing.<br />I have changed my integration tests to using MySQL from file based HSQL.<br />Final production release will probably use MySQL or <a href="http://www.firebirdsql.org">Firebird</a>.<br />(This isn't commercial work, so no <a href="http://www.oracle.com">Oracle</a> in any stack...)<br /><br />But when I switched to MySQL, <a href="http://java.sun.com/javaee/technologies/persistence.jsp">JPA</a>/<a href="http://www.hibernate.org">Hibernate</a> starting complaining about: <b>No value specified for parameter 2</b>. As usual the generic multiple vendor reasons for using JPA/JDBC usually is not true...<br /><br />Was a bit dumbfounded with this error, but eventually found the solution : <a href="http://opensource.atlassian.com/projects/hibernate/browse/HHH-2605">http://opensource.atlassian.com/projects/hibernate/browse/HHH-2605</a>. <br /><br />As it turns out there is a bug in the version of Hibernate that I use. <br /><br />I depend on <br />&nbsp;&lt;dependencies&gt;<br />&nbsp;...<br />&nbsp;&nbsp;&nbsp;&lt;dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.hibernate&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;hibernate-&nbsp;&nbsp;&nbsp;entitymanager&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;3.3.1.ga&lt;/version&gt;<br />&nbsp;&nbsp;&nbsp;&lt;/dependency&gt;<br />&nbsp;...<br />&nbsp;&lt;/dependencies&gt;<br /><br />And this version in the <a href="http://maven.apache.org">maven</a> repositories was uploaded with wrong transparent dependency to hibernate 3.2.4.ga, which is buggy.<br /><br />But the quick fix is to change my own dependency management to use version 3.2.6.<br /><br />Thus this change solved the problem:<br />&nbsp;&lt;dependencyManagement&gt;<br />&nbsp;...<br />&nbsp;&nbsp;&nbsp;&lt;dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.hibernate&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;hibernate&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;3.2.6.ga&lt;/version&gt;<br />&nbsp;&nbsp;&nbsp;&lt;/dependency&gt; <br />&nbsp;...<br />&nbsp;&lt;/dependencyManagement&gt;<br /><br />Maven causes problems, but also solves problems...
+
+{% include comments.html %}
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="https://www.blogger.com/profile/10680780254183344537">Fernando</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            I am new at maven. I would like to know why I should put the tag dependecyManagement instead of putting in
+            build/dependency?
+         </p>
+         <p>
+            I don't know the differencies, but I dont have dependecyManagement.
+         </p>
+         <p>
+            Thanks in advance.
+         </p>
+      </div>
+      <div class="post-comment-date">
+         5 Mar 2009, 15:35:00
+      </div>
+   </div>
+</div>
