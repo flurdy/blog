@@ -11,3 +11,31 @@ blogger_orig_url: http://blog.flurdy.com/2010/05/db2-client-on-windows-7.html
 ---
 
 (Unfortunetly) I have been trying to install DB2 on my Windows 7 laptop as my recent assignment is very Websphere/DB2 centric. And even the unit test rely on a DB2 database.<br /><br />For some reason v9.5 of DB2 Enterprise server does not like my laptop. :(<br /><br />But we have standardised VM images of the DB2/Websphere set up that I could use, which is a very good practice. However as we use the type2 jdbc driver you still need a local DB2 Client installed, which again did not work... <br /><br />But my solution did work: I installed the simpler Runtime Client.<br /><br />Here is the steps I took.<br /><br /><ol><li>Installed our pre configured VM image</li><br /><li>Downloaded our ready made DB2 profile configuration txt file for the VM</li><br /><li>Modified my host file to alias the hostname used in txt file correctly to my VM's IP</li><br /><li>I read <a href="http://www.ibm.com/developerworks/data/library/techarticle/dm-0804zikopoulos/">"Which DB2 9.5 client connectivity option is right for you?"</a>,</li><br /><li><a href="https://www14.software.ibm.com/webapp/iwm/web/preLogin.do?lang=en_US&source=swg-idsrc11">downloaded the DB2 v9.5 Runtime Client</a> and installed it</li> <br /><li>and applied the tips on <a href="http://database.itags.org/ibm-db2/22044/">howto import the profile configuration by command line</a> via <code>db2cfimp  file.txt</code></li><br /></ol><br /><br />Hope this is of use to others with DB2 + Windows 7 grievances.
+
+{% include comments.html %}
+
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img alt="comment author" src="https://4.bp.blogspot.com/_d_pfRlTbmPI/SetpYHg6KuI/AAAAAAAAAQo/Ncx1WJT41h0/S45-s35/timdptbb.png" />
+      </div>
+      <a href="https://www.blogger.com/profile/07959184773425151348">Tim Poultney</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            Hi, this helped me out a lot.
+         </p>
+         <p>
+               If you're using Windows 7 64 bit, bear in mind that you need to use the 32 bit version of the ODBC Data Source
+               Administrator which can then access the 32 bit DB2 driver.
+         </p>
+         <p>
+                  You need to run c:\Windows\SysWOW64\odbcad32.e
+         </p>
+      </div>
+      <div class="post-comment-date">
+         1 Jul 2010, 15:22:00
+      </div>
+   </div>

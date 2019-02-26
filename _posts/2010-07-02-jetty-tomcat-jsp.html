@@ -7,6 +7,7 @@ tags:
 - jsp
 - code
 - jetty
+- tomcat
 - java
 modified_time: '2010-07-02T12:48:54.728+01:00'
 blogger_id: tag:blogger.com,1999:blog-4019909.post-9169428197738027249
@@ -14,3 +15,167 @@ blogger_orig_url: http://blog.flurdy.com/2010/07/jetty-tomcat-jsp.html
 ---
 
 I use <a href="http://eclipse.org/jetty">Jetty</a> as a <a href="http://maven.apache.org">Maven</a> <a href="http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin">plugin</a> during development, but tend to run <a href="http://tomcat.apache.org">Tomcat</a> as my deployment server. (Not sure "production" is appropiate as it's my personal server). <a href="http://code.flurdy.com">My applications</a> are often java MVC based utilising some form of JSP. <br /><br />This combination creates a slight issue with dependencies for JSP and JSTL. If you have ever seen this error when running <code>mvn jetty:run</code>:<br /><br /><code>java.lang.ClassNotFoundException: org.apache.el.ExpressionFactoryImpl</code><br /><br />Or these errors when running in tomcat when it was okay in jetty:<br /><br /><code>javax.servlet.jsp.JspApplicationContext<br />.getExpressionFactory()Ljavax/el/ExpressionFactory</code><br /><br />or<br /><br /><code>org.apache.jasper.JasperException: Unable to read TLD "META-INF/c.tld" from JAR file</code><br /><br />or<br /><br /><code>java.lang.LinkageError: loader constraint violation: loader (instance of org/apache/catalina/loader/WebappClassLoader) previously initiated loading for a different type with name "javax/el/ExpressionFactory"</code><br /><br />Over the last few years I have perservered and solved this flat wheel in different ways. However in my recent deja-vue I now have a tidy solution. (the project where this is visable is my <a href="http://code.flurdy.com">up4 project</a>. <i><a href="http://github.com/flurdy/up4">github source</a>, <a href="http://up4.flurdy.com">demo</a></i>)<br /><br />I am utilising the <a href="http://wiki.eclipse.org/Jetty/Feature/Jetty_Maven_Plugin">jetty maven plugin</a>, and the <a href="http://mojo.codehaus.org/tomcat-maven-plugin/">tomcat maven plugin</a> to show how this works.<br /><br /><code><br />   &lt;plugin&gt;<br />   &lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;7.0.2.v20100331&lt;/version&gt;<br />   &lt;/plugin&gt;<br />   &lt;plugin&gt;<br />&nbsp;&nbsp;    &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;<br />&nbsp;&nbsp;    &lt;artifactId&gt;tomcat-maven-plugin&lt;/artifactId&gt;<br />   &lt;/plugin&gt;<br /></code>   <br /><br />To utilise JSP pages and JSTL EL with e.g. Spring MVC / Struts Tiles you perhaps expect these types of maven dependencies, remembering that most containers include support for Servelet API and JSPs:<br /><br /><code><br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.servlet&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;servlet-api&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;2.5&lt;/version&gt;<br />&nbsp;&nbsp; &lt;scope&gt;provided&lt;/scope&gt;<br />  &lt;/dependency&gt;<br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jsp-api&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;2.1&lt;/version&gt;<br />&nbsp;&nbsp; &lt;scope&gt;compile&lt;/scope&gt;<br />  &lt;/dependency&gt;<br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.servlet&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jstl&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;1.2&lt;/version&gt;<br />  &lt;/dependency&gt;<br /></code><br /><br />If you then try <code> mvn clean jetty:run </code> you may end up with a:<br /><br /><code>java.lang.ClassNotFoundException: org.apache.el.ExpressionFactoryImpl</code><br /><br />A response which will solve the jetty problem is to include some jstl EL dependencies:<br /><br /><code><br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.servlet&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;servlet-api&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;2.5&lt;/version&gt;<br />&nbsp;&nbsp; &lt;scope&gt;provided&lt;/scope&gt;<br />  &lt;/dependency&gt;<br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jsp-api&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;2.1&lt;/version&gt;<br />&nbsp;&nbsp; &lt;scope&gt;compile&lt;/scope&gt;<br />  &lt;/dependency&gt;<br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.servlet&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jstl&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;1.2&lt;/version&gt;<br />  &lt;/dependency&gt;<br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jasper-el&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;6.0.26&lt;/version&gt;<br />  &lt;/dependency&gt;<br /></code><br /><br /><code> mvn jetty:run </code><br /><br />This should now work fine in Jetty (test in browser as well).<br /><br />Now try the application in tomcat: <code> mvn clean tomcat:run </code>. It will moan about unable to read some the JSTL taglibs:<br /><br /><code>org.apache.jasper.JasperException: Unable to read TLD "META-INF/c.tld" from JAR file</code><br /><br />This due to the <i>compile</i> scope of the <i>jsp-api</i> dependency, changing this to <i>provided</i>:<br /><br /><code><br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.servlet&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;servlet-api&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;2.5&lt;/version&gt;<br />&nbsp;&nbsp; &lt;scope&gt;provided&lt;/scope&gt;<br />  &lt;/dependency&gt;<br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jsp-api&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;2.1&lt;/version&gt;<br />&nbsp;&nbsp; &lt;scope&gt;provided&lt;/scope&gt;<br />  &lt;/dependency&gt;<br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.servlet&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jstl&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;1.2&lt;/version&gt;<br />  &lt;/dependency&gt;<br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jasper-el&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;6.0.26&lt;/version&gt;<br />  &lt;/dependency&gt;<br /></code><br /><br />Test first in <code> mvn jetty:run </code>, which should be okay. <br /><br />Then in <code> mvn clean tomcat:run </code>. It starts ok, but on the first browser test this error appears:<br /><br /><code>javax.servlet.jsp.JspApplicationContext<br />.getExpressionFactory()Ljavax/el/ExpressionFactory</code><br /><br />Okay, so Tomcat does not like JSTL EL dependencies as it provides them itself, so my initial respone was to have a separate profile which changed the scope of the dependency to provided for tomcat builds only. However on further reflection it turns out the spec says JSP & EL should be provided by the container. So in fact the problem lays with Jetty, and it turns out the move to eclipse.org created a licensing issue with JSP, so jetty does not include the appropiate libs. So to fix this the correct dependencies will have to be:<br /><br />In your plugins section:<br /><br /><code><br />  &lt;plugin&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jetty-maven-plugin&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;7.0.2.v20100331&lt;/version&gt;<br />&nbsp;&nbsp; &lt;dependencies&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp; &lt;dependency&gt;  <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;groupId&gt;org.mortbay.jetty&lt;/groupId&gt;  <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;artifactId&gt;jsp-2.1-glassfish&lt;/artifactId&gt;  <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    &lt;version&gt;9.1.1.B60.25.p2&lt;/version&gt;  <br />&nbsp;&nbsp;&nbsp;&nbsp; &lt;/dependency&gt; <br />&nbsp;&nbsp;&nbsp;&nbsp; &lt;dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;artifactId&gt;el-api&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;version&gt;6.0.26&lt;/version&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp; &lt;/dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp; &lt;dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;artifactId&gt;jasper-el&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;version&gt;6.0.26&lt;/version&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp; &lt;/dependency&gt; <br />&nbsp;&nbsp; &lt;/dependencies&gt;<br />  &lt;/plugin&gt;<br /></code><br /><br />And in your normal dependencies section:<br /><br /><code><br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.servlet&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;servlet-api&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;2.5&lt;/version&gt;<br />&nbsp;&nbsp; &lt;scope&gt;provided&lt;/scope&gt;<br />  &lt;/dependency&gt;<br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.servlet.jsp&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jsp-api&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;2.1&lt;/version&gt;<br />&nbsp;&nbsp; &lt;scope&gt;provided&lt;/scope&gt;<br />  &lt;/dependency&gt;<br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.servlet&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jstl&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;1.2&lt;/version&gt;<br />  &lt;/dependency&gt;<br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;el-api&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;6.0.26&lt;/version&gt;<br />&nbsp;&nbsp; &lt;scope&gt;provided&lt;/scope&gt;<br />  &lt;/dependency&gt;<br />  &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;org.apache.tomcat&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;jasper-el&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;6.0.26&lt;/version&gt;<br />&nbsp;&nbsp; &lt;scope&gt;provided&lt;/scope&gt;<br />  &lt;/dependency&gt;<br /></code><br /><br /><code> mvn jetty:run </code> &amp; <code> mvn tomcat:run </code><br /><br />Voila. <br /><br /><br />Ps. If you are providing a WAR for another jetty container, you may want to create a profile section which include the provided dependencies.<br /><br />Ps2. If you prefer Sun's EL libs then replace the org.apache.tomcat dependencies with: <br /><code><br />        &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;javax.el&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;el-api&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;version&gt;2.2&lt;/version&gt;<br />&nbsp;&nbsp; &lt;scope&gt;compile&lt;/scope&gt;<br />        &lt;/dependency&gt;<br />        &lt;dependency&gt;<br />&nbsp;&nbsp; &lt;groupId&gt;org.glassfish.web&lt;/groupId&gt;<br />&nbsp;&nbsp; &lt;artifactId&gt;el-impl&lt;/artifactId&gt;<br />&nbsp;&nbsp; &lt;scope&gt;runtime&lt;/scope&gt;<br />&nbsp;&nbsp; &lt;version&gt;2.2&lt;/version&gt;<br />        &lt;/dependency&gt;<br /></code>
+
+{% include comments.html %}
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+    I have tried your solution and it works only with jetty. With tomcat, application returns blank page.
+   </p>
+   <p>
+         Best regards
+         </p>
+      </div>
+      <div class="post-comment-date">
+         31 Aug 2010, 15:36:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="https://www.blogger.com/profile/05986444561972748739">chrc</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+   Great Ivar !<br/>
+   It's work fine for me ;-)
+         </p>
+      </div>
+      <div class="post-comment-date">
+         21 Oct 2010, 17:16:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="https://www.blogger.com/profile/02156160703585854624">Einu</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            THANK YO SOOOOOOOOOOOOO MUCH!!
+         </p>
+         <p>
+         I've been trying to deploy my web aplicattion JSF 2.0 based during 10 days until i found this post.
+      </p>
+      <p>
+         :)
+      </p>
+      <p>
+         By
+         </p>
+      </div>
+      <div class="post-comment-date">
+         22 Dec 2010, 18:04:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img src="https://2.bp.blogspot.com/_WQMxntNMWT0/TAlO0QsdPtI/AAAAAAAAK-I/aW4UC35l3rc/S45-s35/Jo,%2Bqu%25C3%25A9%2Bguapo%2Bsoy.jpg"
+            alt="comment author" />
+      </div>
+      <a href="https://www.blogger.com/profile/04076231677373326747">Jorge</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            Thank you Ivar!<br/>
+            It has been really help
+         </p>
+      </div>
+      <div class="post-comment-date">
+         1 Feb 2011, 16:15:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="https://www.blogger.com/profile/12818642082791114924">misuss</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Thank you very much for your post.<br/>
+I finnally managed to solve my problem using your dependencies.
+         </p>
+         <p>
+Latest versions also work:<br />
+- jetty-maven-plugin/7.3.1.v20110307<br />
+- jsp-2.1-glassfish/2.1.v20100127<br />
+- el-api/6.0.32<br />
+- jasper-el/6.0.32<br/>
+</p>
+<p>
+My problem was complicated because by maven misconfiguration I got gwt-dev/2.1.0 dependency to server module which was conflicting with many classes (JSP, EL, etc.)
+leading to many unclear errors.
+         </p>
+      </div>
+      <div class="post-comment-date">
+         16 Mar 2011, 21:02:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Many thanks. It's really helpfull.
+         </p>
+      </div>
+      <div class="post-comment-date">
+         3 Nov 2011, 19:47:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Thanks a bunch, I'm new to Maven and managed to get my jetty-websocket test to work by adding the right dependecy for the plugin. <br/>
+Cheers!
+         </p>
+      </div>
+      <div class="post-comment-date">
+         29 Nov 2012, 22:17:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img src="https://3.bp.blogspot.com/-N8VLXt5tJuA/VI0ZC5_IdzI/AAAAAAAACfQ/OAkAsLnH52c/s35/background.jpg" alt="comment author" />
+      </div>
+      <a href="https://www.blogger.com/profile/06259141762306048248">Sagun Pandey</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+I was never more happy. Thank you, this was a great post. Kudos for help ;)
+         </p>
+      </div>
+      <div class="post-comment-date">
+         12 Oct 2015, 11:17:00
+      </div>
+   </div>
+</div>

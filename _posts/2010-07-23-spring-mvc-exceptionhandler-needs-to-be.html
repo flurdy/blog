@@ -13,3 +13,121 @@ blogger_orig_url: http://blog.flurdy.com/2010/07/spring-mvc-exceptionhandler-nee
 ---
 
 Had a frustrating evening (<a href="http://code.flurdy.com/grid/snaps">pet project</a>) trying to get <a href="http://www.springsource.org">Spring</a> 3.0 MVC's annotation based  <a href="http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/bind/annotation/ExceptionHandler.html">exception handler</a> to work.<br /><br />All the examples seemed straight forwards:<br /><br />Just annotate a method in a controller:<br /><code>import org.springframe...ExceptionHandler;<br />import org.springframe...ModelAndView;<br />import org.springframe...Controller;<br />....<br />@Controller<br />public class MyController {<br />....<br />@ExceptionHandler(SomeException.class)<br />public ModelAndView myExceptionHandler(<br />&nbsp;&nbsp;&nbsp;&nbsp;SomeException exception){<br />&nbsp;&nbsp;<i>blah</i><br />}<br />...<br />}</code><br /><br />But it just would never catch my exceptions. Very frustrating.<br /><br />But in the end a google search to the end of the world where someone mentioned in the comments that the exceptionhandler method <b>have to be</b> be in the <b>same class</b> as the method throwing the exception.<br /><br />Very odd restriction compared to Spring's usual very agile and generic annotation.<br /><br />So I added my handlers to my abstract controller class that all my controllers extend and problem solved, with some hair still intact.
+
+{% include comments.html %}
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="https://www.blogger.com/profile/12015675829844375240">Lisak</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Hi Ivar, do you know how would I do the same If I hadn't extend any abstract controller but I was using only
+DefaultAnnotationHandlerMapping ? I'm going crazy about this, I got stuck for two hours trying to figure that out ...
+         </p>
+      </div>
+      <div class="post-comment-date">
+         19 Nov 2010, 00:42:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img src="https://2.bp.blogspot.com/_ZN7ijc6gDfE/TH0oKY8Z5KI/AAAAAAAAAO4/R-rECBSPHIU/S45-s35/monster-mean-bean.jpg" alt="comment author"/>
+      </div>
+      <div>
+         <a href="https://www.blogger.com/profile/12114772823884084547">kolodrevskiy</a>:
+      </div>
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            Hey,
+
+            Did you guys found a good workaround for this
+         </p>
+      </div>
+      <div class="post-comment-date">
+         8 Dec 2011, 22:57:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img src="https://1.bp.blogspot.com/__orvSpXiFe8/SkPA_QjCJgI/AAAAAAAAKVA/_2ZK1Ik3c88/S45-s35/n639710275_9982.jpg" alt="comment author"/>
+      </div>
+      <a href="https://www.blogger.com/profile/10135980656836281405">Rubens Mariuzzo</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+
+Thanks!
+
+         </p>
+      </div>
+      <div class="post-comment-date">
+         10 Jul 2012, 19:37:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Somaiah:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            Wouldn't it be a better solution be to create a generic exception handler to handle all exceptions using Spring's
+            default exception handler, and then override exception handlers specific to controllers using the annotation?
+         </p>
+      </div>
+      <div class="post-comment-date">
+         25 Oct 2012, 14:18:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="https://www.blogger.com/profile/13348910013258100129">careerPleasure</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            I have the same problem. Can you guys give some example programs of how to fix it.
+         </p>
+      </div>
+      <div class="post-comment-date">
+         26 Oct 2012, 16:00:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img src="https://3.bp.blogspot.com/_ad7qMYhFTGg/So_uFFB59YI/AAAAAAAAALc/fFSerCr9o_I/S45-s35/me.png" alt="comment author"/>
+      </div>
+      <a href="https://www.blogger.com/profile/14467766350899745773">Stevo Slavić</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            As of Spring 3.2 @ControllerAdvice is available for shared/common @ExceptionHandler methods.
+         </p>
+         <p>
+            See <a href="http://stackoverflow.com/a/13418498/381140">this SO entry.</a>
+         </p>
+      </div>
+      <div class="post-comment-date">
+         26 Mar 2013, 09:21:00
+      </div>
+   </div>
+</div>

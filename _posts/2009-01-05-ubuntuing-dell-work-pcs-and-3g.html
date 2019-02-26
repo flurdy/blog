@@ -17,3 +17,108 @@ blogger_orig_url: http://blog.flurdy.com/2008/12/ubuntuing-dell-work-pcs-and-3g.
 ---
 
 Now I have had two <a href="http://dell.com">Dell</a> laptop PCs from work recently, D610 and D820. Both worked flawlessly with <a href="http://ubuntu.com">Ubuntu</a> and both work with my 3G USB key from <a href="http://www.telenor.no">Telenor</a>, an Option iCon 255.<br /><br /><br />On my Dell D610, I installed Ubuntu 8.04 Hardy Heron. To get 3G working I installed all HSO script from <a href="http://www.pharscape.org">PHARscape</a>.<br /><br /><br />On my more recent Dell D820, I installed Ubuntu 8.10 Intrepid Ibex, which now comes with great 3G support. It does include the HSO driver in the kernel. And by installing the new zerocd and udev script from <a href="http://www.pharscape.org">PHARscape</a>, basically following his <a href="http://www.pharscape.org/networkmanager-0.7.0-and-3g-wwan-modems.html">howto</a> you can get it up and running. <br /><br />However the HSO driver with Ubuntu 8.10 is an older version, and caused my PC to crash after awhile, so I installed the newer version from PHARscape, which works flawlessly.<br /><br />The new Network Manager works great with the 3G USB dongle, however it needs to be plugged in on boot to pick it up. If you sometimes plug it in afterwards, it is wise to also install PHARscape's HSO Connect GUI as a backup.
+
+{% include comments.html %}
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Flurdy:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+
+    Still not 100% perfect though. Still need to unplug and reconnect some times.
+
+         </p>
+      </div>
+      <div class="post-comment-date">
+         12 Jan 2009, 12:56:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Flurdy:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            Best to use the HSO connect scripts by Pharscape for time being. As seems quite up and down some days.
+
+            Tip: if you get the message that connection to modem is lost. Dont click OK. Unplug, wait and replug the modem first!
+            Otherwise, my PC at least, freezes.
+         </p>
+      </div>
+      <div class="post-comment-date">
+         9 Feb 2009, 19:45:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Flurdy:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            Ah bugger been swearing at the modem lately. But realised Ubuntu has update the kernel, and are using the old HSO driver
+            again.
+         </p>
+         <p>
+            Redownloading and untaring hso 1.6
+         </p>
+         <p>
+            make clean<br/>
+            make<br />
+            sudo make install
+         </p>
+         <p>
+            Will need to remember to this every kernetl update..
+         </p>
+         <p>
+            Tedious.
+         </p>
+      </div>
+      <div class="post-comment-date">
+         10 Feb 2009, 12:10:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Flurdy:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Ubuntu Jaunty Jackalope 9.04 comes with Network Manager 0.7.0.100 which supports hotpluggin the 3G card. Nice.
+</p>
+<p>
+However it still comes with HSO driver 1.2 which is unstable.
+</p>
+<p>
+Download 1.12 from Pharscape.org and install it. It works very well!
+</p>
+<p>
+:)
+</p>
+<p>
+Ps. rename the old v1.2 in /lib..../net/usb
+</p>
+<p>
+Pss. The make file install v1.12 in the wrong place. Move it from /lib..../net/wwan to /lib.....net/usb
+</p>
+<p>
+Psss. Do a clean reboot without putting in the usb modem before installing the driver, unles you know your way around
+kernel module loading.
+         </p>
+      </div>
+      <div class="post-comment-date">
+         4 May 2009, 18:12:00
+      </div>
+   </div>
+</div>

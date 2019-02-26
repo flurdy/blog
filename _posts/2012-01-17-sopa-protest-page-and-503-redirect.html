@@ -14,3 +14,22 @@ blogger_orig_url: http://blog.flurdy.com/2012/01/sopa-protest-page-and-503-redir
 ---
 
 Tomorrow, 18t January 2012, many websites <a href="http://sopastrike.com/">will protest</a> against the US <a href="http://en.wikipedia.org/wiki/Stop_Online_Piracy_Act">SOPA</a> and <a href="http://en.wikipedia.org/wiki/PROTECT_IP_Act">PIPA</a> acts. For example <a href="http://en.wikipedia.org/wiki">Wikipedia</a> will <a href="http://wikimediafoundation.org/wiki/English_Wikipedia_anti-SOPA_blackout">go blank in protest</a> for 24 hours.<br /><br />For those intending to blackout their own websites (or in the future intend to do something similar, e.g. a more practical "web site temporarily down message" while doing an upgrade etc, here are a few tips:<br /><br />First of all Google recommend you do not simple just change your website front page to a blank page or similar. As this can have repercussions on your SEO, ie your search ranking. Read more about it in <a href="https://plus.google.com/115984868678744352358/posts/Gas8vjZ5fmB">this post on Google+ by a Googler</a>. They recommend a 503 error response instead. Which indicates the site is temporarily down.<br /><br />So a simple change of index.html is not recommended. Nor is a simple redirect in the html's meta header, nor a plain http 302 redirect. All this can affect your ranking.<br /><br />I recommend (if using <a href="http://httpd.apache.org">Apache 2</a>) to use <a href="http://httpd.apache.org/docs/current/mod/mod_rewrite.html">mod_rewrite</a> in this manner:<br /><code><br />RewriteEngine on<br />RewriteCond %{ENV:REDIRECT_STATUS} !=503<br />Alias /stop-sopa <i>/var/www/stop-sopa</i><br />ErrorDocument 503 /stop-sopa/index.html<br />RewriteRule !^s/stop-sopa$ /stop-sopa [L,R=503]<br /></code><br /><br />This uses <b>Alias</b> to another folder so that the same message can be used for several virtual hosts. It uses a custom <b>ErrorDocument</b> to display a human readable blackout page. And it uses <b>RewriteRule</b> to redirect all requests to the <b>stop-sopa</b> page (except for request for <b>/stop-sopa</b> so that you don't get an infinite loop).<br /><br />If you are looking for a page to use as the blackout page, there is a nice <a href="https://github.com/zachstronaut/stop-sopa">github project page for just that</a>. An example can be <a href="http://www.zachstronaut.com/lab/text-shadow-box/stop-sopa.html">viewed here</a>.<br /><br /><br /><br /><br/><br /><br/>
+
+{% include comments.html %}
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Flurdy:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            Google's More about <a href="https://www.google.com/landing/takeaction/sopa-pipa/">SOPA and PIPA</a>
+            information on their <a href="https://www.google.com/landing/takeaction/">End piracy not liberty take action page</a>.
+         </p>
+      </div>
+      <div class="post-comment-date">
+         18 Jan 2012, 13:13:00
+      </div>
+   </div>
+</div>

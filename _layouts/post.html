@@ -47,7 +47,11 @@ layout: default
 						</div>
 						<div class="post-date">
 							<span>
-								<time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date_to_long_string: "ordinal"}}</time>
+                        {% if page.post-date %}
+                        <time datetime="{{ page.date | date_to_xmlschema }}">{{page.post-date | date_to_long_string: "ordinal"}}</time>
+                        {% else %}
+                        <time datetime="{{ page.date | date_to_xmlschema }}">{{page.date | date_to_long_string: "ordinal"}}</time>
+                        {% endif %}
 							</span>
 						</div>
 					</div>

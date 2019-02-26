@@ -15,3 +15,87 @@ blogger_orig_url: http://blog.flurdy.com/2010/07/orghibernatemappingexception-co
 ---
 
 I was simplifying the <a href=" http://github.com/flurdy/snaps/blob/master/src/main/java/com/flurdy/grid/snaps/domain/SecurityDetail.java">domain model</a> of a <a href="http://github.com/flurdy/snaps">pet project</a> by removing an unneccesarry entity by using JPA 2.0's <a href="http://en.wikibooks.org/wiki/Java_Persistence/ElementCollection">ElementCollection annotation</a>:<br /><br /><code>public class SecurityDetail {<br /><br />public enum AuthorityRole{<br />&nbsp;&nbsp;ROLE_ADMIN,<br />&nbsp;&nbsp;ROLE_SUPER,<br />&nbsp;&nbsp;ROLE_USER<br />}<br />....<br />@ElementCollection<br />@CollectionTable(<br />&nbsp;&nbsp;name="Authority",<br />&nbsp;&nbsp;joinColumns=@JoinColumn(name="username")<br />)<br />private Set<String> authorities;<br />....</code><br /><br />However I was getting this error message: <br /><code>org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: SecurityDetail, for columns: [org.hibernate.mapping.Column(authorities)]</code><br /><br /><br />Digging around (googling) I ended up on this blog entry: <a href="http://blog.m1key.me/2010/06/orghibernatemappingexception-could-not.html">blog.m1key.me/2010/06/orghibernatemappingexception-could-not.html</a>, which main solution is to make sure you have a newer hibernate, version 3.5.3 or later.<br /><br /><br />I use maven, with the hibernate3-maven-plugin, sql-maven-plugin and dbunit-maven-plugin to create the schema, database and to populate data. So I bumped the org.hibernate:hibernate-entitymanager dependency from 3.5.0 to 3.5.3-Final. (and fixed <a href="http://code.flurdy.com/nexus">my own nexus repository</a> to pull JBoss's latest jars.)<br /><br />However it did not fix the problem. But by reading the comments of the blog entry above I also realised that my hibernate3-maven-plugin may be using older dependencies. So I explicitly added the recent verions of org.hibernate:hibernate-core dependency to both the plugin and the app, as well as org.hibernate:hibernate-entitymanager to the plugin as well:<br /><br /><code>&lt;properties&gt<br />&nbsp;&nbsp;&lt;hibernate.version&gt;3.5.3-Final&lt;/hibernate.version&gt<br />&lt;/properties&gt<br />....<br />&lt;dependencies&gt;<br />&nbsp;&nbsp;&lt;dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.hibernate&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;hibernate-entitymanager&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;${hibernate.version}&lt;/version&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;exclusions&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;cglib&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;cglib&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;commons-logging&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;commons-logging&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/exclusions&gt;<br />&nbsp;&nbsp;&lt;/dependency&gt;<br />&nbsp;&nbsp;&lt;dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.hibernate&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;${hibernate.version}&lt;/version&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;exclusions&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;cglib&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;cglib&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;commons-logging&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;commons-logging&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/exclusions&gt;<br />&nbsp;&nbsp;&lt;/dependency&gt;<br />&lt;/dependencies&gt;<br />....<br />&lt;plugins&gt;<br />&nbsp;&nbsp;&lt;plugin&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;hibernate3-maven-plugin&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;2.2&lt;/version&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;executions&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;execution&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;phase&gt;process-classes&lt;/phase&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;goals&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;goal&gt;hbm2ddl&lt;/goal&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/goals&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/execution&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/executions&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;configuration&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;components&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;component&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;name&gt;hbm2ddl&lt;/name&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;implementation&gt;jpaconfiguration&lt;/implementation&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/component&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/components&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;componentProperties&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;persistenceunit&gt;${project.artifactId}&lt;/persistenceunit&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;outputfilename&gt;schema.ddl&lt;/outputfilename&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;drop&gt;false&lt;/drop&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;create&gt;true&lt;/create&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;export&gt;false&lt;/export&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;format&gt;true&lt;/format&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/componentProperties&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/configuration&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;dependencies&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;hsqldb&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;hsqldb&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;${hsqldb.version}&lt;/version&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.hibernate&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;hibernate-entitymanager&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;${hibernate.version}&lt;/version&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;exclusions&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;cglib&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;cglib&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;commons-logging&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;commons-logging&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/exclusions&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;org.hibernate&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;version&gt;${hibernate.version}&lt;/version&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;exclusions&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;cglib&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;cglib&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;groupId&gt;commons-logging&lt;/groupId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;artifactId&gt;commons-logging&lt;/artifactId&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/exclusion&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/exclusions&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dependency&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;/dependencies&gt;                        <br />&nbsp;&nbsp;&lt;/plugin&gt;<br />&lt;/plugins&gt</code>
+
+
+{% include comments.html %}
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="https://www.blogger.com/profile/00732923395088829048">Karthikkannan</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Thank you very much. You have saved my time by posting this useful tip.
+</p>
+<p>
+Thanks a lot...
+         </p>
+      </div>
+      <div class="post-comment-date">
+         28 Oct 2010, 12:00:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <a href="https://www.blogger.com/profile/06151940905330845557">Alex Shubert</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Who is awesome? <br/>
+You are!<br />
+Thanks a lot for your job, it saved a lot of my time.<br />
+Firstly and mainly I did not realize that there was realises over that 3.4.0
+         </p>
+      </div>
+      <div class="post-comment-date">
+         13 Nov 2010, 13:09:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      <div class="post-comment-author-avatar">
+         <img src="https://3.bp.blogspot.com/_JnB8duB_Cck/Sj4ft6QHgPI/AAAAAAAAAao/C_Bg0Dkm7Ec/S45-s35/makkurokurosuke.jpg" alt="comment author"/>
+      </div>
+      <a href="https://www.blogger.com/profile/06399361948217920178">Nicus</a>:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+THANKS!<br/>
+You saved me!
+</p>
+<p>
+      (How stupid is Maven?
+         </p>
+      </div>
+      <div class="post-comment-date">
+         18 Jun 2012, 16:04:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+Just lost 2 hours before reading your blog entry.
+I wish I red it before.
+</p>
+<p>
+Thanks again.
+         </p>
+      </div>
+      <div class="post-comment-date">
+         28 Jul 2012, 18:33:00
+      </div>
+   </div>
+</div>

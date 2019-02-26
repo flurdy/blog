@@ -16,3 +16,38 @@ blogger_orig_url: http://blog.flurdy.com/2010/10/accessing-picasas-atom-feed-api
 ---
 
 Been swearing at my screen and Google's choice of atom based API for their <a href="http://picasaweb.google.com">Picasa web albums</a>. <a href="http://www.flickr.com/">Flickr's</a> <a href="http://www.flickr.com/services/api/">REST API</a> took 10 seconds to work out. Picasa: days...<br /><br /><br />My problem:<br /> <br />Trying to parse album ids from <a href="http://code.google.com/apis/picasaweb/docs/2.0/developers_guide_protocol.html#ListAlbum">Picasa's API</a>: <a href="http://code.google.com/apis/picasaweb/docs/2.0/developers_guide_protocol.html#ListAlbum">code.google.com/apis/picasaweb/docs/2.0/developers_guide_protocol.html#ListAlbum</a>.<br /><br /><code><br />Source picasaResponse = restTemplate.getForObject( albumsURL, Source.class, parameters );<br/><br />Jaxp13XPathTemplate xpathTemplate = new Jaxp13XPathTemplate();<br/><br />Collection albumIds = xpathTemplate.evaluate("//entry",<br/><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;picasaResponse, new NodeMapper(){<br/><br />&nbsp;&nbsp;&nbsp;public Object mapNode(Node node, int i) throws DOMException {<br/><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Element album = (Element) node;<br/><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log.debug("IN NODE ALBUM");<br/><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return null;<br/><br />&nbsp;&nbsp;&nbsp;}<br/><br />}<br/></code><br /><br />This never worked. It should have I thought. Trying different combinations of "/entry", "/feed/entry", "//atom:entry", "/atom:feed/atom:entry", swapping with Jaxen, etc made no impact.<br /><br /><br />Then after some googlebashing and soulsearching I solved the problem.<br /><br />The Xpath template needs a namespace to resolve the atom xml. So adding this solved the problem:<br /><br /><code><br />Source picasaResponse = restTemplate.getForObject( albumsURL, Source.class, parameters );<br/><br />Jaxp13XPathTemplate xpathTemplate = new Jaxp13XPathTemplate();<br/><br />Properties namespaces = new Properties();<br/><br />namespaces.setProperty("atom",<br/><br />&nbsp;&nbsp;&nbsp;"http://www.w3.org/2005/Atom");<br/><br />xpathTemplate.setNamespaces(namespaces);<br/><br />Collection albumIds = xpathTemplate.evaluate("//atom:entry",<br/><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;picasaResponse, new NodeMapper(){<br/> <br />&nbsp;&nbsp;&nbsp;public Object mapNode(Node node, int i) throws DOMException {<br/><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Element album = (Element) node;<br/><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log.debug("IN NODE ALBUM");<br/><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return null;<br/><br />&nbsp;&nbsp;&nbsp;}<br/><br />}</code><br /><br /><br /><br /><i>Ps. code simplified and not using bean injection etc for clarity.</i>
+
+{% include comments.html %}
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            How interesting. We have the same exact problem. I'm glad I've found your blog. The solution you provided solved my
+            issue. Thanks a lot :)
+         </p>
+      </div>
+      <div class="post-comment-date">
+         15 Jan 2011, 10:01:00
+      </div>
+   </div>
+</div>
+
+<div class="post-comment">
+   <div class="post-comment-author">
+      Anonymous:
+   </div>
+   <div class="post-comment-comment">
+      <div class="post-comment-content">
+         <p>
+            Thank you for this post! I was struggling on this problem for a whole day unless I found this po
+         </p>
+      </div>
+      <div class="post-comment-date">
+         23 Feb 2012, 22:22:00
+      </div>
+   </div>
+</div>
