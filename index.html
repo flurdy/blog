@@ -10,9 +10,9 @@ layout: default
 			<article class="article-first">
             <div class="article-image-first"
             {% if post.image %}
-               style="background-image: url({{"/img/" | prepend: site.baseurl | append : post.image}})"
+               style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url({{"/img/" | prepend: site.baseurl | append : post.image}})"
             {% else %}
-               style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),url({{"/img/lysaker.jpg" | prepend: site.baseurl }})"
+               style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),url({{"/img/lysaker.jpg" | prepend: site.baseurl }})"
             {% endif %}
             >
 					<div class="article-content-first">

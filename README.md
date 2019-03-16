@@ -9,6 +9,10 @@ A blog migrated from Blogger to Jekyll.
 * Extended and customised Galada Jekyll theme by Artem Sheludko:
 * https://github.com/artemsheludko/galada
 
+### Run
+
+```docker-compose up```
+
 
 ### License
 * Software License: MIT
