@@ -55,19 +55,18 @@ that will be less funny or powerful as time moves on.
 #### Priorities changes
 
 If I have just come up with an idea to solve a problem,
-over time my desire to solve that my change.
+over time my desire to solve that may change.
 
 Maybe it is no longer a problem,
-maybe it no longer hurts or cheer me up.
+maybe it no longer hurts nor cheer me up.
 
 Maybe I have found other solutions.
 
-Maybe I don't have time to write something I no longer think is that important any more
+Maybe I don't have time to write something that I no longer think is that important any more.
 
 #### Poor memory
 
 Also over time some ideas, frustration, solutions are simply forgotten.
-
 Or at least the details to make it worth writing a blog post.
 
 Or embarrassing as I no longer am sure where and from whom I could attribute the original idea to.
@@ -81,34 +80,37 @@ or experienced that what I was writing about does not work well.
 
 Or as mentioned above I feel less passionate about it.
 
-I have noticed that in several of the longer long-lived non published blog drafts, that they often seem to contain different views.
-And have been rewritten many times.
+I have noticed that in several of the longer long-lived non-published blog drafts,
+that they often seem to contain different views in different parts of the drafts.
+And have been rewritten several times.
 
-When reading that it is a poor blog post. The start may lean towards one point of view.
-But the end seems to have another. Not very coherent.
+When reading those drafts they would be a poor blog post.
+The start may lean towards one point of view,
+but the end seems to have another. Not very coherent.
 
-#### Not fresh Technology or process
+#### Not fresh technology or process
 
 And sometimes the blog idea was related to a new piece of technology,
 or new process or method I have just learned from colleagues or a conference.
 
-And those may start to feel stale. Newer technologies may have replaced it.
+And these may start to feel stale. Newer technologies may have replaced it.
 Better processes may have been born to replace it.
 
-Or too well established so a blog posts would feel like preaching to the choir.
+Or they are now too well established so a blog posts would feel like preaching to the choir.
 
 ### Blog quick
 
 So my solution these days is to blog quick.
-Write it whilst the idea is fresh,
+
+Write and publish it whilst the idea is fresh,
 the passion is high,
 and points of view does not change.
 
 #### Publish drafts
 
-I try with blog posts, and howto articles on my
+I try with the blog posts, and the howto articles on my
 [flurdy.com](https://flurdy.com) site,
-to throw out drafts live if they more or less covering most points.
+to publish drafts live if they more or less covering most points.
 
 With typos and missing minor sections.
 
@@ -128,7 +130,7 @@ More to the point, with less cruft.
 
 #### More blog posts
 
-And hopefully encourages people to write more blog posts.
+This hopefully encourages people to write more blog posts.
 There is less barrier to write a post,
 less guilt over drafts living on forever.
 
