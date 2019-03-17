@@ -3,6 +3,11 @@ layout: post
 title: Migrate blog to Jekyll
 date: '2019-02-22T23:10:00.000Z'
 author: flurdy
+image: /posts/2019/02/leiv-eriksson-small.jpg
+image-large: /posts/2019/02/leiv-eriksson-large.jpg
+image-attribution: Christian Krohg
+image-attribution-link: https://commons.wikimedia.org/wiki/File:Christian-krohg-leiv-eriksson.jpg
+image-attribution-license: Public Domain
 tags:
 - blog
 - blogger

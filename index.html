@@ -9,10 +9,14 @@ layout: default
 		<div class="col col-12">
 			<article class="article-first">
             <div class="article-image-first"
-            {% if post.image %}
-               style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url({{"/img/" | prepend: site.baseurl | append : post.image}})"
+            {% if post.image-large %}
+               style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url({{"/img/" | prepend: site.baseurl | append : post.image-large}})"
             {% else %}
-               style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),url({{"/img/lysaker.jpg" | prepend: site.baseurl }})"
+               {% if post.image %}
+                  style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),url({{"/img/" | prepend: site.baseurl | append : post.image}})"
+               {% else %}
+                  style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)),url({{"/img/lysaker.jpg" | prepend: site.baseurl }})"
+               {% endif %}
             {% endif %}
             >
 					<div class="article-content-first">
@@ -57,7 +61,7 @@ layout: default
 					<div class="article-box">
 						<div class="article-head">
                      <a href="{{ post.url | prepend: site.baseurl }}" class="article-image"
-                     style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url({{"/img/" | prepend: site.baseurl | append : post.image}})">
+                     style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url({{"/img/" | prepend: site.baseurl | append : post.image}})">
 								<div class="image-overlay">
 									<span class="image-overlay-text">{{post.title | slice: 0}}</span>
 								</div>
