@@ -5,7 +5,7 @@ date: '2019-03-17T14:30:00.000Z'
 author: flurdy
 image: /posts/2019/03/missed-train-small.jpg
 image-large: /posts/2019/03/missed-train-large.jpg
-image-attriubtion: Roger Price
+image-attribution: Roger Price
 image-attribution-link: https://www.flickr.com/photos/rwp-roger/3515046308/
 image-attribution-license: CC-by-nc-sa
 tags:
