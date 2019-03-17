@@ -1,28 +1,5 @@
 <aside class="sidebar">
 
-  {% if page.id %}
-  <div class="widget widget-recent">
-    <h3 class="widget-title">Recent Posts</h3>
-    {% for post in site.posts limit:4 %}
-    <div class="recent-posts">
-      {% if post.image %}
-      <div class="recent-header">
-        <a class="recent-image" href="{{ root_url }}{{ post.url | prepend: site.baseurl }}" style="background-image: url({{"/img/" | prepend: site.baseurl | append: post.image}})"></a>
-      </div>
-      {% else %}
-      {% endif %}
-      <div class="recent-content">
-        <h6 class="recent-title"><a href="{{ root_url }}{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h6>
-        <div class="recent-date">
-          <time datetime="{{ post.date | date_to_xmlschema }}">{{post.date | date: "%-d %B %Y"}}</time>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-  {% else %}
-  {% endif %}
-
   <div class="widget widget-author">
     <div class="author-avatar">
       <a href="{{ "/about/" | prepend: site.baseurl }}"><img src="{{"/img/" | prepend: site.baseurl | append : site.author-avatar }}" /></a>
@@ -74,6 +51,69 @@
       {% else %} {% endif %}
     </ul>
   </div>
+
+  {% if page.id %}
+  <div class="widget widget-recent">
+    <h3 class="widget-title">Recent Posts</h3>
+    {% for post in site.posts limit:4 %}
+    <div class="recent-posts">
+      {% if post.image %}
+      <div class="recent-header">
+        <a class="recent-image" href="{{ root_url }}{{ post.url | prepend: site.baseurl }}" style="background-image: url({{"/img/" | prepend: site.baseurl | append: post.image}})"></a>
+      </div>
+      {% else %}
+      {% endif %}
+      <div class="recent-content">
+        <h6 class="recent-title"><a href="{{ root_url }}{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h6>
+        <div class="recent-date">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{post.date | date: "%-d %B %Y"}}</time>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+
+  {% endif %}
+
+  {% if page.id %}
+      <div class="widget widget-recent">
+         {% if page.next.url %}
+            <h3 class="widget-title">Next article</h3>
+            <div class="recent-posts">
+               {% if page.next.image %}
+               <div class="recent-header">
+                  <a class="recent-image" href="{{ root_url }}{{ page.next.url | prepend: site.baseurl }}"
+                   style="background-image: url({{"/img/" | prepend: site.baseurl | append: page.next.image}})"></a>
+               </div>
+               {% endif %}
+               <div class="recent-content">
+               <h6 class="recent-title"><a href="{{ root_url }}{{ page.next.url | prepend: site.baseurl }}">{{ page.next.title }}</a></h6>
+               <div class="recent-date">
+                  <time datetime="{{ page.next.date | date_to_xmlschema }}">{{page.next.date | date: "%-d %B %Y"}}</time>
+               </div>
+               </div>
+            </div>
+         {% endif %}
+         {% if page.previous.url %}
+            <h3 class="widget-title">Previous article</h3>
+            <div class="recent-posts">
+               {% if page.previous.image %}
+               <div class="recent-header">
+                  <a class="recent-image" href="{{ root_url }}{{ page.previous.url | prepend: site.baseurl }}"
+                   style="background-image: url({{"/img/" | prepend: site.baseurl | append: page.previous.image}})"></a>
+               </div>
+               {% endif %}
+               <div class="recent-content">
+               <h6 class="recent-title"><a href="{{ root_url }}{{ page.previous.url | prepend: site.baseurl }}">{{ page.previous.title }}</a></h6>
+               <div class="recent-date">
+                  <time datetime="{{ page.previous.date | date_to_xmlschema }}">{{page.previous.date | date: "%-d %B %Y"}}</time>
+               </div>
+               </div>
+            </div>
+         {% endif %}
+      </div>
+  {% endif %}
 
    <div class="widget widget-archive">
       <h3 class="widget-title">Post archive</h3>
