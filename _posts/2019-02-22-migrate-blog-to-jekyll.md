@@ -32,7 +32,7 @@ You may have seen lot of Jekyll generated pages already as it was initially crea
 * Static HTML, so fast, and secure.
 * Markdown for posts.
 * Self hosted (not always a good thing, but works better for me).
-* Easy and extensive chose of themes.
+* Easy and extensive choice of themes.
 
 
 ### Creating a Jekyll blog
