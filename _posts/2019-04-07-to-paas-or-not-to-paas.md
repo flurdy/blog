@@ -13,6 +13,8 @@ tags:
 - heroku
 - kubernetes
 - hosting
+- PAAS
+- Infrastructure
 ---
 
 ## When is a PAAS the right tool?
