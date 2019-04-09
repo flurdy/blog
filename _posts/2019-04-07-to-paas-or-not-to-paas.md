@@ -116,7 +116,7 @@ And to be on-call when it all falls over in the middle of the night.
 
 ## Is PAAS expensive?
 
-( *Ignoring the free and $7 per month price bands that for example Heroku has, as they are more suitable for personal projects and prototypes.* )
+<!-- ( *Ignoring the free and $7 per month price bands that for example Heroku has, as they are more suitable for personal projects and prototypes.* ) -->
 
 For businesses prices at for example Heroku start at $25 per month.
 
@@ -138,7 +138,7 @@ Remember $25 cost would comparably pay for perhaps 20 minutes or less for an Ops
 So no, PAAS is cheap, not expensive.
 
 However once you scale to _a lot_ of apps and nodes, and a lot of traffic on AppEngine for example,
-PAAS is then not no longer the most economical solution.
+PAAS is then no longer the most economical solution.
 Though at that scale, nothing is cheap.
 
 
