@@ -96,6 +96,11 @@ as part of the one price offering.
 
 It offers years of experience, tweaking, to make the services that provide all that to work as smooth as possible, all the time, for everyone.
 
+And when there is a network issue they take care of it immediately.
+Any hardware issue they take care of it.
+Any security patches - they apply it for you.
+Most of the time you wont even notice as they bring up another horizontal node of your application and replace your current one without any downtime.
+
 And for instance in the case of Heroku they offer [lots of add-ons](https://elements.heroku.com/addons/) that is mostly just one click or one CLI command away to be set up and working straight away with your applications.
 
 
@@ -109,21 +114,38 @@ That is expensive.
 
 And to be on-call when it all falls over in the middle of the night.
 
-{% comment %}
+## Is PAAS expensive?
 
-## Why PAAS
+( *Ignoring the free and $7 per month price bands that for example Heroku has, as they are more suitable for personal projects and prototypes.* )
 
-Or to be specific: __When__?
+For businesses prices at for example Heroku start at $25 per month.
 
-So why should you use a PAAS, and when?
-In what situation is a PAAS the better choice?
+That is cheap.
 
-{% endcomment %}
+Some will counter that you can get a nano instance at AWS for a month for a lot less.
+But they forget the above mentioned, PAAS is not just hosting.
+
+For a company $25 per month is nothing.
+The more powerful options at $50 or even $250 for a real business is still nothing,
+even if horizontally scaled to multiple nodes,
+if the applications are important to the company.
+
+Remember you are comparing it to paying for more salaries in a custom infrastructure.
+Or divert focus away from other tasks for your Operations staff.
+
+Remember $25 cost would comparably pay for perhaps 20 minutes or less for an Ops contractor when comparing hourly contractor rates if in e.g. London.
+
+So no, PAAS is cheap, not expensive.
+
+However once you scale to _a lot_ of apps and nodes, and a lot of traffic on AppEngine for example,
+PAAS is then not no longer the most economical solution.
+Though at that scale, nothing is cheap.
+
 
 
 ## Premature optimisation
 
-One thing a PAAS is good for is to prove whether a project/application need heavy infrastructure investment.
+One thing a PAAS is good for is to prove whether a project/application need heavy infrastructure investment before you commit to it.
 
 Try lots of ideas, pivots, applications in a live environment before focussing on one that will succeed.
 
@@ -143,7 +165,7 @@ The requirements, time and money available is very different depending on your s
 A Startup is often a good candidate for a PAAS project.
 
 A Startup may want to focus on validating the idea, avoiding the above mention premature optimisation.
-Often they have limited budget and need to focus on a few areas only.
+Often they have limited budget and need to focus on a few areas only, of which infrastructure probably is not yet included.
 
 A Startup is often time poor, needing to get something launched before anyone else do the same.
 
@@ -151,11 +173,11 @@ If the product starts to make profit then they can start to diversify the PAAS i
 
 #### Unicorn Startup <i class="icon ion-md-close-circle glyp-red"></i>
 
-A Startup with big investments and in the process up massively scaling its staff may be able to hire a boat load of operations employees to create an elaborate architecture and infrastructure.
+A Startup with big investments and in the process of massively scaling its staff may be able to hire a boat load of Operations employees to create an elaborate architecture and infrastructure.
 
 #### No Ops/DevOps <i class="icon ion-md-checkmark-circle glyp-green"></i>
 
-If you are small company that do not want to hire Operations staff then having your application / website on a PAAS makes sense,
+If you are a small company that do not want to hire Operations staff then having your application / website on a PAAS makes sense,
 they do the majority of the Ops for you.
 
 #### Cheap labour cost  <i class="icon ion-md-close-circle glyp-red"></i>
@@ -246,7 +268,7 @@ And then offer more powerful nodes at a much higher price point.
 
 If the application is your core business,
 and you are making a profit,
-then perhaps you should scale it out and invest in a custom infrastructure that perfectly suits your needs.
+then perhaps you should scale it out and invest in a custom infrastructure that perfectly suits your bespoke needs.
 
 
 ## What about Kubernetes
