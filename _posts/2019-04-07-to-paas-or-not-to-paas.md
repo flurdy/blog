@@ -234,6 +234,14 @@ then you will experience slow response times when a request awakes it.
 This affects search rankings, and user experience.
 
 
+#### Resource demanding application <i class="icon ion-md-close-circle glyp-red"></i>
+
+If your application demands a lot of processing power, or memory then a PAAS
+might not be suitable.
+
+PAASes often provides a limited node for free. E.g. 512mb with Heroku.
+And then offer more powerful nodes at a much higher price point.
+
 #### Core business <i class="icon ion-md-close-circle glyp-red"></i>
 
 If the application is your core business,
@@ -259,6 +267,7 @@ Kubernetes is vast and complicated, with a large surface area of where it could 
 It depends.
 
 For a new project I would suggest just to initially throw it up on a PAAS.
+And not the free options, a proper supported *business* node.
 
 Validate it, iterate, then if it makes sense due to popularity or company policy move it to a custom infrastructure. And for that I would suggest Kubernetes.
 
