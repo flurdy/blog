@@ -8,7 +8,7 @@ image: /posts/2019/04/oil-rig-small.jpg
 image-large: /posts/2019/04/oil-rig-large.jpg
 image-attribution: anthony jones from Pexels
 image-attribution-link: https://www.pexels.com/photo/oil-rig-in-the-sunrise-1468171/
-image-attribution-license: Pexels Free to Use
+image-attribution-license: Free to Use
 tags:
 - heroku
 - kubernetes

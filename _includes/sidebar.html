@@ -135,7 +135,7 @@
    </div>
 
    <div class="widget widget-tags">
-      <h3 class="widget-title"><a href="/tags.html">Tag Cloud</a></h3>
+      <h3 class="widget-title"><a href="/tags/">Tag Cloud</a></h3>
       {% assign quantified = "" | split: "" %}
       {% for tag in site.tags %}
          {% if tag[1].size > 1 %}
@@ -150,7 +150,7 @@
                {% if tag[0] == tag_word %}
                   {% if tag[1].size > 1 or quantified > 20 %}
                      <li class="tag-item">
-                        <a href="{{ site.baseurl }}/tags#{{ {{ tag | first | slugify }} | cgi_escape }}" class="tag">
+                        <a href="{{ site.baseurl }}/tags/#{{ tag | first | slugify | cgi_escape }}" class="tag">
                            {{ tag | first }}
                         </a>
                      </li>

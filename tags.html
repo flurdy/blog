@@ -1,8 +1,12 @@
 ---
 layout: page
-title: Tags in Blog
-image: 11.jpg
+title: Tags in blog posts
 permalink: /tags/
+image: luggage.jpg
+image-large: luggage-large.jpg
+image-attribution: Photo by Magda Ehlers from Pexels
+image-attribution-link: https://www.pexels.com/photo/colourful-cruise-durban-harbour-988761/
+image-attribution-license: Free to use
 ---
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
 {% assign tag_words = site_tags | split:',' | sort %}
@@ -11,7 +15,7 @@ permalink: /tags/
   <ul class="tags-list">
   {% for item in (0..site.tags.size) %}{% unless forloop.last %}
     {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-    <li class="tags-item"><a href="#{{ this_word | cgi_escape }}" class="tags-link">{{ this_word }} <span>{{ site.tags[this_word].size }}</span></a></li>
+    <li class="tags-item"><a href="#{{ this_word | cgi_escape }}" class="tags-link">{{ this_word }}</a></li>
   {% endunless %}{% endfor %}
   </ul>
 

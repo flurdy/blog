@@ -6,7 +6,21 @@ layout: default
       {% if page.image %}
 		<div class="col col-12">
 			<div class="page-image-box">
-				<div class="page-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image}})"></div>
+            <!-- <div class="page-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image}})"></div> -->
+            {% if page.image-large %}
+            <div class="page-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image-large}})">
+            </div>
+            {% else %}
+            <div class="page-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image}})"></div>
+            {% endif %}
+            {% if page.image-attribution or page.image-attribution-license %}
+            <div class="page-image-attribution">
+               {% if page.image-attribution-link %}<a target="_new" href="{{ page.image-attribution-link }}">{% endif %}
+                  {% if page.image-attribution %}Photo: {{ page.image-attribution }}.{% endif %}
+                  {% if page.image-attribution-license %}{{ page.image-attribution-license }}{% endif %}
+                  {% if page.image-attribution-link %}</a>{% endif %}
+            </div>
+            {% endif %}
 			</div>
       </div>
       {% endif %}

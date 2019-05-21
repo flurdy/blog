@@ -86,6 +86,12 @@ permalink: /about/
          </li>
          {% else %} {% endif %}
 
+         {% if site.facebook %}
+         <li class="social-profiles-item">
+            <a href="{{ site.facebook }}" class="social-profiles-link"><i class="ion ion-logo-facebook"></i></a>
+         </li>
+         {% else %} {% endif %}
+
          {% if site.linkedin %}
          <li class="social-profiles-item">
             <a href="{{ site.linkedin }}" class="social-profiles-link"><i class="ion ion-logo-linkedin"></i></a>
