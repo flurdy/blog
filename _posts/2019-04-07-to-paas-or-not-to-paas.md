@@ -1,6 +1,5 @@
 ---
 layout: post
-#title: Use Heroku. Don't use Heroku. Use Kubernetes. Don't use Kubernetes
 title: To PAAS or not to PAAS
 date: '2019-04-07T21:22:00.000Z'
 author: flurdy
