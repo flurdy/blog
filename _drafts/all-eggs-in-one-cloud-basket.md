@@ -43,6 +43,8 @@ And since companies was already on AWS many have not really looked further at ot
 The same happens with newer companies and projects that perhaps choose other big providers such as GCP or Azure.
 Once they are on and it works they do not look further as their chosen cloud provider does everything they need.
 
+If you only use one provider your employees can specialise and enhance their skills of its specific features.
+
 
 ## Cloud lock-in
 
@@ -53,6 +55,7 @@ Such as [AWS's Lamda](https://aws.amazon.com/lambda) or [GCP's Cloud Functions](
 Or database solutions and data that are not easily transferrable such as [Dynamo](https://aws.amazon.com/dynamodb/) or [Cloud Spanner](https://cloud.google.com/spanner/).
 
 But mostly they try to spread as wide as possible and ingrate as deep as possible into your whole organisation and procedures so that a migration elsewhere will be very painful and just not feasible.
+
 
 [![Broken eggs]({{site.baseurl}}/img/posts/2019/06/baptiste-broken-eggs-small.jpg)](https://en.wikipedia.org/wiki/File:Jean_Baptiste_Creuze_Broken_Eggs.JPG)
 _[Painting by Jean Baptiste. Public Domain](https://en.wikipedia.org/wiki/File:Jean_Baptiste_Creuze_Broken_Eggs.JPG)_
@@ -111,7 +114,6 @@ They have done that to others, e.g. suspended all accounts linked and just suspe
 They do state that they may do so in their policies.
 
 Recently Digital Ocean had some bad PR when one their automated abuse script [banned a persons account effectively taking his whole company offline](https://twitter.com/w3Nicolas/status/1134529316904153089).
-It got reactivated when he responded to the automated ticket, but then a day later suspended again and then manually banned permanently.
 What made it worse he no longer could access his database backups as they were all hosted with DO.
 So his company was effectively dead.
 Thankfully he had enough social media clout to reach one of DO's founders whom rectified the problem.
@@ -164,7 +166,7 @@ This horizontally scalable design costs a lot architecture and development time 
 However as mentioned if there is a problem with some specific cloud features it may take down all the zones and global regions of that provider. They are rare but they do happen.
 
 
-## Many different baskets, Hybrid.
+## Many different baskets, hybrid
 
 Of course the obvious solution to one basket is many baskets.
 Use several cloud providers, and your own hosted solutions.
@@ -200,6 +202,11 @@ For databases use [Postgres](https://www.postgresql.org), [Redis](https://redis.
 you can use on any provider and does not tie your data to a specific supplier.
 
 Use [EKL](https://www.elastic.co/elk-stack) logging so that it is ambiguous if you use AWS or GCP or others.
+
+There are also many generic serverless functions solutions.
+[Serverless](https://serverless.com/), [Fission](https://fission.io/), [OpenFAAS](https://www.openfaas.com/),
+and I am sure many more to come.
+I have not tested them well enough to know if they are mature enough yet.
 
 
 ## Back up for total dataloss
