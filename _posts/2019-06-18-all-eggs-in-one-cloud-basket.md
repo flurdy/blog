@@ -36,7 +36,7 @@ Starting a new company or project using co-location datacentre servers just does
 
 ## Stay with the one cloud
 
-AWS was the first real cloud provider. There was others before depending on how you define _cloud_ but none came with the size, marketing, and total [IAAS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service) solution of AWS. So AWS was the first provider most people dabbled with. And by now 10+ years later it is the giant in this marketplace with as many customers as all the others combine. And with a huge range of features to confuse the best of us.
+AWS was the first real cloud provider. There was others before depending on how you define _cloud_ but none came with the size, marketing, and total [IAAS](https://en.wikipedia.org/wiki/Infrastructure_as_a_service) solution of AWS. So AWS was the first provider most people dabbled with. And by now 10+ years later it is the giant in this marketplace with as many customers as all the others combined. And with a huge range of features to confuse the best of us.
 
 And since companies was already on AWS many have not really looked further at other cloud providers.
 
@@ -58,6 +58,7 @@ But mostly they try to spread as wide as possible and ingrate as deep as possibl
 
 
 [![Broken eggs]({{site.baseurl}}/img/posts/2019/06/baptiste-broken-eggs-small.jpg)](https://en.wikipedia.org/wiki/File:Jean_Baptiste_Creuze_Broken_Eggs.JPG)
+
 _[Painting by Jean Baptiste. Public Domain](https://en.wikipedia.org/wiki/File:Jean_Baptiste_Creuze_Broken_Eggs.JPG)_
 
 # Smashed eggs
@@ -90,7 +91,7 @@ GCP has been offline,
 and Azure is also known for significant downtime.
 
 Some times it is not just a partial outage nor limited to a region, sometimes everything goes offline.
-For example GCP's recent massive outage that took also down Google's own Youtube, GMail and more.
+For example [GCP's recent massive outage](https://techcrunch.com/2019/06/02/google-cloud-is-down-affecting-numerous-applications-and-services/) that took also down Google's own Youtube, GMail and more.
 
 And when they are down there is not much you can do than wait.
 Hopefully they are good at communicating the status.
@@ -103,14 +104,14 @@ Including detection of illegal activity, abuse reporting and support.
 And at best have staff on low pay whom have to process a huge amount of tickets by spending as little time on per ticket as possible.
 
 I have been scared by numerous reports of random accounts being frozen and service taken offline for no apparent reason.
-Or tiny misinterpretations that could not be corrected have they been able to talk to a human.
+Or tiny misinterpretations that would have been corrected have they been able to talk to a human.
 
 But I was suffering from [Niem&ouml;ller's quote](https://encyclopedia.ushmm.org/content/en/article/martin-niemoeller-first-they-came-for-the-socialists): "_First they came for the socialists, and I did not speak out — because I was not a socialist..._" I did not think I was doing anything wrong so this did not involve me.
 
 Until last year, when my own [Adwords](https://ads.google.com) account was suspended then banned for no apparent reason with no recourse.
 Thankfully they did not suspend any of my other accounts or use of other Google services as that would affect not just me badly but my family as well.
 
-They have done that to others, e.g. suspended all accounts linked and just suspected of being linked, including business and personal accounts. And total ban ie deleting docs, email, photos, Android profiles for all these accounts.
+Google have done that to [others](https://twitter.com/search?q=google%20account%20suspended), e.g. suspended all accounts linked and just suspected of being linked, including business and personal accounts. And total ban ie deleting [docs, email, photos, Android profiles](https://slate.com/technology/2013/04/life-without-google-when-my-account-was-suspended-i-felt-like-id-been-dumped.html) for all these accounts.
 They do state that they may do so in their policies.
 
 Recently Digital Ocean had some bad PR when one their automated abuse script [banned a persons account effectively taking his whole company offline](https://twitter.com/w3Nicolas/status/1134529316904153089).
@@ -123,6 +124,7 @@ These stories have made me very wary of ever relying on one provider again.
 
 
 [![Battery chicken]({{site.baseurl}}/img/posts/2019/06/battery-chicken-small.jpg)](https://www.flickr.com/photos/artembali/44927194462)
+
 _[Photo by Artem Beliaikin. Public domain](https://www.flickr.com/photos/artembali/44927194462)_
 
 # Better egg distribution
@@ -137,7 +139,7 @@ And if steps need to be taken to reduce it or just slow it down, or detect any a
 The providers offer monitoring, e.g. [CloudWatch](https://aws.amazon.com/cloudwatch/) and [StackDriver](https://cloud.google.com/monitoring/).
 
 And there is a vast range of 3rd party tools to monitor usage, threats, errors and billing costs across several cloud providers.
-Such as Dynatrace, Looker, Datadog, NewRelic, Cloudability, CloudMonitor, AlertLogic, etc.
+Such as [Dynatrace](https://www.dynatrace.com), [Looker](https://looker.com), [Datadog](https://www.datadoghq.com), [NewRelic](https://newrelic.com), [Cloudability](https://www.cloudability.com), [AlertLogic](https://www.alertlogic.com), [CloudHealth](https://www.cloudhealthtech.com) etc.
 
 Though to me they all seems one tiny AWS feature announcement away from going out of business.
 
@@ -172,8 +174,8 @@ Of course the obvious solution to one basket is many baskets.
 Use several cloud providers, and your own hosted solutions.
 
 This is a *hybrid* solution, and many providers and 3rd parties offering solutions for this.
-AWS offer an integration with VMWare for an on-premises solution that integrates with AWS.
-Google is offering several tools to manage Hybrid solutions.
+AWS offer an integration with VMWare for an on-premises solution, [Outpost](https://aws.amazon.com/outposts/), that integrates with AWS.
+Google is offering several tools to manage Hybrid solutions, e.g. ([Anthos](https://cloud.google.com/anthos/)).
 But I am suspicious of these, I am not sure what the motives are for their offering,
 but I am sure it is to drive more use of their own cloud.
 
@@ -208,6 +210,11 @@ There are also many generic serverless functions solutions.
 and I am sure many more to come.
 I have not tested them well enough to know if they are mature enough yet.
 
+To avoid reinventing the wheel, and use the cloud providers automatic scaling ability, 
+I understand people choosing the cloud providers databases and streaming solutions instead of setting up and maintaining all that infrastructure yourself.
+My projects have often relied on DynamoDB or [AWS's RDS](https://aws.amazon.com/rds/), and I would consider [AWS's Kafka service](https://aws.amazon.com/msk/) in future projects.
+So my suggestion is not 100% gospel, just be pragmatic and responsible.
+
 
 ## Back up for total dataloss
 
@@ -220,6 +227,7 @@ That way your company and project is not dead, just very set back.
 
 
 [![Fried egg buffet]({{site.baseurl}}/img/posts/2019/06/fried-egg-small.jpg)](https://pixabay.com/photos/fried-buffet-gastronomy-hotel-1789962/)
+
 _[Photo by darf_nicht_mehr_hochladen from Pixabay. Public Domain](https://pixabay.com/users/darf_nicht_mehr_hochladen-2998623/)_
 
 # My fried eggs
@@ -264,6 +272,7 @@ But I am softening up on this requirement to instead include budgets to plan a m
 
 
 [![Chick and eggs]({{site.baseurl}}/img/posts/2019/06/egg-chick-small.jpg)](https://www.flickr.com/photos/53344659@N05/4978438263)
+
 _[Photo by sheilapic76. CC-by](https://www.flickr.com/photos/53344659@N05/4978438263)_
 
 # Any basket is better than broken eggs
@@ -272,7 +281,7 @@ Should all companies running on only one cloud provider follow my advice?
 
 No, for most putting all eggs in one basket is calculated risk worth taking.
 
-After all a cloud provider is better than none.
+After all, *A* cloud provider is better than none.
 
 And remember the big providers are much better at reliability, fault tolerance and networking than you.
 Yes, a lot better.
