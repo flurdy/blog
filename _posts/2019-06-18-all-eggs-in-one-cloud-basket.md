@@ -198,7 +198,8 @@ Use technology stacks that you can use on any cloud provider.
 And minimise proprietary technology a cloud provider supplies.
 
 For instance using [Kubernetes](https://kubernetes.io) lets you deploy your solution to many providers.
-Though Kubernetes is a behomoth and not right for everyone.
+You can run it across their instances, or use their managed services such as [EKS](https://aws.amazon.com/eks/), [GKE](https://cloud.google.com/kubernetes-engine/), [AKS](https://azure.microsoft.com/en-us/services/kubernetes-service/) and with [DigitalOcean](https://www.digitalocean.com/products/kubernetes/).
+Though Kubernetes is a behemoth and not right for everyone.
 
 For databases use [Postgres](https://www.postgresql.org), [Redis](https://redis.io), [Cassandra](http://cassandra.apache.org), [CockroachDB](https://www.cockroachlabs.com) and others that
 you can use on any provider and does not tie your data to a specific supplier.
@@ -210,7 +211,7 @@ There are also many generic serverless functions solutions.
 and I am sure many more to come.
 I have not tested them well enough to know if they are mature enough yet.
 
-To avoid reinventing the wheel, and use the cloud providers automatic scaling ability, 
+To avoid reinventing the wheel, and use the cloud providers automatic scaling ability,
 I understand people choosing the cloud providers databases and streaming solutions instead of setting up and maintaining all that infrastructure yourself.
 My projects have often relied on DynamoDB or [AWS's RDS](https://aws.amazon.com/rds/), and I would consider [AWS's Kafka service](https://aws.amazon.com/msk/) in future projects.
 So my suggestion is not 100% gospel, just be pragmatic and responsible.
