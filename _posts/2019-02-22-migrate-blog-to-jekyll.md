@@ -14,13 +14,13 @@ tags:
 - jekyll
 ---
 
-In [my previous post]({{ "/2019/02/migrating-blog-away-from-blogger.html" | prepend: site.baseurl }}) I explain why I decided to migrate [my blog](http://blog.flurdy.com) away from [Blogger](http://blogger.com).
-And I that decided to use [Jekyll](http://jekyllrb.com) to generate my blog from now on.
+In [my previous post]({{ "/2019/02/migrating-blog-away-from-blogger.html" | prepend: site.baseurl }}) I explained why I decided to migrate [my blog](http://blog.flurdy.com) away from [Blogger](http://blogger.com).
+And that I decided to use [Jekyll](http://jekyllrb.com) to generate my blog from now on.
 
 
 ### What is Jekyll
 
-Jekyll is Ruby based website generator.
+Jekyll is a Ruby based website generator.
 Its output is static html pages that you can include with whatever web server you choose, including Jekyll's own web server.
 
 You may have seen lot of Jekyll generated pages already as it was initially created by [GitHub](https://github.com) to power their GitHub pages.
@@ -39,7 +39,7 @@ You may have seen lot of Jekyll generated pages already as it was initially crea
 
 #### Develop
 
-Jekyll is [installed](https://jekyllrb.com/docs/) as a [Ruby Gem](https://rubygems.org/gems/jekyll/).
+Jekyll are [installed](https://jekyllrb.com/docs/) as a [Ruby Gem](https://rubygems.org/gems/jekyll/).
 But you can create it and its pages &amp; posts all inside a [Jekyll Docker container](https://hub.docker.com/r/jekyll/jekyll/).
 
 #### Theme
@@ -68,7 +68,7 @@ The [Blogger import plugin](https://import.jekyllrb.com/docs/blogger/) worked pe
 
 #### Building &amp; Hosting
 
-You can host your jekyll site [directly with GitHub pages](https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages), or with [AWS' S3](https://jekyllrb.com/docs/deployment/manual/) and [others](https://jekyllrb.com/docs/deployment/third-party/).
+You can host your Jekyll site [directly with GitHub pages](https://help.github.com/en/articles/using-jekyll-as-a-static-site-generator-with-github-pages), with [AWS' S3](https://jekyllrb.com/docs/deployment/manual/) or [others](https://jekyllrb.com/docs/deployment/third-party/).
 
 But I prefer a bit more control so I have hosted mine inside my own [Kubernetes](https://kubernetes.io) cluster.
 
