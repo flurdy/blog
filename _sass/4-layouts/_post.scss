@@ -1,4 +1,7 @@
 // Post
+.container-post {
+  max-width: 1400px;
+}
 .post {
   margin-bottom: 20px;
 }
@@ -12,6 +15,7 @@
   }
    .post-image {
       min-height: 430px;
+      max-height: 550px;
       margin-bottom: 30px;
       background-size: cover;
       background-position: center;
