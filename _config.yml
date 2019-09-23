@@ -14,11 +14,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Ivar's rambling
+title: Ivar's ranting
 # email: blog@flurdy.tldreplcewithdotemail
 copyright_year: 2019
 copyright_name: Ivar Abrahamsen
 author-name: Ivar Abrahamsen
+author-nickname: Flurdy
 author-jobtitle: Software Engineer
 author-location: Hampshire, United Kingdom
 author-avatar: me/stash2.jpg

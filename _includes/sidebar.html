@@ -5,7 +5,14 @@
       <a href="{{ "/about/" | prepend: site.baseurl }}"><img src="{{"/img/" | prepend: site.baseurl | append : site.author-avatar }}" /></a>
     </div>
     <div class="author-name">
-       <h4><a href="{{ "/about/" | prepend: site.baseurl }}">{{ site.author-name }}</a></h4>
+      <h4>
+          <a href="{{ "/about/" | prepend: site.baseurl }}">{{ site.author-name }}</a>
+         {% if site.author-nickname %}
+            <div class="author-nickname">
+               (<a href="{{ "/about/" | prepend: site.baseurl }}">{{ site.author-nickname }}</a>)
+            </div>
+         {% endif %}
+      </h4>
     </div>
     <div class="author-jobtitle">
        <p><a href="{{ "/about/" | prepend: site.baseurl }}">{{ site.author-jobtitle }}</a></p>
