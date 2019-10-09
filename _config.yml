@@ -88,7 +88,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-archives
 
-paginate: 11
+
+paginate: 13
 paginate_path: "/page/:num"
 
 jekyll-archives:
