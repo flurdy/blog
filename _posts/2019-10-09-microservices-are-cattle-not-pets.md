@@ -5,6 +5,7 @@ date: '2019-10-09T16:08:00.000Z'
 author: flurdy
 image: /posts/2019/10/cattle.jpg
 image-large: /posts/2019/10/cattle-large.jpg
+image-alt: 2 long haired cows
 image-attribution: Alexandre Dulaunoy
 image-attribution-link: https://www.flickr.com/photos/adulau/2428604542
 image-attribution-license: CC by-sa

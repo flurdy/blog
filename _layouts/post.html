@@ -7,9 +7,9 @@ layout: default
 		<div class="col col-12">
 			<div class="post-image-box">
             {% if page.image-large %}
-               <div class="post-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image-large}})"></div>
+               <div class="post-image" style="background-image: url({{"/img" | prepend: site.baseurl | append : page.image-large}})"></div>
             {% else %}
-               <div class="post-image" style="background-image: url({{"/img/" | prepend: site.baseurl | append : page.image}})"></div>
+               <div class="post-image" style="background-image: url({{"/img" | prepend: site.baseurl | append : page.image}})"></div>
             {% endif %}
             {% if page.image-attribution or page.image-attribution-license %}
             <div class="post-image-attribution">
