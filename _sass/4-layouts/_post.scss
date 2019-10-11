@@ -147,6 +147,16 @@
 
 .post-body {
   padding-bottom: 20px;
+  img {
+     border: 3px silver outset;
+  }
+  .post-photo-license {
+     text-align: right;
+     padding-right: 30px;
+     em {
+      font-size: 0.8em;
+     }
+  }
 }
 
 .post-share {

@@ -12,6 +12,7 @@ tags:
 - Microservices
 - Development
 - Architecture
+- Productivity
 ---
 
 ## Shed no tears when quickly culling services.
@@ -41,6 +42,11 @@ You maintained and fixed each server over a long period of time.
 
 I.e. a pet.
 
+[![Big dog and kitten]({{site.baseurl}}/img/posts/2019/10/big-dog-kitten.jpg)](https://www.flickr.com/photos/21265997@N08/5148597478)
+
+_[Photo by Katlene Niven. CC by](https://www.flickr.com/photos/21265997@N08/5148597478)_
+{:.post-photo-license}
+
 #### Cattle servers
 
 However if in a modern cloud virtual environment where you scale out horizontally, massively, you would not really care if _mail-server-238_ had an issue.
@@ -52,9 +58,10 @@ I.e. cattle.
 And this would possibly be automatic so to you it may merely be a minor datapoint in your monthly cloud usage report.
 
 
-[![Sofa cat]({{site.baseurl}}/img/posts/2019/10/sofa-cat.jpg)](https://commons.wikimedia.org/wiki/File:A_female_British_Shorthair_cat_on_a_brown_sofa_resting.jpg)
+[![Cow factory]({{site.baseurl}}/img/posts/2019/10/cow-factory.jpg)](https://www.rtl.fr/actu/debats-societe/chine-une-ferme-de-100-000-vaches-pollue-les-nappes-phreatiques-7786462404)
 
-_[Photo by George E. Koronaios. CC by-sa](https://commons.wikimedia.org/wiki/File:A_female_British_Shorthair_cat_on_a_brown_sofa_resting.jpg)_
+_[Photo by AFP](https://www.rtl.fr/actu/debats-societe/chine-une-ferme-de-100-000-vaches-pollue-les-nappes-phreatiques-7786462404)_
+{:.post-photo-license}
 
 ##  Monolithic pets
 
@@ -65,6 +72,11 @@ They extend it, morph it, modernise it, and add more and more features to it.
 They fix bugs, they even acknowledge problems with and work around it so the application stays alive.
 
 I.e. a pet.
+
+[![Sofa cat]({{site.baseurl}}/img/posts/2019/10/sofa-cat.jpg)](https://commons.wikimedia.org/wiki/File:A_female_British_Shorthair_cat_on_a_brown_sofa_resting.jpg)
+
+_[Photo by George E. Koronaios. CC by-sa](https://commons.wikimedia.org/wiki/File:A_female_British_Shorthair_cat_on_a_brown_sofa_resting.jpg)_
+{:.post-photo-license}
 
 ### Precious microservices
 
@@ -79,7 +91,7 @@ Don't.
 [![Meerkat defend young]({{site.baseurl}}/img/posts/2019/10/meerkat-protect.jpg)](https://www.flickr.com/photos/rofanator/5751217677)
 
 _[Photo by Jon Pinder. CC by-nc-nd](https://www.flickr.com/photos/rofanator/5751217677)_
-
+{:.post-photo-license}
 
 ## Microservices are cattle
 
@@ -92,7 +104,7 @@ Do not be precious about tiny bits of code.
 Be cold.
 
 If not needed, do not shed a tear.
-Move on and iterate quicker.
+Cull it, move on and iterate onwards.
 
 #### Be cold to others
 
@@ -103,6 +115,10 @@ Kill any services that are superfluous.
 And if others delete a service you worked on a lot,
 be magnanimous and supportive.
 
+[![Cattle round up]({{site.baseurl}}/img/posts/2019/10/cattle_round_up.jpg)](https://thomaswdinsmore.com/2018/12/04/ai-ml-roundup-november-2018/)
+
+_License unknown_
+{:.post-photo-license}
 
 #### Not clones
 
@@ -116,6 +132,7 @@ or however you split and define, and name your services and context.
 [![Clone sheep]({{site.baseurl}}/img/posts/2019/10/Nottingham-Dollies.jpg)](https://www.wired.co.uk/article/human-cloning-technology-dolly-sheep)
 
 _[Photo by University of Nottingham](https://www.wired.co.uk/article/human-cloning-technology-dolly-sheep)_
+{:.post-photo-license}
 
 #### Don't morph, kill & replace
 
@@ -135,3 +152,4 @@ your project, architecture and infrastructure has a much better chance of being 
 [![Ayrshire cow]({{site.baseurl}}/img/posts/2019/10/Ayrshire_cow.jpg)](https://commons.wikimedia.org/wiki/File:Ayrshire_cow.jpg)
 
 _[Photo by Malcolm Morley. Public domain](https://commons.wikimedia.org/wiki/File:Ayrshire_cow.jpg)_
+{:.post-photo-license}
