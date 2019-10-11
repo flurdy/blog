@@ -10,7 +10,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
    <link rel="shortcut icon" href="/favicon.ico">
    <meta name="twitter:site" content="@{{site.twitter_username}}">
-   {% if post.title %}<meta name="twitter:title" content="{{post.title}}">{% endif %}
+   {% if page.title %}<meta name="twitter:title" content="{{page.title}}">
+   {% else %}<meta name="twitter:title" content="{{site.title}}">
+   {% endif %}
    {% if post.description %}<meta name="twitter:description" content="{{ post.description | strip_html | truncate: 135 }}">
    {% else %}
    {% if post.content %}<meta name="twitter:description" content="{{ post.content | strip_html | truncate: 135 }}">
@@ -22,7 +24,7 @@
    {% endif %}
    {% if page.image %}
    <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:image" content="{{"/img" | prepend: site.baseurl | append : page.image}}">
+   <meta name="twitter:image" content="{{"/img" | prepend: site.baseurl | prepend: site.url | append : page.image}}">
    {% if page.image-alt %}<meta name="twitter:image:alt" content="{{page.image-alt}}">{% endif %}
    {% endif %}
    <style>
