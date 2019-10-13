@@ -13,19 +13,28 @@
    {% if page.title %}<meta name="twitter:title" content="{{page.title}}">
    {% else %}<meta name="twitter:title" content="{{site.title}}">
    {% endif %}
-   {% if post.description %}<meta name="twitter:description" content="{{ post.description | strip_html | truncate: 135 }}">
+   <meta name="twitter:description" 
+   {% if post.description %}
+      content="{{ post.description | strip | truncate: 135 }}">
    {% else %}
-   {% if post.content %}<meta name="twitter:description" content="{{ post.content | strip_html | truncate: 135 }}">
-   {% else %}
-   {% if page.description %}<meta name="twitter:description" content="{{page.description}}">
-   {% else %}<meta name="twitter:description" content="{{site.description}}">
-   {% endif %}
-   {% endif %}
+      {% if page.description %}
+         content="{{ page.description | strip | truncate: 135 }}">
+      {% else %}
+         {% if post.content %}
+            content="{{ post.content | strip_html | truncate: 135 }}">
+         {% else %}
+            {% if page.content %}
+               content="{{ page.content | strip_html | truncate: 135 }}">
+            {% else %}
+               content="{{ site.description | strip | truncate: 135 }}">
+            {% endif %}
+         {% endif %}
+      {% endif %}
    {% endif %}
    {% if page.image %}
-   <meta name="twitter:card" content="summary_large_image">
-   <meta name="twitter:image" content="{{"/img" | prepend: site.baseurl | prepend: site.url | append : page.image}}">
-   {% if page.image-alt %}<meta name="twitter:image:alt" content="{{page.image-alt}}">{% endif %}
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:image" content="{{"/img" | prepend: site.baseurl | prepend: site.url | append : page.image}}">
+      {% if page.image-alt %}<meta name="twitter:image:alt" content="{{page.image-alt}}">{% endif %}
    {% endif %}
    <style>
 {% capture include_to_scssify %}
