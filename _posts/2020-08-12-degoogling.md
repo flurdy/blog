@@ -4,12 +4,12 @@ title: Degoogling
 description: Degoogling myself. Removing my dependance on Google's services. And Regoogling myself.
 date: '2020-08-12T21:12:00.000Z'
 author: flurdy
-ximage: /posts/2019/11/.jpg
-ximage-large: /posts/2019/11/-large.jpg
-ximage-alt:
-ximage-attribution:
-image-attribution-link:
-ximage-attribution-license:
+image: /posts/2020/08/decontaminate.jpg
+image-large: /posts/2020/08/decontaminate-large.jpg
+image-alt: Decontamination
+image-attribution: Cpl. Kelsey Dornfeld
+image-attribution-link: https://commons.wikimedia.org/wiki/File:Joint_forces_decontaminate_the_flight_line_071317-M-PY134-113.jpg
+image-attribution-license: Public domain
 tags:
 - Google
 - Privacy
@@ -28,12 +28,20 @@ This degoogling process started years ago and is still in progress.
 
 And then I also am "Regoogling" myself using new Google services. &#129318;
 
+(The title is a spin on [Tor Norbye](https://twitter.com/tornorbye)'s 2010 tweet when he [cryptically hinted he was joining Google](https://twitter.com/tornorbye/status/25509797878).)
 
 ## Why degoogling
 
 Risk.
 
 Depending on just one company for a lot of my digital life is risky. Suddenly I may not be able to use any of their services or access my data. That could be very problematic.
+
+
+[![Balancing Jenga]({{site.baseurl}}/img/posts/2020/08/jenga.jpg)](https://commons.wikimedia.org/wiki/File:Jenga_distorted.jpg)
+{:.post-photo-narrow}
+
+_[Photo by Guma89. CC by-sa](https://commons.wikimedia.org/wiki/File:Jenga_distorted.jpg)_
+{:.post-photo-license}
 
 
 #### Google might close down
@@ -63,6 +71,10 @@ This has let to many false positives and innocent people getting banned. Some ju
 And the main problem is that it is Google's policy to not to tell you specifically what they think you have infringed. This makes it hard to figure out how to you can fix whatever the problem is. Whether is it is an error, a misunderstanding, just a mistake, or nothing wrong at all.
 
 If one service ban in error might lead to a total ban, including your email, all your documents, all your photos, analytics, servers etc it is very risky to rely totally on one provider like Google.
+
+
+
+[![Evicted]({{site.baseurl}}/img/posts/2020/08/evicted.jpg)](https://commons.wikimedia.org/wiki/File:East_Side_Eviction.jpg)
 
 
 ## I got banned
@@ -107,16 +119,23 @@ I have always used Dropbox and never used Drive as an online storage.
 
 #### Chrome
 
-5ish years ago I went back to use [Firefox](https://www.mozilla.org/en-GB/firefox/new/) as my default browser.
+5ish years ago I went back to use [Firefox](https://www.mozilla.org/en-GB/firefox/new/) as my default browser. With the [Multi-Account-Container addon](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/) to sandbox Google, Facebook, etc...
 
 #### Adwords
 
 As mentioned Google closed my Adwords account. And since they specifically ban you from creating another account, I can't see any way for me to every use Adwords again. Nor recommend it to anyone else.
 
 
+
+[![Tai Chi]({{site.baseurl}}/img/posts/2020/08/taichi.jpg)](https://www.goodfreephotos.com/people/man-dressed-in-white-praticing-tai-chi-on-beasch.jpg.php)
+{:.post-photo-narrow}
+
+_[Photo by Goodfreephotos. Public domain](https://www.goodfreephotos.com/people/man-dressed-in-white-praticing-tai-chi-on-beasch.jpg.php)_
+{:.post-photo-license}
+
 ## Still googling
 
-Some services I have not found a good enough alternative or I am too lazy to switch away.
+For some services I have not found a good enough alternative or I am too lazy to switch away.
 
 
 #### Google Maps
@@ -144,6 +163,12 @@ Google Analytics is easy to use, but if I might try others soon to avoid the sna
 The IOS search app is actually quite good, both as a search engine but also as a news aggregator.
 
 
+
+
+[![Grampa Simpson]({{site.baseurl}}/img/posts/2020/08/grampasimpson.gif)](https://giphy.com/gifs/reactiongifs-mrw-awkward-13e4OMO2IVZloQ)
+
+
+
 ## Regoogling myself
 
 At the same time as I am reducing my exposure to Google I am starting to use some of their other services more.
@@ -156,7 +181,7 @@ I have in the last few years started to use Google's Computing Platform, especia
 
 #### FitBit
 
-Not sure if the acquisition is approved/complete yet but I like my FitBit Charge. Though if ever Apple releases a watch that is not square and dorky like their current ones then I could be tempted.
+Not sure if the acquisition is approved/complete yet but I like my FitBit Charge. Though if ever Apple releases a watch that is not square and dorky like their current ones then I could be tempted. I blame Pebble for making me wear watches again.
 
 
 #### Nest
@@ -183,3 +208,6 @@ So I plan to start migrating my albums to it. Though still duplicated in iCloud 
 Well both.
 
 I think I have reduced my exposure and risk. And increased back up options. But I know I still am and will be heavily reliant on Google's services as they make great products.
+
+
+[![Don't be evil]({{site.baseurl}}/img/posts/2020/08/dontbeevil.png)](https://thefutureofai.blogspot.com/2018/05/google-dont-be-evil.html)
