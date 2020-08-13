@@ -75,6 +75,7 @@ If one service ban in error might lead to a total ban, including your email, all
 
 
 [![Evicted]({{site.baseurl}}/img/posts/2020/08/evicted.jpg)](https://commons.wikimedia.org/wiki/File:East_Side_Eviction.jpg)
+{:.post-photo-narrow}
 
 
 ## I got banned
@@ -166,7 +167,7 @@ The IOS search app is actually quite good, both as a search engine but also as a
 
 
 [![Grampa Simpson]({{site.baseurl}}/img/posts/2020/08/grampasimpson.gif)](https://giphy.com/gifs/reactiongifs-mrw-awkward-13e4OMO2IVZloQ)
-
+{:.post-photo-narrow}
 
 
 ## Regoogling myself
@@ -211,3 +212,4 @@ I think I have reduced my exposure and risk. And increased back up options. But 
 
 
 [![Don't be evil]({{site.baseurl}}/img/posts/2020/08/dontbeevil.png)](https://thefutureofai.blogspot.com/2018/05/google-dont-be-evil.html)
+{:.post-photo-narrow}
