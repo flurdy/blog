@@ -121,7 +121,7 @@ Some services I have not found a good enough alternative or I am too lazy to swi
 
 #### Google Maps
 
-Google Maps is still the best mapping solution. Some alternatives are good and I try to use Apple Maps, OpenStreetMaps, TomTom for some parts but still the default is to use Google Maps.
+Google Maps is still the best mapping solution. Some alternatives are good and I try to use Apple Maps, OpenStreetMap, TomTom for some parts but still the default is to use Google Maps.
 
 
 #### Google Docs
@@ -146,7 +146,7 @@ The IOS search app is actually quite good, both as a search engine but also as a
 
 ## Regoogling myself
 
-At the same time I am reducing my exposure to Google I am starting to use some of their other services more.
+At the same time as I am reducing my exposure to Google I am starting to use some of their other services more.
 
 
 #### GCP
@@ -156,12 +156,12 @@ I have in the last few years started to use Google's Computing Platform, especia
 
 #### FitBit
 
-Not sure if the acquisition is approved/complete yet but I like my FitBit Charge. Though if ever Apple releases a watch that is not square and dorky like their current ones I could be tempted.
+Not sure if the acquisition is approved/complete yet but I like my FitBit Charge. Though if ever Apple releases a watch that is not square and dorky like their current ones then I could be tempted.
 
 
-#### Google Nest
+#### Nest
 
-I love my Nest Mini so much we now have 3 of them. And I can see myself buying other Nest products such as the doorbell.
+I love my Google Nest Mini so much we now have 3 of them. And I can see myself buying other Nest products such as the doorbell.
 
 
 #### Google Assistant
@@ -171,7 +171,7 @@ Though not foolproof I am impressed by Google Assistant. And much prefer to use 
 
 #### Google Photos
 
-I have some very old albums from the Picasa days. But I avoided their Photos service like a plague when Google forced us to use Google Plus which I refused to use.
+I have some very old albums from the Picasa days. But I avoided their Photos service like a plague when Google forced us to use Google Plus which I refused.
 
 Since Google Plus is no more and Google Photos is now a standalone service  it is again an alternative especially as many people I know highly recommend it.
 
