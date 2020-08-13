@@ -54,9 +54,10 @@ author-description3: >-
     Ps. I rant a lot more on <a href="https://twitter.com/flurdy">Twitter</a> than I blog.
   </p>
 description: >- # this means to ignore newlines until "baseurl:"
-  The ramblings of Ivar Abrahamsen at flurdy.com.
+  The ramblings and ranting of Ivar Abrahamsen at flurdy.com.
   Contain ideas, ranting at innocents, blinkered sporting opinions,
   tech bable, and probably not enough to be interesting.
+description-short: The ramblings and ranting of Ivar Abrahamsen at flurdy.com.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.flurdy.com" # the base hostname & protocol for your site, e.g. http://example.com
 

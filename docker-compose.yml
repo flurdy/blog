@@ -7,6 +7,8 @@ services:
     environment:
       - JEKYLL_ENV=docker
     command: jekyll serve --force_polling --livereload --drafts
+    # command: bundle install
+    # command: bundle update jekyll
     ports:
       - 4000:4000
       - 35729:35729
