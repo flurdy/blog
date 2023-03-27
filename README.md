@@ -17,3 +17,4 @@ A blog migrated from Blogger to Jekyll.
 ### License
 * Software License: MIT
 * Content license: CC-by
+* Ivar Abrahamsen
