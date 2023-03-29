@@ -16,12 +16,12 @@ permalink: /about/
                <img src="{{"/img/" | prepend: site.baseurl | append : site.author-avatar1 }}" />
             </div>
          {% endif %}
-         {% if site.author-avatar1 %}
+         {% if site.author-avatar2 %}
             <div class="about-author-avatar">
                <img src="{{"/img/" | prepend: site.baseurl | append : site.author-avatar2 }}" />
             </div>
          {% endif %}
-         {% if site.author-avatar1 %}
+         {% if site.author-avatar3 %}
             <div class="about-author-avatar">
                <img src="{{"/img/" | prepend: site.baseurl | append : site.author-avatar3 }}" />
             </div>
@@ -44,15 +44,13 @@ permalink: /about/
       </div>
    </div>
 
+   {% if site.author-description0 %}
    <div class="container">
       <div class="row">
-         <p>
-            Essentially really good at receiving a message,
-            spliting it, joining it
-            and sending it elsewhere.
-         </p>
+         {{ site.author-description0 }}
       </div>
    </div>
+   {% endif %}
 
    {% if site.author-description1 %}
       <div class="container">

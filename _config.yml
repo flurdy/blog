@@ -29,13 +29,19 @@ author-avatar3: me/skina.jpg
 author-description: >-
   <ul>
     <li>Developer then Tech Lead then Architect then Manager, now Consultant/Contractor.</li>
-    <li>With Java then Scala and then a little Rust. And everything in between.</li>
+    <li>With Java then Scala and everything in between and beyond.</li>
     <li>From racks to AWS to Kubernetes.</li>
     <li>From waterfall to Scrum to Kanban to Lean to whatever works.</li>
-    <li>From multinational enterprises to unicorn startups.</li>
-    <li>From Telecoms to Finance to Game Studios to Media and back.</li>
+    <li>From multinational enterprises to public sector to unicorn startups.</li>
+    <li>From Telecoms to Finance to Game Studios to Retail to Streaming Media and more.</li>
     <li>Still is an Open Source wannabee hacker at night.</li>
   </ul>
+author-description0: >-
+  <p>
+    Essentially really good at receiving a message,
+    splitting a message, joining a message
+    and sending a message elsewhere.
+  </p>
 author-description1: >-
   <p>
     Most of the blog posts are about technology and some about sport.
@@ -51,7 +57,7 @@ author-description2: >-
   </ul>
 author-description3: >-
   <p>
-    Ps. I rant a lot more on <a href="https://twitter.com/flurdy">Twitter</a> than I blog.
+    Ps. I rant a lot more on <a href="https://twitter.com/flurdy">Twitter</a> and <a href="https://snabelen.no/@flurdy">Mastadon</a> than I blog.
   </p>
 description: >- # this means to ignore newlines until "baseurl:"
   The ramblings and ranting of Ivar Abrahamsen at flurdy.com.
