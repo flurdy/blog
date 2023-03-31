@@ -25,7 +25,8 @@ __TL;DR__
 
 Many meetings drags on discussing potential what-if scenarios, don't waste time on those.
 
-Instead finish the meeting and focus on the next step first then meet again if necessary.
+Instead when you have agreed on the next step, finish the meeting straight away and focus on that step.
+Then meet again if necessary afterwards.
 
 Less what-if - more focus.
 
