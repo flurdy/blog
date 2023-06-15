@@ -4,15 +4,17 @@ title: MVP is too late, launch first!
 description: Launch as the project starts. Waiting until MVP is too late
 date: '2023-06-14T19:00:00.000Z'
 author: flurdy
+image: /posts/2023/06/sub-missile-small.webp
+image-large: /posts/2023/06/sub-missile.webp
+image-alt: Submarine missile launch
+image-attribution: Edward L. Cooper/Defense Intelligence Agency
+image-attribution-link: https://commons.wikimedia.org/wiki/File:Delta-class-submarine-firing-SS-N-18-DIA.jpg
+image-attribution-license: Public Domain
 tags:
 - productivity
 - launch
 - product
 - feedback
----
-
-#### *Draft*
-Not yet finished
 
 ---
 
@@ -36,6 +38,10 @@ Maybe all you go live with is a small listener that mirrors all requests to the 
 
 Maybe it is a tiny app that gets called with real live request  but simply redirect to the old system like a [Facade design pattern](https://en.wikipedia.org/wiki/Facade_pattern).
 
+Or an unlinked website url, being mostly blank at the start. This does run the risk of being exposed if URL is leaked or sniffed somehow by search engine crawlers.
+
+Or your ingress tools can then start to filter 0.001% of traffic to your service etc.
+
 Maybe other minor launches that act similarly.
 
 
@@ -44,14 +50,14 @@ Maybe other minor launches that act similarly.
 Waiting to launch until when a MVP is ready may be some time.
 Even a small MVP is a significant delay.
 
-Delaying till MVP it basicall a mini big bang release.
+Delaying till MVP it basically a mini big bang release.
 
-And you loose the benefits of launching very early:
+And you loose the benefits of launching even earlier:
 
 
-#### Real prod data
+#### Real data
 
-The important part of launching early is to start *using real production data* and *run in the real production environment*.
+The important part of launching early is to start using *real production data* and run in the *real production environment*.
 
 Instead of faking maybe unrealistic traffic, or even totally ignorable data, in a substandard environment.
 
@@ -86,43 +92,49 @@ And then you keep going.
 
 ### My real experiences
 
-I worked on a few projects where have practised this concept of going live very early.
+I worked on a few projects where we decided to go live very early.
+For example:
 
 #### New retail rewards
 
 I worked with a retailer that trialed out a new reward card scheme in a big project.
 
-We launched after 3 weeks!
-
-But only in one shop (out of over 1000 stores).
+We launched after just 3 weeks. But only in one shop (out of over 1000 stores).
 And subsidising the customers inconvenience of using a new incomplete scheme.
 
-It worked marvelous. And was gradually expanded to more eventually all the stores.
-The early feedback was fantastic.
+It worked marvelous. And was gradually expanded to more then eventually all the stores.
+The early and constant feedback was priceless.
 We also got early mirror event traffic of the real data flow which was
 essential in the success.
 
 
-#### New insurance risk engine
+#### New insurance engine
 
 With a client we launched a new risk pricing engine very quickly.
-And part of that success was we tapped into the existing legacy
-request events from the start.
+And part of the reason for that success was that we tapped into the
+existing legacy request events from the start.
 
 As we filled in our new services acting on these events
 the data lake of results quickly matched the legacy system
 and went beyond.
 
-The success as partially due to the live data feed we got in the first few weeks.
+The success was partially due to the live data feed we got in the first few weeks.
 That we could compare the old and new continually and deliver value immediately.
 
 
 #### Blog now
 
-On personal level I posted about [Blog quick. Blog now!](/2019/03/blog-quick-blog-now),
+On a personal level I posted about [Blog quick. Blog now!](/2019/03/blog-quick-blog-now),
 where I emphasised the idea of posting blog posts straight away when incomplete.
 
 You then quickly want to fill in the rest of your blog post, with even more benefits detailed in that blog post.
+
+
+### Testing in prod
+
+Part of why I think launching early is great is that I really value the [_testing in prod_](https://launchdarkly.com/blog/testing-in-production-for-safety-and-sanity/) approach.
+With trunk-based-development, feature toggles, no PR gating etc, I think the value of having your project/system in prod quickly
+is an additional great benefit.
 
 
 ## tl;dr
