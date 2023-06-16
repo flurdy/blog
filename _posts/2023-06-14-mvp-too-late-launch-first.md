@@ -44,6 +44,11 @@ Or your ingress tools can then start to filter 0.001% of traffic to your service
 
 Maybe other minor launches that act similarly.
 
+![Cheetah camouflage]({{site.baseurl}}/img/posts/2023/06/camouflage.jpg)]
+{:.post-photo-narrow}
+
+_[Photo via Safaris Africana](https://safarisafricana.com/animal-camouflage/)_
+{:.post-photo-license}
 
 ### MVP is too late
 
@@ -53,6 +58,12 @@ Even a small MVP is a significant delay.
 Delaying till MVP it basically a mini big bang release.
 
 And you loose the benefits of launching even earlier:
+
+![Missed Train]({{site.baseurl}}/img/posts/2023/06/missed-train.jpg)]
+{:.post-photo-narrow}
+
+_[Photo by spaero from Pixabay. Pixabay License](https://pixabay.com/photos/berlin-train-movement-red-4299732/)_
+{:.post-photo-license}
 
 
 #### Real data
@@ -75,6 +86,12 @@ Better to launch early and iterate on it until you can launch the MVP and beyond
 The feedback from real usage is vastly superior to estimated responses.
 
 
+![Street artist]({{site.baseurl}}/img/posts/2023/06/street-artist.jpg)]
+{:.post-photo-narrow}
+
+_[Photo by pcdazero from Pixabay. Pixabay License](https://pixabay.com/photos/street-artist-painter-bench-1514087/)_
+{:.post-photo-license}
+
 ### Focus on only deliver value
 
 With a live product, only features that actually matter will take priority,
@@ -89,11 +106,15 @@ Eventually the whole delivery is live.
 
 And then you keep going.
 
-
 ### My real experiences
 
 I worked on a few projects where we decided to go live very early.
-For example:
+
+![Faraday lecture]({{site.baseurl}}/img/posts/2023/06/faraday-lecture.jpg)]
+{:.post-photo-narrow}
+
+_[Public domain](https://en.wikipedia.org/wiki/Royal_Institution_Christmas_Lectures)_
+{:.post-photo-license}
 
 #### New retail rewards
 
