@@ -121,7 +121,7 @@ _[Public domain](https://en.wikipedia.org/wiki/Royal_Institution_Christmas_Lectu
 I worked with a retailer that trialed out a new reward card scheme in a big project.
 
 We launched after just 3 weeks. But only in one shop (out of over 1000 stores).
-And subsidising the customers inconvenience of using a new incomplete scheme.
+And compensating the customers for their inconvenience of using a new incomplete scheme.
 
 It worked marvelous. And was gradually expanded to more then eventually all the stores.
 The early and constant feedback was priceless.
@@ -131,15 +131,15 @@ essential in the success.
 
 #### New insurance engine
 
-With a client we launched a new risk pricing engine very quickly.
+With a client we launched a new risk pricing calculation engine very quickly.
 And part of the reason for that success was that we tapped into the
-existing legacy request events from the start.
+existing legacy request events in prod from the start.
 
 As we filled in our new services acting on these events
 the data lake of results quickly matched the legacy system
 and went beyond.
 
-The success was partially due to the live data feed we got in the first few weeks.
+The success was significantly due to the live data feed we got in the first few weeks.
 That we could compare the old and new continually and deliver value immediately.
 
 
