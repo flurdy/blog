@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pair Programming 2 AI agents? Like paring juniors?
+title: Pairing AI agents? They're just like juniors.
 description: 
 date: '2025-08-02T13:27:00.000Z'
 author: flurdy
@@ -18,7 +18,7 @@ tags:
 
 ---
 
-### Can we pair 2 agents together, is that similar to pairing juniors?
+### Can we pair program with 2 agents together, is that similar to pairing juniors?
 
 As I and all of us are getting used to use AI agents in our development flow,
 I am wondering if we should learn from our experience of the value of pair programming,
