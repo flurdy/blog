@@ -4,20 +4,12 @@ title: Pair Programming 2 AI agents? Like paring juniors?
 description: 
 date: '2025-08-02T13:27:00.000Z'
 author: flurdy
-# image: /posts/2025/08/two-robots-work-together small.jpg
-# image-large: /posts/2025/08/two-robots-work-together.jpg
-# image: /posts/2025/08/android-girl-computer-small.png
-# image-large: /posts/2025/08/android-girl-computer.png
 image: /posts/2025/08/human-robot-small.jpg
 image-large: /posts/2025/08/human-robot.jpg
 image-alt: Human and Robot
 image-attribution: Image by Creative Matters
 image-attribution-link: https://cm.taltech.ee/pair-programming-conference-cyprus
 # image-attribution-license: 
-# image-alt: Two robots work together
-# image-attribution: Designed by Freepik
-# image-attribution-link: https://www.freepik.com/premium-ai-image/two-futuristic-robots-work-together-laptop-showcasing-potential-ai-workplace_323753155.htm
-# image-attribution-license: Premium
 tags:
 - team
 - productivity
@@ -65,7 +57,7 @@ But:
 - They do not consider the bigger picture, of how the solution works with other systems and existing solutions.
 - They do not consider the risk and cost on supporting a solution, extending it, training new devs, fixing bugs 5 years in the future etc.
 
-Now seniors (me included) also do these mistakes, but hopefully a lot less after having learnt from early days mistakes.
+Now seniors (me included) also do these mistakes, but hopefully a lot less after having learnt from early days mistakes.g
 
 #### Junior = AI agent. For now.
 
