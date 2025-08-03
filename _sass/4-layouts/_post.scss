@@ -153,6 +153,14 @@
   .post-photo-narrow {
      text-align: center;
   }
+  .post-photo-tall 
+  {
+     text-align: center;
+     img {
+        max-height: 500px;
+        width: auto;
+     }
+  }
   .post-photo-license {
      text-align: right;
      padding-right: 30px;

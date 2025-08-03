@@ -6,6 +6,7 @@ layout: default
 	<div class="row">
 		<div class="col col-12">
 			<div class="post-image-box">
+            {% if page.image-attribution-link %}<a target="_new" href="{{ page.image-attribution-link }}">{% endif %}
             {% if page.image-large %}
                <div class="post-image" style="background-image: url({{"/img" | prepend: site.baseurl | append : page.image-large}})"></div>
             {% else %}
@@ -13,12 +14,11 @@ layout: default
             {% endif %}
             {% if page.image-attribution or page.image-attribution-license %}
             <div class="post-image-attribution">
-               {% if page.image-attribution-link %}<a target="_new" href="{{ page.image-attribution-link }}">{% endif %}
                {% if page.image-attribution %}Photo: {{ page.image-attribution }}.{% endif %}
                {% if page.image-attribution-license %}{{ page.image-attribution-license }}{% endif %}
-               {% if page.image-attribution-link %}</a>{% endif %}
             </div>
             {% endif %}
+            {% if page.image-attribution-link %}</a>{% endif %}
 			</div>
 		</div>
 	</div>

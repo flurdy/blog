@@ -1,15 +1,23 @@
 ---
 layout: post
-title: Pair Programming AI agents? Like junior devs?
+title: Pair Programming 2 AI agents? Like paring juniors?
 description: 
 date: '2025-08-02T13:27:00.000Z'
 author: flurdy
-# image: /posts/2020/09/.jpg
-#image-large: /posts/2020/08.jpg
-# image-alt: Decontamination
-# image-attribution: 
-# image-attribution-link: 
-# image-attribution-license: Public domain
+# image: /posts/2025/08/two-robots-work-together small.jpg
+# image-large: /posts/2025/08/two-robots-work-together.jpg
+# image: /posts/2025/08/android-girl-computer-small.png
+# image-large: /posts/2025/08/android-girl-computer.png
+image: /posts/2025/08/human-robot-small.jpg
+image-large: /posts/2025/08/human-robot.jpg
+image-alt: Human and Robot
+image-attribution: Image by Creative Matters
+image-attribution-link: https://cm.taltech.ee/pair-programming-conference-cyprus
+# image-attribution-license: 
+# image-alt: Two robots work together
+# image-attribution: Designed by Freepik
+# image-attribution-link: https://www.freepik.com/premium-ai-image/two-futuristic-robots-work-together-laptop-showcasing-potential-ai-workplace_323753155.htm
+# image-attribution-license: Premium
 tags:
 - team
 - productivity
@@ -18,7 +26,7 @@ tags:
 
 ---
 
-### Pair Programming AI agents? Like junior devs?
+### Can we pair 2 agents together, is that similar to pairing juniors?
 
 As I and all of us are getting used to use AI agents in our development flow,
 I am wondering if we should learn from our experience of the value of pair programming,
@@ -37,6 +45,15 @@ When using AI agents in your SDLC, with your normal development task, you quickl
 - They think of things you did not see and present solutions solving that.
 - They do sometimes see what others have done and keep applying the standard.
 
+
+![Android Girl Computer]({{site.baseurl}}/img/posts/2025/08/android-girl-computer-small.png)]
+{:.post-photo-narrow .post-photo-tall}
+
+_[Image by Stephane from Pixabay. Pixabay License](https://pixabay.com/illustrations/child-android-computer-girl-young-8803596/)_
+{:.post-photo-license}
+
+#### Junior dev risks
+
 But:
 
 - They can also go on a crazy train and unnecessary rewrite fundamental parts of the architecture.
@@ -48,16 +65,19 @@ But:
 - They do not consider the bigger picture, of how the solution works with other systems and existing solutions.
 - They do not consider the risk and cost on supporting a solution, extending it, training new devs, fixing bugs 5 years in the future etc.
 
-#### Seniors too
-
-Now I and all other seniors still do these mistakes, but hopefully a lot less. 
-And hopefully we still learn to avoid making the same mistakes.
+Now seniors (me included) also do these mistakes, but hopefully a lot less after having learnt from early days mistakes.
 
 #### Junior = AI agent. For now.
 
 Now it is obvious that AI agents seem to behave like a junior dev, though with time the LLM models may train and train and become more "senior".
 
 But in essence I treat the AI agents as a junior dev that I have to oversee.
+
+![Hut]({{site.baseurl}}/img/posts/2025/08/surfing-teaching.jpg)]
+{:.post-photo-narrow}
+
+_[Photo by Kampus Production. Creative Commons license](https://www.pexels.com/photo/photo-of-man-guiding-a-boy-in-surfing-sea-waves-6299967/)_
+{:.post-photo-license}
 
 ## Guiding Juniors
 
@@ -91,6 +111,12 @@ Now I have preached many times on the subject:
 In my mind it is essential you keep pairing beyond the initial onboarding. 
 
 And not just junior with a senior but junior+junior and senior+senior.
+
+![Human and Robot]({{site.baseurl}}/img/posts/2025/08/human-robot-small.jpg)]
+{:.post-photo-narrow}
+
+_[Image by Creative Matters](https://cm.taltech.ee/pair-programming-conference-cyprus)_
+{:.post-photo-license}
 
 ## Guide an AI agent
 
@@ -128,6 +154,12 @@ This means the navigator has to be on alert and continually aware of each step t
 Now a solution I was thinking to avoid the pitfalls of a junior dev / AI agent maybe the AI should pair up with another AI? To keep it in line?
 
 Perhaps a Google Gemini Pro agent can be the navigator for Claude Code Opus agent?
+
+![Two robots]({{site.baseurl}}/img/posts/2025/08/two-robots-work-together-small.jpg)]
+{:.post-photo-narrow}
+
+_[Designed by Freepik](https://www.freepik.com/premium-ai-image/two-futuristic-robots-work-together-laptop-showcasing-potential-ai-workplace_323753155.htm)_
+{:.post-photo-license}
 
 #### Why pair 2 agents?
 
