@@ -14,7 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Ivar's ranting
+title: flurdy's ranting
+title-short: ranting
 # email: blog@flurdy.tldreplcewithdotemail
 copyright_year: 2019
 copyright_name: Ivar Abrahamsen
@@ -81,20 +82,18 @@ contact: https://ivar.uk/contact
 website-url: https://flurdy.com
 website-pretty: flurdy.com
 
-
 rss: true
 
 google-analytics: UA-281408-9
 
 # Build settings
 markdown: kramdown
-permalink: '/:year/:month/:title:output_ext'
+permalink: "/:year/:month/:title:output_ext"
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-archives
-
 
 paginate: 13
 paginate_path: "/page/:num"

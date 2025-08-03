@@ -13,6 +13,10 @@ A blog migrated from Blogger to Jekyll.
 
 ```docker-compose up```
 
+### Browse
+
+http://localhost:4000/
+
 
 ### License
 * Software License: MIT
