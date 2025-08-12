@@ -1,15 +1,15 @@
 ---
 layout: post
 title: AI in SDLC = the End of Outsourcing?
-description: Is outsourcing development business at risk? By AI agents? Does it replace the reasons people outsource?
-date: "2025-11-22T45:00:00.000Z"
+description: Will the need to outsource development end? By AI agents? Pros and cons debated.
+date: "2025-08-11T22:00:00.000Z"
 author: flurdy
-# image: /posts/2025/11/-small.jpg
-# image-large: /posts/2025/11/.jpg
-# image-alt: AI factory
-# image-attribution: Image by
-# image-attribution-link: https://example.com
-# image-attribution-license:
+image: /posts/2025/08/ai-office-small.jpg
+image-large: /posts/2025/08/ai-office.jpg
+image-alt: AI office
+image-attribution: Photo by Stockcake
+image-attribution-link: https://stockcake.com/i/neon-data-nexus_2678753_1500736
+image-attribution-license: Public Domain
 tags:
   - cost
   - productivity
@@ -17,7 +17,7 @@ tags:
   - AI
 ---
 
-# AI in SDLC = the End of Outsourcing?
+Is outsourcing development business at risk? By AI agents? Does it replace the reasons people outsource?
 
 ## Why outsource?
 
@@ -40,6 +40,12 @@ Or change requirements and skills required on a whim.
 
 No-one sheds tears for a consultant if a project gets canned.
 
+![Outsourced office]({{site.baseurl}}/img/posts/2025/08/office-space-small.jpg)]
+{:.post-photo-narrow}
+
+_[Photo by Stockcake. Public Domain](https://stockcake.com/i/busy-office-space_481743_105167)_
+{:.post-photo-license}
+
 #### Cost
 
 Local consultants costs more per hour but you do not pay for them all the time. Nor any of the benefits etc. If the project is not started, is paused or when it is finished that costs is 0.
@@ -60,6 +66,12 @@ That means either
 - Or that the budget can be much smaller.
 
 In theory.
+
+![Overwhelmed manager]({{site.baseurl}}/img/posts/2025/08/overwhelmed-small.jpg)]
+{:.post-photo-narrow}
+
+_[Photo by Stockcake. Public Domain](https://stockcake.com/i/overwhelmed-office-worker_1342777_969535)_
+{:.post-photo-license}
 
 ## Fallacies of outsourcing
 
@@ -83,13 +95,19 @@ Especially with more remote teams there will be the need to hire more intermedia
 
 With consultancies the time to train and retrain is considerable as there normally is a bit turnover of staff on the project and outsourced company.
 
+![Robot Coding]({{site.baseurl}}/img/posts/2025/08/coding-robot-small.jpg)]
+{:.post-photo-narrow}
+
+_[Photo by Stockcake. Public Domain](https://stockcake.com/i/future-coding-robot_2124224_1196273)_
+{:.post-photo-license}
+
 ## Comparable use of AI
 
 Now what if an in house development team uses AI agents in their SDLC how does that compare?
 
 #### Like junior devs
 
-Like I discussed in [aa](https://cc) AI agents is like working with junior developers.
+Like I discussed in [Pairing AI Agents](https://blog.flurdy.com/2025/08/ai-pair-programming.html), AI in SDLC is like working with junior developers.
 
 #### Developers becomes architect/manager
 
@@ -123,6 +141,10 @@ It becomes a calculation of gains v cost.
 - Falling behind risk is low as the AI are up to date.
 - One risk is not keeping up the developer skills in line with the AI's skills.
 
+![Terminator]({{site.baseurl}}/img/posts/2025/08/terminator.jpg)]
+{:.post-photo-narrow}
+
+
 ### AI fallacies
 
 And the negatives of using AI agents in SDLC:
@@ -146,6 +168,12 @@ The skill in using the AI is worth training and focussing on.
 
 As well as making sure the skills of the developers don't wither.
 They need to supervise and work in conjunction with the AI to avoid AI slop and rotting code.
+
+![AI Office]({{site.baseurl}}/img/posts/2025/08/ai-office-small.jpg)]
+{:.post-photo-narrow}
+
+_[Photo by Stockcake. Public Domain](https://stockcake.com/i/neon-data-nexus_2678753_1500736)_
+{:.post-photo-license}
 
 ## Outsource or AI?
 
@@ -188,4 +216,4 @@ Time will tell.
 
 I, the author, Ivar Abrahamsen, have worked as a consultant for a huge multinational consultancy that offered outsourcing, I have been hired in on many projects to a smaller consultancy that do both local mixed with remote outsourcing. As well as a permanent employee of companies that outsourced parts of their projects. Some of the outsourcing have been to India, some near-shore like Czechia, some in the similar timezones in South-Africa and Argentina.
 
-I am currently an independent consultant that is available at the moment: https://eray.uk
+I am an independent consultant and available to help your company's AI journey: [eray.uk](https://eray.uk)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pairing AI agents? They're just like juniors
-description: 
+description: AI agents in SDLC require management like junior devs in the team, can it be helped by pairing 2 AI agents together?
 date: '2025-08-02T13:27:00.000Z'
 author: flurdy
 image: /posts/2025/08/human-robot-small.jpg
