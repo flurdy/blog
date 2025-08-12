@@ -9,7 +9,7 @@ image-large: /posts/2025/08/human-robot.jpg
 image-alt: Human and Robot
 image-attribution: Image by Creative Matters
 image-attribution-link: https://cm.taltech.ee/pair-programming-conference-cyprus
-# image-attribution-license: 
+# image-attribution-license:
 tags:
 - team
 - productivity
@@ -30,7 +30,7 @@ That should get some of the benefits of code quality though less of the knowledg
 
 ## Junior developers
 
-When using AI agents in your SDLC, with your normal development task, you quickly see the patterns of working with junior developers in a similar fashion. 
+When using AI agents in your SDLC, with your normal development task, you quickly see the patterns of working with junior developers in a similar fashion.
 
 - They can be smart and develop great things by themselves.
 - With a simple task description they may create great solutions.
@@ -49,7 +49,7 @@ _[Image by Stephane from Pixabay. Pixabay License](https://pixabay.com/illustrat
 But:
 
 - They can also go on a crazy train and unnecessary rewrite fundamental parts of the architecture.
-- They make rookie mistakes that more senior developers all did and learnt not to do. 
+- They make rookie mistakes that more senior developers all did and learnt not to do.
 - They can overcomplicate; and try and do too much instead of focusing.
 - Or they ignore red flags and hyper focus on the tiny tasks ignoring the blatant side effects.
 - They may write extremely bloated code and solution when a DRY terse solution would be much better.
@@ -73,9 +73,9 @@ _[Photo by Kampus Production. Creative Commons license](https://www.pexels.com/p
 
 ## Guiding Juniors
 
-You do need junior developers, a constant income of new "blood" is essential. 
+You do need junior developers, a constant income of new "blood" is essential.
 For new ideas, avoiding stagnation and counter natural employee turnovers.
-And most companies and leaders know how to reduce the risks and side effects of having junior developers. 
+And most companies and leaders know how to reduce the risks and side effects of having junior developers.
 
 - You have a thorough recruitment process to hire smart, independent, eager-to-learn and responsible employees.
 - You offer training to always expand (and maintain) the developers' skills and knowledge.
@@ -83,11 +83,11 @@ And most companies and leaders know how to reduce the risks and side effects of 
 
 #### Onboarding and Guidance
 
-But the most effecting is having a tried and tested modern onboarding process. 
+But the most effecting is having a tried and tested modern onboarding process.
 
 This would usually involves pairing up with another developer for a while at the start to ensure the path chosen from the go is the correct one.
 
-You teach them the technology, architecture and projects but also the culture and the norms of the company and team. 
+You teach them the technology, architecture and projects but also the culture and the norms of the company and team.
 
 With some guidance the mistakes and the risk of car crashes can be minimised.
 It is okay to break convention, try something new, just in a sensible manner.
@@ -100,7 +100,7 @@ Now I have preached many times on the subject:
 - [[2] Pair up now](https://blog.flurdy.com/2015/03/pair-up-now)
 - [[3] Pair with people you like and code reviews with people you don't like](https://blog.flurdy.com/2013/11/code-review-with-people-you-dont-like)
 
-In my mind it is essential you keep pairing beyond the initial onboarding. 
+In my mind it is essential you keep pairing beyond the initial onboarding.
 
 And not just junior with a senior but junior+junior and senior+senior.
 
@@ -112,7 +112,7 @@ _[Image by Creative Matters](https://cm.taltech.ee/pair-programming-conference-c
 
 ## Guide an AI agent
 
-It is the same with AI agents. 
+It is the same with AI agents.
 
 - You guide them with advise
 - You tell them what to do with clear prompts
@@ -123,18 +123,18 @@ It is the same with AI agents.
 
 Essentially sometimes it is very much like a top down Senior/Tech-Lead instructing what a junior should do.
 
-This depends on what tasks you and the AI are doing. 
+This depends on what tasks you and the AI are doing.
 A more hands-off task is a bit more like normal senior/manager to junior delegation of tasks.
 
-However when it is an intensive task I think of it as a pair-programming session. 
-Except I am always the navigator/co-pilot and the AI is always the driver/pilot. 
+However when it is an intensive task I think of it as a pair-programming session.
+Except I am always the navigator/co-pilot and the AI is always the driver/pilot.
 It is always the navigator that is actually in charge.
 
 ### AI Agent behaving like a junior
 
 That is mostly to avoid a lot of the same negative/risks listed at the start for a junior dev.
 
-The AI Agent often goes on a completely wrong tangent, or forgets something basic about the SDLC of this project. 
+The AI Agent often goes on a completely wrong tangent, or forgets something basic about the SDLC of this project.
 A hands-on navigator keeps it inline.
 
 An experienced navigator also good at catching and knows when it needs to prevent the AI going down a futile deep rabbit hole for a simple solution.

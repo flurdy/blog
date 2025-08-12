@@ -93,7 +93,7 @@ Especially with more remote teams there will be the need to hire more intermedia
 
 #### Knowledge Churn
 
-With consultancies the time to train and retrain is considerable as there normally is a bit turnover of staff on the project and outsourced company.
+With consultancies the time to train and retrain is considerable as there normally is a big turnover of staff on the project and outsourced company.
 
 ![Robot Coding]({{site.baseurl}}/img/posts/2025/08/coding-robot-small.jpg)]
 {:.post-photo-narrow}
@@ -103,19 +103,19 @@ _[Photo by Stockcake. Public Domain](https://stockcake.com/i/future-coding-robot
 
 ## Comparable use of AI
 
-Now what if an in house development team uses AI agents in their SDLC how does that compare?
+Now what if an in house development team uses AI agents in their SDLC - how does that compare?
 
 #### Like junior devs
 
 Like I discussed in [Pairing AI Agents](https://blog.flurdy.com/2025/08/ai-pair-programming.html), AI in SDLC is like working with junior developers.
 
-#### Developers becomes architect/manager
+#### Developers become architects and managers
 
 And since it is like delegating to a junior, every developer transforms into their own manager/architect with responsibility to create the requirements and delegate it to the AI agent(s).
 
 #### Horizontal scaled up AI use
 
-With every developer using AI in such manner the outcome is the outcome similar to outsourcing?
+With every developer using AI in such manner is the outcome similar to outsourcing?
 
 ### SDLC with AI benefits
 
@@ -123,7 +123,8 @@ Lets compare the pros and cons of outsourcing discussed briefly above.
 
 #### AI Capacity
 
-If the team goes all in with AI agents the theory and current data indicate they can now scale horizontally the bandwidth by quite a bit.
+If the team goes all in with AI agents the theory and current data indicate they can now scale the horizontally bandwidth by quite a bit.
+A team can be less developers, so they can have more teams with the same amount of developers.
 
 #### AI Flexibility
 
@@ -138,7 +139,7 @@ It becomes a calculation of gains v cost.
 
 - The employee salaries does not increase.
 - The AI agent cost increases but on a whim can be dialled to 0.
-- Falling behind risk is low as the AI are up to date.
+- Falling behind risk is low as the AI skills are up to date.
 - One risk is not keeping up the developer skills in line with the AI's skills.
 
 ![Terminator]({{site.baseurl}}/img/posts/2025/08/terminator.jpg)]
@@ -147,13 +148,13 @@ It becomes a calculation of gains v cost.
 
 ### AI fallacies
 
-And the negatives of using AI agents in SDLC:
+And the negatives of using AI agents in SDLC versus outsourcing:
 
 #### AI Productivity
 
 The productivity gains could be huge. If managed well on the individual level.
 
-YAGNI is vital as with great power comes great responsibility... to not bloat the requirements aed features by including everything.
+YAGNI is vital as with great power comes great responsibility... to not bloat the requirements and features by including everything, and never really finish/deliver.
 
 #### AI Hidden costs
 
@@ -180,7 +181,7 @@ _[Photo by Stockcake. Public Domain](https://stockcake.com/i/neon-data-nexus_267
 As you can see above many of the benefits of outsourcing is also prevalent with using AI in SDLC.
 And many of the negatives are irrelevant or reduced.
 
-So should comes just use AI instead?
+So should companies just use AI instead?
 It is not quite as black and white.
 
 ## It depends...
