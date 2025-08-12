@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Pairing AI agents? They're just like juniors.
+title: Pairing AI agents? They're just like juniors
 description: 
 date: '2025-08-02T13:27:00.000Z'
 author: flurdy
