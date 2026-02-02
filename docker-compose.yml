@@ -6,7 +6,7 @@ services:
     container_name: blog
     environment:
       - JEKYLL_ENV=docker
-    command: jekyll serve --force_polling --livereload --drafts --limit_posts 10
+    command: jekyll serve --force_polling --livereload --drafts --limit_posts 10 --incremental
     # command: bundle install
     # command: bundle update jekyll
     ports:

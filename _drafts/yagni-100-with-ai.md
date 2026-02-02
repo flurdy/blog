@@ -1,0 +1,110 @@
+---
+layout: post
+title: YAGNI * 100 with AI
+description: AI coding assistants make it trivially easy to generate code, amplifying the temptation to over-engineer. YAGNI matters more than ever.
+date: '2026-01-31T16:00:00.000Z'
+author: flurdy
+# image: /posts/2026/02/.jpg
+# image-large: /posts/2026/02/.jpg
+# image-alt:
+# image-attribution:
+# image-attribution-link:
+# image-attribution-license:
+tags:
+- AI
+- productivity
+- architecture
+- YAGNI
+---
+
+## You Aren't Gonna Need It
+
+YAGNI - don't build features until you actually need them. History taught us that if we added all the features we thought we would need, projects would be late, over budget, or never finished at all. Most of those extras were rarely needed in the end.
+
+Release early with basic features and see if more polish is actually needed. That way you ship on time and budget, but also gain real feedback on what works. You may add a few more features later - but only a tiny subset of what you thought you needed.
+
+### The old friction was our friend
+
+Before AI, there was natural friction. Want to add a caching layer? That's a few hours. An abstraction for three database backends? A day or two. A plugin system for your internal tool? Block out a week.
+
+This friction served as a filter. When building something unnecessary costs significant time, you think twice. You weigh the trade-offs. You ask yourself: "Do I really need this?"
+
+YAGNI saved days, weeks, months. It saved projects, businesses and careers.
+
+## The New World, the AI World, No Friction
+
+With AI agents, that calculation changes dramatically as AI removes the friction. Now you can:
+
+- Generate a complete caching layer in minutes
+- Build abstraction layers with a few prompts
+- Create plugin architectures before lunch
+
+The friction is gone. And with it, our natural defense against over-engineering.
+
+> AI makes it so easy to write code that we forget to ask if we should
+
+
+## The hidden costs remain
+
+But in fact the real costs was not just the development time, more code means:
+
+- **Maintenance burden** 
+
+  Code that exists must be maintained, updated, and understood
+
+- **Bug surface area** 
+
+  More code means more places for bugs to hide
+
+But also on individual level:
+
+- **Cognitive load** 
+  
+  Every abstraction adds complexity for the next developer (including future you)
+
+- **Onboarding friction** 
+  
+  New team members must understand code that serves no purpose
+
+### Not just code
+
+Even with super charged AI development, if you keep adding features fast, each one will still delay a project more and more:
+
+- **Testing overhead** 
+
+  That unnecessary feature still needs tests.
+
+  And often manual QA, or at least some manual UX test to ensure it has been done.
+
+- **Documentation** 
+
+  More features, means more documentation and training
+
+## Yagni * 100 to avoid AI bloat
+
+With AI agents ability to create features at such rapid rate, you will need a strict discipline to keep the project on course and apply YAGNI all the time to stop the bloat.
+
+AI increases output, not understanding. If you build five extra features you do not need, you also create five extra surfaces for bugs, support, and distraction.
+
+### The discipline shift
+
+In the old world, we needed discipline to push through and finish features. 
+
+In the AI world, we need discipline to stop ourselves from building features.
+
+The AI suggests adding configuration options, extensibility points, error handling for scenarios that won't happen, abstractions for problems you don't really have. And because it's so easy, the instinct is to say yes.
+
+### Before you build
+
+Before asking your AI assistant to build something, ask yourself:
+
+1. **Is this solving a real problem I have today?** Not a hypothetical future problem. Today.
+2. **What's the simplest solution?** AI loves to suggest comprehensive solutions. Push back.
+3. **Can I delete this later?** If the code is deeply integrated, think harder about whether you need it.
+4. **Would I write this by hand?** If the effort would have stopped you before, maybe that was wisdom.
+
+## Resist
+
+> The best code is still no code. The second best is the minimum code that solves the actual problem.
+
+AI makes it tempting to skip straight to comprehensive solutions. Resist.
