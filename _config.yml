@@ -130,3 +130,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - kube
+  - AGENTS.md
+  - .claude
+  - .cursor
+  - .vscode
