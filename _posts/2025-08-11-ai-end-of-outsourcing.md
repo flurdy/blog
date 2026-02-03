@@ -40,7 +40,7 @@ Or change requirements and skills required on a whim.
 
 No-one sheds tears for a consultant if a project gets canned.
 
-![Outsourced office]({{site.baseurl}}/img/posts/2025/08/office-space-small.jpg)]
+![Outsourced office]({{site.baseurl}}/img/posts/2025/08/office-space-small.jpg)
 {:.post-photo-narrow}
 
 _[Photo by Stockcake. Public Domain](https://stockcake.com/i/busy-office-space_481743_105167)_
@@ -67,7 +67,7 @@ That means either
 
 In theory.
 
-![Overwhelmed manager]({{site.baseurl}}/img/posts/2025/08/overwhelmed-small.jpg)]
+![Overwhelmed manager]({{site.baseurl}}/img/posts/2025/08/overwhelmed-small.jpg)
 {:.post-photo-narrow}
 
 _[Photo by Stockcake. Public Domain](https://stockcake.com/i/overwhelmed-office-worker_1342777_969535)_
@@ -95,7 +95,7 @@ Especially with more remote teams there will be the need to hire more intermedia
 
 With consultancies the time to train and retrain is considerable as there normally is a big turnover of staff on the project and outsourced company.
 
-![Robot Coding]({{site.baseurl}}/img/posts/2025/08/coding-robot-small.jpg)]
+![Robot Coding]({{site.baseurl}}/img/posts/2025/08/coding-robot-small.jpg)
 {:.post-photo-narrow}
 
 _[Photo by Stockcake. Public Domain](https://stockcake.com/i/future-coding-robot_2124224_1196273)_
@@ -142,7 +142,7 @@ It becomes a calculation of gains v cost.
 - Falling behind risk is low as the AI skills are up to date.
 - One risk is not keeping up the developer skills in line with the AI's skills.
 
-![Terminator]({{site.baseurl}}/img/posts/2025/08/terminator.jpg)]
+![Terminator]({{site.baseurl}}/img/posts/2025/08/terminator.jpg)
 {:.post-photo-narrow}
 
 
@@ -170,7 +170,7 @@ The skill in using the AI is worth training and focussing on.
 As well as making sure the skills of the developers don't wither.
 They need to supervise and work in conjunction with the AI to avoid AI slop and rotting code.
 
-![AI Office]({{site.baseurl}}/img/posts/2025/08/ai-office-small.jpg)]
+![AI Office]({{site.baseurl}}/img/posts/2025/08/ai-office-small.jpg)
 {:.post-photo-narrow}
 
 _[Photo by Stockcake. Public Domain](https://stockcake.com/i/neon-data-nexus_2678753_1500736)_
