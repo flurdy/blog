@@ -134,6 +134,14 @@ You don't need a physical room. Remote mob programming works surprisingly well:
 
 In some ways, remote is better - everyone has the same view, recordings are easy, and introverts often participate more freely.
 
+### Beyond one driver
+
+Tools like VS Code Live Share change the dynamic. Multiple people can edit the same file simultaneously - one person leads, but others can jump in to fix a typo, add a comment, or demonstrate an idea.
+
+The strict "one driver" rule relaxes into "one person in charge, flexible for input." This can accelerate things further - a navigator spots a missing semicolon and just fixes it instead of dictating the correction.
+
+Traditional mob purists might object, but the goal is flow, not rules.
+
 
 ## Getting started
 
