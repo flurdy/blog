@@ -38,6 +38,18 @@ Mob programming is not a meeting. You're producing code the whole time. It's als
 
 Think of it as continuous code review with immediate implementation.
 
+### Life happens, code flows
+
+One underrated benefit: flexibility. People take breaks, step out for meetings, leave early, go on holiday - and the code keeps flowing. No one is a bottleneck because everyone shares the context.
+
+Compare this to solo work where one person's absence means their work stops, their PRs wait for review, and their knowledge stays locked in their head.
+
+### Fewer rabbit holes
+
+Like pair programming, mob programming naturally prevents waste. When you're about to spend two hours on a "nice to have" abstraction, someone asks: "Do we actually need this?"
+
+Rabbit holes get spotted early. Unnecessary code never gets written. The group maintains focus on what matters.
+
 
 ## The solo AI trap
 
