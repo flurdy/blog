@@ -178,6 +178,20 @@ If your team uses AI assistants, try mobbing for a week. You might find that wor
 
 ## Resources
 
-- [Mob Programming](https://mobprogramming.org/) - Woody Zuill's original site
-- *TODO: Add more resources*
+### Books
+
+- [Software Teaming: A Mob Programming, Whole-Team Approach](https://www.amazon.com/Software-Teaming-Programming-Whole-Team-Approach/dp/B0BLG1QTYK) - Woody Zuill and Kevin Meadows. The definitive guide, now in its second edition with material on remote mob programming.
+
+- [Code with the Wisdom of the Crowd](https://pragprog.com/titles/mpmob/code-with-the-wisdom-of-the-crowd/) - Mark Pearl. Practical guide to getting started with mob programming.
+
+### Podcasts
+
+- [The Mob Mentality Show](https://mobmentalityshow.podbean.com/) - Chris Lucian and Austin Chadwick discuss mob programming with guests. Over 300 episodes covering everything from getting started to advanced patterns.
+
+- [Mob Programming with Woody Zuill](https://www.mountaingoatsoftware.com/agile/podcast/33-mob-programming-with-woody-zuill) - Mountain Goat Software podcast episode with the originator.
+
+### Websites
+
+- [Mob Programming](https://mobprogramming.org/) - Woody Zuill's original site with resources and sample book chapters
+- [Woody Zuill](https://woodyzuill.com/) - Workshops, talks, and coaching on software teaming
 
