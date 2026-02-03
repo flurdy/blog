@@ -104,6 +104,39 @@ More people doesn't help here - you need coordination, not headcount.
 Smaller groups rotate the driver role more frequently. Everyone stays sharp and engaged.
 
 
+## The ideal team
+
+I believe small mob teams with shared AI collaboration represent the most productive team structure we've found yet.
+
+Not individuals racing ahead with their own AI agents. Not large teams with coordination overhead. But 4-5 people, thinking together, prompting together, building together.
+
+### Mixed backgrounds, shared goal
+
+The ideal mob isn't five backend developers. It's a mix - someone with frontend experience, someone who knows infrastructure, someone strong on architecture, maybe someone closer to product.
+
+This diversity is a feature, not a problem. When you hit a CSS issue, the frontend person leads. When deployment questions arise, the infra person steps in. Everyone learns from each other constantly. Knowledge spreads without scheduled "knowledge transfer" sessions.
+
+You don't need experts in everything. You need enough overlap to communicate and enough diversity to cover the problem space.
+
+### Flexible focus
+
+Not everyone needs to stare at the same screen every moment. While the core group drives the main story forward, someone can branch off to investigate:
+
+- Research an API the team will need
+- Spike a potential approach
+- Check documentation or find examples
+
+They stay connected - same call, same shared context - and rejoin the main flow when ready. The investigation feeds back into the mob's work rather than becoming a separate track.
+
+This flexibility means the mob moves fast on the main path while still handling the side quests that would otherwise block progress.
+
+### The sum is greater
+
+The AI handles the typing speed. The mob handles the thinking speed.
+
+Four people with different perspectives, reviewing AI output together, catching issues the AI missed, asking "but what about..." - this produces better results than any individual could achieve, no matter how good their AI tools.
+
+
 ## How it works in practice
 
 ### Shared specifications
@@ -174,39 +207,6 @@ The first session will feel awkward. That's normal. By the third session, you'll
 - Better prompt engineering as a team skill
 
 
-## The ideal team
-
-I believe small mob teams with shared AI collaboration represent the most productive team structure we've found yet.
-
-Not individuals racing ahead with their own AI agents. Not large teams with coordination overhead. But 4-5 people, thinking together, prompting together, building together.
-
-### Mixed backgrounds, shared goal
-
-The ideal mob isn't five backend developers. It's a mix - someone with frontend experience, someone who knows infrastructure, someone strong on architecture, maybe someone closer to product.
-
-This diversity is a feature, not a problem. When you hit a CSS issue, the frontend person leads. When deployment questions arise, the infra person steps in. Everyone learns from each other constantly. Knowledge spreads without scheduled "knowledge transfer" sessions.
-
-You don't need experts in everything. You need enough overlap to communicate and enough diversity to cover the problem space.
-
-### Flexible focus
-
-Not everyone needs to stare at the same screen every moment. While the core group drives the main story forward, someone can branch off to investigate:
-
-- Research an API the team will need
-- Spike a potential approach
-- Check documentation or find examples
-
-They stay connected - same call, same shared context - and rejoin the main flow when ready. The investigation feeds back into the mob's work rather than becoming a separate track.
-
-This flexibility means the mob moves fast on the main path while still handling the side quests that would otherwise block progress.
-
-### The sum is greater
-
-The AI handles the typing speed. The mob handles the thinking speed.
-
-Four people with different perspectives, reviewing AI output together, catching issues the AI missed, asking "but what about..." - this produces better results than any individual could achieve, no matter how good their AI tools.
-
-
 ## Try it
 
 If your team uses AI assistants, try mobbing for a week. You might find that working together - truly together - is faster than working apart.
@@ -234,4 +234,3 @@ If your team uses AI assistants, try mobbing for a week. You might find that wor
 
 - [Mob Programming](https://mobprogramming.org/) - Woody Zuill's original site with resources and sample book chapters
 - [Woody Zuill](https://woodyzuill.com/) - Workshops, talks, and coaching on software teaming
-
