@@ -7,10 +7,10 @@ date: '2026-02-04T12:52:00.000Z'
 author: flurdy
 image: /posts/2026/02/two-robots-work-together-small.jpg
 image-large: /posts/2026/02/two-robots-work-together.jpg
-# image-alt:
-# image-attribution:
-# image-attribution-link:
-# image-attribution-license:
+image-alt: Two robots working together on a laptop
+image-attribution: Designed by Freepik
+image-attribution-link: https://www.freepik.com/premium-ai-image/two-futuristic-robots-work-together-laptop-showcasing-potential-ai-workplace_323753155.htm
+image-attribution-license: Freepik License
 tags:
 - AI
 - team
