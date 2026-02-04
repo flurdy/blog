@@ -53,6 +53,8 @@ Rabbit holes get spotted early. Unnecessary code never gets written. The group m
 
 ## The solo AI trap
 
+![Separate workstations]({{site.baseurl}}/img/posts/2025/08/ai-office-small.jpg)
+
 AI coding assistants are transforming how we work. But here's what often happens:
 
 Each developer on your team works alone with their AI. They each:
@@ -69,6 +71,8 @@ Code gets written fast. Integration takes forever. Debugging someone else's AI-g
 
 
 ## The mob + AI sweet spot
+
+![Human and robot collaborating]({{site.baseurl}}/img/posts/2025/08/human-robot-small.jpg)
 
 Here's the insight: AI agents don't replace mob programming - they supercharge it.
 
@@ -92,10 +96,11 @@ With 4-5 people, everyone stays engaged. No one becomes a passive observer. Each
 
 ### Parallel agent orchestration
 
-A small mob can effectively coordinate 2-3 AI agents working simultaneously:
+A small mob can effectively coordinate multiple AI agents working simultaneously:
 - One agent implementing a feature
 - Another writing tests
 - A third updating documentation
+- An agent can be tasked with planning etc
 
 More people doesn't help here - you need coordination, not headcount.
 
@@ -105,6 +110,8 @@ Smaller groups rotate the driver role more frequently. Everyone stays sharp and 
 
 
 ## The ideal team
+
+![Team huddle]({{site.baseurl}}/img/posts/2023/03/team_focus.jpg)
 
 I believe small mob teams with shared AI collaboration represent the most productive team structure we've found yet.
 
