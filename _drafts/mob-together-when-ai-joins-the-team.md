@@ -3,10 +3,10 @@ layout: post
 title: "Mob Together: When AI Joins the Team"
 slug: mob-together-when-ai-joins-the-team
 description: Small teams collaborating with AI agents outperform solo developers each working alone with their own AI. Mob programming is back, and it's better than ever.
-date: '2026-02-03T12:00:00.000Z'
+date: '2026-02-04T12:52:00.000Z'
 author: flurdy
-image: /posts/2025/08/two-robots-work-together-small.jpg
-# image-large: /posts/2025/08/two-robots-work-together.jpg
+image: /posts/2026/02/two-robots-work-together-small.jpg
+image-large: /posts/2026/02/two-robots-work-together.jpg
 # image-alt:
 # image-attribution:
 # image-attribution-link:
