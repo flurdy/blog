@@ -26,6 +26,11 @@ permalink: /about/
                <img src="{{"/img/" | prepend: site.baseurl | append : site.author-avatar3 }}" />
             </div>
          {% endif %}
+         {% if site.author-avatar4 %}
+            <div class="about-author-avatar">
+               <img src="{{"/img/" | prepend: site.baseurl | append : site.author-avatar4 }}" />
+            </div>
+         {% endif %}
       </div>
       <div class="row about-author-name">
          <h4>{{ site.author-name }}</h4>

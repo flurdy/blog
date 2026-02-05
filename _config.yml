@@ -27,10 +27,11 @@ author-avatar: me/stash2.jpg
 author-avatar1: me/oculus.jpg
 author-avatar2: me/ivarslips.jpg
 author-avatar3: me/skina.jpg
+author-avatar4: me/ee-ivar.jpg
 author-description: >-
   <ul>
-    <li>Developer then Tech Lead then Architect then Manager, now Consultant/Contractor.</li>
-    <li>With Java then Scala and everything in between and beyond.</li>
+    <li>Started as Developer then Tech Lead then Architect then Manager, now Consultant/Contractor.</li>
+    <li>With Java then Scala and then Rust, TypeScript, everything in between and beyond.</li>
     <li>From racks to AWS to Kubernetes.</li>
     <li>From waterfall to Scrum to Kanban to Lean to whatever works.</li>
     <li>From multinational enterprises to public sector to unicorn startups.</li>
@@ -42,6 +43,9 @@ author-description0: >-
     Essentially really good at receiving a message,
     splitting a message, joining a message
     and sending a message elsewhere.
+  </p>
+  <p>
+    And now good at telling others how to do that too.
   </p>
 author-description1: >-
   <p>
@@ -55,10 +59,11 @@ author-description2: >-
     <li>My website: <a href="https://flurdy.com">flurdy.com</a></li>
     <li>My ideas: <a href="https://code.flurdy.com">code.flurdy.com</a></li>
     <li>Who am I: <a href="https://ivar.uk/whoami.html">ivar.uk/whoami.html</a></li>
+    <li>CV: <a href="https://linkedin/in/flurdy">linkedin/in/flurdy</a></li>
   </ul>
 author-description3: >-
   <p>
-    Ps. I rant a lot more on <a href="https://twitter.com/flurdy">Twitter</a> and <a href="https://snabelen.no/@flurdy">Mastadon</a> than I blog.
+    Ps. I rant into the empty echo chamber on <a href="https://twitter.com/flurdy">Twitter/X</a>, <a href="https://bsky.app/profile/flurdy.com">BlueSky</a> and <a href="https://snabelen.no/@flurdy">Mastadon</a>, more than I blog.
   </p>
 description: >- # this means to ignore newlines until "baseurl:"
   The ramblings and ranting of Ivar Abrahamsen at flurdy.com.

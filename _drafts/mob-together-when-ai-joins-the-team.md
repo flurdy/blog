@@ -5,12 +5,11 @@ slug: mob-together-when-ai-joins-the-team
 description: Small teams collaborating with AI agents outperform solo developers each working alone with their own AI. Mob programming is back, and it's better than ever.
 date: '2026-02-04T12:52:00.000Z'
 author: flurdy
-image: /posts/2026/02/two-robots-work-together-small.jpg
-image-large: /posts/2026/02/two-robots-work-together.jpg
-image-alt: Two robots working together on a laptop
-image-attribution: Designed by Freepik
-image-attribution-link: https://www.freepik.com/premium-ai-image/two-futuristic-robots-work-together-laptop-showcasing-potential-ai-workplace_323753155.htm
-image-attribution-license: Freepik License
+image: /posts/2026/02/3-people-and-2-robots-small.png
+image-large: /posts/2026/02/3-people-and-2-robots.png
+image-alt: 3 people and 2 androids talking closely
+image-attribution: AI-generated with Nano Banana
+image-attribution-license: Licensed under CC-BY 4.0.
 tags:
 - AI
 - team
@@ -18,6 +17,8 @@ tags:
 - mob
 - pair
 ---
+
+
 
 ## What is mob programming?
 
@@ -50,10 +51,13 @@ Like pair programming, mob programming naturally prevents waste. When you're abo
 
 Rabbit holes get spotted early. Unnecessary code never gets written. The group maintains focus on what matters.
 
+[![Silos]({{site.baseurl}}/img/posts/2026/02/silos-barn-small.jpg)]({{site.baseurl}}/img/posts/2026/02/silos-barn.jpg)
+{:.post-photo-narrow}
+
+_[Image by Freepik](https://www.freepik.com/free-photo/wide-shot-concrete-silos-barns-grass-field-surrounded-with-trees_7908980.htm)_
+{:.post-photo-license}
 
 ## The solo AI trap
-
-![Separate workstations]({{site.baseurl}}/img/posts/2025/08/ai-office-small.jpg)
 
 AI coding assistants are transforming how we work. But here's what often happens:
 
@@ -72,8 +76,6 @@ Code gets written fast. Integration takes forever. Debugging someone else's AI-g
 
 ## The mob + AI sweet spot
 
-![Human and robot collaborating]({{site.baseurl}}/img/posts/2025/08/human-robot-small.jpg)
-
 Here's the insight: AI agents don't replace mob programming - they supercharge it.
 
 A small mob (4-5 people) working together with AI agents:
@@ -85,6 +87,11 @@ A small mob (4-5 people) working together with AI agents:
 
 The mob provides what AI lacks: judgment, context, and coherence.
 
+[![Small Robot mob]({{site.baseurl}}/img/posts/2026/02/small-mob-robots-small.png)]({{site.baseurl}}/img/posts/2026/02/small-mob-robots.png)
+{:.post-photo-narrow}
+
+_AI generated image with Nano Banana. CC-by_
+{:.post-photo-license}
 
 ## Why smaller mobs work better with AI
 
@@ -111,8 +118,6 @@ Smaller groups rotate the driver role more frequently. Everyone stays sharp and 
 
 ## The ideal team
 
-![Team huddle]({{site.baseurl}}/img/posts/2023/03/team_focus.jpg)
-
 I believe small mob teams with shared AI collaboration represent the most productive team structure we've found yet.
 
 Not individuals racing ahead with their own AI agents. Not large teams with coordination overhead. But 4-5 people, thinking together, prompting together, building together.
@@ -137,12 +142,14 @@ They stay connected - same call, same shared context - and rejoin the main flow 
 
 This flexibility means the mob moves fast on the main path while still handling the side quests that would otherwise block progress.
 
+[![Cogs]({{site.baseurl}}/img/posts/2026/02/cogs-small.jpg)]({{site.baseurl}}/img/posts/2026/02/cogs.jpg)
+{:.post-photo-narrow}
+
 ### The sum is greater
 
 The AI handles the typing speed. The mob handles the thinking speed.
 
 Four people with different perspectives, reviewing AI output together, catching issues the AI missed, asking "but what about..." - this produces better results than any individual could achieve, no matter how good their AI tools.
-
 
 ## How it works in practice
 
@@ -174,6 +181,11 @@ When developers work solo with AI, you get:
 
 A mob stays aligned by definition. There's one codebase direction, one architectural vision, one understanding.
 
+![Cabin work]({{site.baseurl}}/img/posts/2026/02/cabin-work-small.jpg)
+{:.post-photo-narrow}
+
+_[Photo by StockCake](https://stockcake.com/i/remote-work-paradise_3076106_1423399)_
+{:.post-photo-license}
 
 ## Remote mob programming
 
