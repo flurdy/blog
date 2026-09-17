@@ -161,3 +161,7 @@ The migration comes back. Whoever is on the thread reads it out. We take it. At 
 At five we close the call. Two of the agents are still running. We'll look at them in the morning.
 
 I'll report back when it's every Tuesday. If you get there first, tell me.
+
+
+_Drafted with AI assistance; the opinions are mine._
+{:.post-photo-license}
