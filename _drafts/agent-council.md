@@ -161,10 +161,3 @@ The migration comes back. Whoever is on the thread reads it out. We take it. At 
 At five we close the call. Two of the agents are still running. We'll look at them in the morning.
 
 I'll report back. If you get there first, tell me.
-
-
----
-
-## Resources
-
-<!-- TODO: anything on context switching cost, attention research, or AI fatigue pieces worth citing. Keep short. -->
