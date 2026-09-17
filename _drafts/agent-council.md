@@ -67,6 +67,8 @@ I need to be able to stop answering without everything stopping.
 
 In February I argued for [mobbing with AI in the room]({{site.baseurl}}/2026/02/mob-together-when-ai-joins-the-team.html). The AI did the typing and the mob did the thinking. It already shared judgment and caught rabbit holes. What I hadn't worked out was how to make that judgment hold across several agent threads for a whole day, or how to make stopping one of its decisions.
 
+Take the keyboard away and the deciding falls back to whoever owns the chat window. That's me, six times over.
+
 Call it a council. A few people, three to five, one shared set of agents, agreeing what to ask for, whether the answer is good enough, what to switch to next, and when to stop. The extra rule is that no tired person can quietly extend the queue or the day. I've run it for afternoons and for whole days, now and then, in my own team. It holds. What I want is to run it full time, and for it to be how the company works, not something one team does on a good week.
 
 I want someone else to know enough to say we've done enough today.
