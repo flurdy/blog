@@ -69,7 +69,7 @@ In February I argued for [mobbing with AI in the room]({{site.baseurl}}/2026/02/
 
 Mobbing answered "who decides?" by accident: everyone did, because everyone was watching one keyboard. Take the keyboard away and the deciding falls back to whoever owns the chat window. That's me, six times over.
 
-So the fix isn't a mob. It's a council. A few people, three to five, one shared set of agents, agreeing what to ask for, whether the answer is good enough, what to switch to next, and when to stop. This is a proposal. I've tried it for afternoons, not yet for a day.
+So the fix isn't a different mob. It's the same mob, minus the keyboard, plus the one thing February left out: shared responsibility for what not to start and when to finish. Call it a council. A few people, three to five, one shared set of agents, agreeing what to ask for, whether the answer is good enough, what to switch to next, and when to stop. I've run it for afternoons and for whole days, now and then, in my own team. It holds. What I want is to run it full time, and for it to be how the company works, not something one team does on a good week.
 
 I want someone else to know enough to say we've done enough today.
 
@@ -86,7 +86,7 @@ One more rule: nobody accepts what their own prompt produced. Someone else reads
 
 ### Holds the business knowledge
 
-Nobody on the council has the codebase in their fingers any more. The agents do. What we still have is why any of it exists: what the customer needed, why we chose this over that, what we tried and dropped. If the council doesn't hold that, nobody does. And I need it held by someone other than me, so that someone else can say no to a thing the second time, and can tell whether what came back is what the customer asked for. The tests can pass and still be the wrong thing.
+Nobody on the council types the code any more; the agents do. We still have to understand it, and we're still the ones answerable for it. But the thing only we hold is why any of it exists: what the customer needed, why we chose this over that, what we tried and dropped. If the council doesn't hold that, nobody does. And I need it held by someone other than me, so that someone else can say no to a thing the second time, and can tell whether what came back is what the customer asked for. The tests can pass and still be the wrong thing.
 
 ### Says no together
 
@@ -107,7 +107,7 @@ In a council the end of the day is decided before it starts. We agree when we're
 
 That's the part I want most. To close the laptop without having to decide whether I've done enough, because we already decided.
 
-An afternoon is the easy case. Nobody needs a council to stop at four. The evening is where I need it, and you don't get the evening unless the council is the whole day.
+An afternoon council is the easy case: it ends when the call ends, and then I'm on my own again with the evening in front of me. The stop time only protects the evening if the council has the whole day. That's the version worth running.
 
 I don't know whether we'd ship more. I'd settle for the same amount, if I could finish at five and someone else understood what we'd shipped.
 
@@ -128,7 +128,7 @@ Only on direction. Whoever is on the thread chooses how to ask for work we've al
 
 ### "Three people to watch six agents?"
 
-Yes, and I haven't shown it pays. That's the trade in the section above, and it's the part I still have to try.
+Yes, and I haven't measured whether it pays. That's the trade in the section above.
 
 ### "Isn't this just a team lead?"
 
@@ -136,7 +136,7 @@ A lead is still one person deciding. Same problem.
 
 ### "You're still context switching, just together"
 
-Yes. I don't know yet whether a day of switching together leaves me less tired than a day of switching alone. That's the experiment.
+Yes. On the days we've done it, I've gone home on time, and less tired. Whether that holds week after week, I don't know yet. That's the experiment.
 
 
 ## How to start
@@ -160,4 +160,4 @@ The migration comes back. Whoever is on the thread reads it out. We take it. At 
 
 At five we close the call. Two of the agents are still running. We'll look at them in the morning.
 
-I'll report back. If you get there first, tell me.
+I'll report back when it's every Tuesday. If you get there first, tell me.
