@@ -136,7 +136,7 @@ A lead is still one person deciding. Same problem.
 
 ### "You're still context switching, just together"
 
-Yes. On the days we've done it, I've gone home on time, and less tired. Whether that holds week after week, I don't know yet. That's the experiment.
+Yes. On the days we've done it, I've closed the laptop on time, and less tired. Whether that holds week after week, I don't know yet. That's the experiment.
 
 
 ## How to start
