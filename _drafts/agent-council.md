@@ -5,11 +5,11 @@ slug: the-agent-council-stopping-together
 description: AI agents always have another task to suggest. Could a small council sharing direction and a finish time make it easier to close the laptop?
 date: '2026-09-16T12:00:00.000Z'
 author: flurdy
-# image: /posts/2026/09/agent-council-small.png
-# image-large: /posts/2026/09/agent-council.png
-# image-alt: A small group of people around a table directing several robots
-# image-attribution: AI-generated with Nano Banana
-# image-attribution-license: Licensed under CC-BY 4.0.
+image: /posts/2026/09/someone-says-stop-wide-small.png
+image-large: /posts/2026/09/someone-says-stop-wide.png
+image-alt: One person standing with their laptop shut while two colleagues look up from theirs; androids keep working in the room beyond
+image-attribution: AI-generated with Recraft
+image-attribution-license: Licensed under CC-BY 4.0.
 tags:
 - AI
 - team
@@ -54,7 +54,11 @@ And everything my agents and I worked out today is in my chat history, where nob
 
 More gets shipped. Less of it fits together, and less of it is understood by anyone but me. And if I stop answering, all of it waits.
 
-<!-- photo: silos or a lone figure at many screens -->
+[![One person at a desk surrounded by six screens, an android on each waiting for an answer]({{site.baseurl}}/img/posts/2026/09/solo-director-small.png)]({{site.baseurl}}/img/posts/2026/09/solo-director.png)
+{:.post-photo-narrow}
+
+_AI generated image with Recraft. CC-by_
+{:.post-photo-license}
 
 
 ## A council, not a mob
@@ -88,6 +92,12 @@ Nobody on the council has the codebase in their fingers any more. The agents do.
 
 Every agent finishes with an offer, and on my own I take it. In a council someone else hears the offer too, and "do we actually need that?" turns out to be a much easier thing to say about somebody else's next task. That question is the whole of [YAGNI × 100]({{site.baseurl}}/2026/02/yagni-100-with-ai.html).
 
+[![Three people at one table, one closing a laptop, while androids work on behind the glass]({{site.baseurl}}/img/posts/2026/09/council-at-table-small.png)]({{site.baseurl}}/img/posts/2026/09/council-at-table.png)
+{:.post-photo-narrow}
+
+_AI generated image with Recraft. CC-by_
+{:.post-photo-license}
+
 
 ## The council can stop
 
@@ -102,6 +112,12 @@ An afternoon is the easy case. Nobody needs a council to stop at four. The eveni
 I don't know whether we'd ship more. I'd settle for the same amount, if I could finish at five and someone else understood what we'd shipped.
 
 > The agents can keep going. We don't have to.
+
+[![An empty desk with a closed laptop and the chair pushed in; on the wall a screen where two androids are still quietly working]({{site.baseurl}}/img/posts/2026/09/council-can-stop-small.png)]({{site.baseurl}}/img/posts/2026/09/council-can-stop.png)
+{:.post-photo-narrow}
+
+_AI generated image with Recraft. CC-by_
+{:.post-photo-license}
 
 
 ## Objections, honestly
