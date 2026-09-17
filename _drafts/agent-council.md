@@ -61,15 +61,13 @@ _AI generated image with Recraft. CC-by_
 {:.post-photo-license}
 
 
-## A council, not a mob
+## From mob to council
 
 I need to be able to stop answering without everything stopping.
 
-In February I argued for [mobbing with AI in the room]({{site.baseurl}}/2026/02/mob-together-when-ai-joins-the-team.html). Most of it still holds. What I hadn't understood was how much I would need it just to stop.
+In February I argued for [mobbing with AI in the room]({{site.baseurl}}/2026/02/mob-together-when-ai-joins-the-team.html). The AI did the typing and the mob did the thinking. It already shared judgment and caught rabbit holes. What I hadn't worked out was how to make that judgment hold across several agent threads for a whole day, or how to make stopping one of its decisions.
 
-Mobbing answered "who decides?" by accident: everyone did, because everyone was watching one keyboard. Take the keyboard away and the deciding falls back to whoever owns the chat window. That's me, six times over.
-
-So the fix isn't a different mob. It's the same mob, minus the keyboard, plus the one thing February left out: shared responsibility for what not to start and when to finish. Call it a council. A few people, three to five, one shared set of agents, agreeing what to ask for, whether the answer is good enough, what to switch to next, and when to stop. I've run it for afternoons and for whole days, now and then, in my own team. It holds. What I want is to run it full time, and for it to be how the company works, not something one team does on a good week.
+Call it a council. A few people, three to five, one shared set of agents, agreeing what to ask for, whether the answer is good enough, what to switch to next, and when to stop. The extra rule is that no tired person can quietly extend the queue or the day. I've run it for afternoons and for whole days, now and then, in my own team. It holds. What I want is to run it full time, and for it to be how the company works, not something one team does on a good week.
 
 I want someone else to know enough to say we've done enough today.
 
@@ -107,9 +105,9 @@ In a council the end of the day is decided before it starts. We agree when we're
 
 That's the part I want most. To close the laptop without having to decide whether I've done enough, because we already decided.
 
-An afternoon council is the easy case: it ends when the call ends, and then I'm on my own again with the evening in front of me. The stop time only protects the evening if the council has the whole day. That's the version worth running.
+An afternoon is enough to practise, and its stop time can still hold after the call. But by then I've spent the morning starting things alone. At five I may already have a private queue and a reason to make one exception. A whole day makes five o'clock part of every decision from nine onwards. It protects the evening better.
 
-I don't know whether we'd ship more. I'd settle for the same amount, if I could finish at five and someone else understood what we'd shipped.
+I don't know whether we'd ship more. I'd settle for the same amount, if I could consistently finish at five and someone else understood what we'd shipped.
 
 > The agents can keep going. We don't have to.
 
@@ -145,7 +143,7 @@ You need a few people, one window every agent reports into, and a stop time agre
 
 Start with an afternoon, to learn the window: who's on the thread, what a return looks like when it waits, how it feels to have someone else read your agent's work before you do.
 
-Then do a whole day. That's the one that counts. Agree five before you start. Turn one offer down. At five, close it.
+Then do a whole day. That's the stronger test. Agree five before you start. Turn one offer down. At five, close it.
 
 One rule for both: no agent gets a new task unless two of you wanted it.
 
