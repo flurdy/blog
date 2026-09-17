@@ -3,7 +3,7 @@ layout: post
 title: "The Agent Council: Stopping Together"
 slug: the-agent-council-stopping-together
 description: AI agents always have another task to suggest. Could a small council sharing direction and a finish time make it easier to close the laptop?
-date: '2026-09-16T12:00:00.000Z'
+date: '2026-09-17T12:00:00.000Z'
 author: flurdy
 image: /posts/2026/09/someone-says-stop-wide-small.png
 image-large: /posts/2026/09/someone-says-stop-wide.png
