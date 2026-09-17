@@ -69,7 +69,7 @@ In February I argued for [mobbing with AI in the room]({{site.baseurl}}/2026/02/
 
 Mobbing answered "who decides?" by accident: everyone did, because everyone was watching one keyboard. Take the keyboard away and the deciding falls back to whoever owns the chat window. That's me, six times over.
 
-So the fix isn't a mob. It's a council. Three or four people, one shared set of agents, agreeing what to ask for, whether the answer is good enough, what to switch to next, and when to stop. This is a proposal. I've tried it for afternoons, not yet for a day.
+So the fix isn't a mob. It's a council. A few people, three to five, one shared set of agents, agreeing what to ask for, whether the answer is good enough, what to switch to next, and when to stop. This is a proposal. I've tried it for afternoons, not yet for a day.
 
 I want someone else to know enough to say we've done enough today.
 
@@ -92,7 +92,7 @@ Nobody on the council has the codebase in their fingers any more. The agents do.
 
 Every agent finishes with an offer, and on my own I take it. In a council someone else hears the offer too, and "do we actually need that?" turns out to be a much easier thing to say about somebody else's next task. That question is the whole of [YAGNI × 100]({{site.baseurl}}/2026/02/yagni-100-with-ai.html).
 
-[![Three people at one table, one closing a laptop, while androids work on behind the glass]({{site.baseurl}}/img/posts/2026/09/council-at-table-small.png)]({{site.baseurl}}/img/posts/2026/09/council-at-table.png)
+[![Someone leaning back with headphones on, half-listening to a call; on the laptop two small colleague tiles and a large shared window of androids at work]({{site.baseurl}}/img/posts/2026/09/council-remote-small.png)]({{site.baseurl}}/img/posts/2026/09/council-remote.png)
 {:.post-photo-narrow}
 
 _AI generated image with Recraft. CC-by_
@@ -141,7 +141,7 @@ Yes. I don't know yet whether a day of switching together leaves me less tired t
 
 ## How to start
 
-You need three people, one window every agent reports into, and a stop time agreed before anyone opens it.
+You need a few people, one window every agent reports into, and a stop time agreed before anyone opens it.
 
 Start with an afternoon, to learn the window: who's on the thread, what a return looks like when it waits, how it feels to have someone else read your agent's work before you do.
 
