@@ -127,6 +127,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - _imports
+  - .beads
   - docker-compose.yml
   - Dockerfile
   - node_modules
