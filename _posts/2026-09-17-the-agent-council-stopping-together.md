@@ -31,7 +31,7 @@ It's Tuesday. I have six agents running across three repositories. One is migrat
 
 I am not writing any code. I haven't for months. I read, approve, redirect, answer. Then switch. Then switch again.
 
-Every one of them finishes with the same offer: shall I do the next thing? It's never a bad suggestion. It's always cheap to say yes. One more prompt, the way Civilization and Football Manager made it one more turn. So I say yes at four, and at six, and at half nine.
+Every one of them finishes with the same offer: shall I do the next thing? It's never a bad suggestion. It's always cheap to say yes. One more prompt, the way it was once one more turn. So I say yes at four, and at six, and at half nine.
 
 This isn't the tiredness of a hard problem. That kind I recognise, and I sleep it off. This is something else: constant switching, paired with an assistant that never, ever wants to stop.
 
