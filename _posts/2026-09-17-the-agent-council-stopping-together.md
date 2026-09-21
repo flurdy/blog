@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Agents Never Stop. A Council Can."
+title: "The Agents Never Stop. A Council Can."
 slug: the-agent-council-stopping-together
 description: AI agents always have another task to suggest. Could a small council sharing direction and a finish time make it easier to close the laptop?
 date: '2026-09-17T12:00:00.000Z'
