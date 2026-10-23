@@ -5,3 +5,4 @@ kube
 .jekyll-cache
 
 .vscode/
+.beads.gate.lock*
