@@ -5,7 +5,8 @@ This is a Jekyll blog repository for [blog.flurdy.com](https://blog.flurdy.com).
 ## Quick Reference
 
 - **Jekyll 4.1** with kramdown markdown
-- **Local dev**: `docker-compose up` → http://localhost:4000
+- **Local dev**: `docker compose up` → http://localhost:4000
+- **Build checks**: run through Docker Compose; Ruby is not installed on the host
 - **CI/CD**: CircleCI builds and pushes to Quay.io on master
 
 ## Repository Structure
@@ -78,12 +79,15 @@ docker-compose up
 # LiveReload on port 35729
 ```
 
-### Production Build
+### Build Check
+
+One-off build in the Compose image, including drafts, without touching `_site/`:
 
 ```bash
-bundle exec jekyll build
-# Output in _site/
+docker compose run --rm --no-deps jekyll jekyll build --drafts --limit_posts 10 --destination /tmp/_site
 ```
+
+CI runs `bundle exec jekyll build` (output in `_site/`).
 
 ### CI/CD Pipeline (CircleCI)
 
